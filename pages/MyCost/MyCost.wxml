@@ -1,0 +1,97 @@
+<!--pages/MyCost/MyCost.wxml-->
+<wxs module="common" src="../../utils/changeNum.wxs"></wxs>
+
+<van-tabs active="{{ active }}" bind:click="changetabs" color="#0969AD">
+   <van-tab title="{{item.brandName}}" name="{{item.brandCode}}"   wx:for="{{tabList}}" wx:key="index" />
+</van-tabs>
+
+<view class="headercolor">
+   <view class="jiagetext"><text class="yongtext">￥</text>{{CanUseMoney}}</view>
+   <view class="keyuong">可用余额</view>
+</view>
+
+<view class="feiyznan" bindtap="handeltozlan">
+  <view>费用总览</view>
+  <image src="../../img/goto.png" class="gotoimg"></image>
+</view>
+
+<!-- <view class="zhifmony">
+  <view class="fixWith">兑付方式</view>
+  <view class="fixWith">费用总金额</view>
+  <view class="fixWith">已使用金额</view>
+  <view class="fixWith">可用余额</view>
+</view>
+
+<view>
+<view class="zhifmonyt" wx:for="{{moenyList}}" wx:key="index">
+  <view class="fixWith">{{item.ExpenseWayName}}</view> 
+  <view class="fixWith">{{item.Money||"0.00"}}</view>
+  <view class="fixWith">{{item.TotalUsedMoney||"0.00"}}</view>
+  <view class="fixWith">{{item.CanUseMoney||"0.00"}}</view>
+</view>
+
+
+<view class="zhifmonyzj">
+  <view class="fixWith">总计</view>
+  <view class="fixWith" >{{Money}}</view>
+  <view class="fixWith">{{TotalUsedMoney}}</view>
+  <view class="fixWith">{{CanUseMoney}}</view>
+</view>
+
+</view> -->
+
+
+
+
+<view class="leftweaper">
+    <view class="biaotitext">
+      <view class="fixleft borderlef">兑付方式</view>
+    <scroll-view scroll-x style="width:100%">
+      <view class="fixleft" wx:for="{{moenyList}}" wx:key="index" 
+       >{{item.ExpenseWayName}}</view>
+      </scroll-view>
+      <view class="colored fixleft">总计</view>
+    </view>
+
+<scroll-view scroll-x style="width:calc(100vw - 45%)">
+     <view class="moneyweap">       
+        <view>
+          <view class="borderlef withdt everymoey">费用金额</view>
+          <view 
+            class="everymoey"
+            wx:for="{{moenyList}}"
+            wx:key="index"
+            >
+            {{item.Money?common.threeNum(item.Money):"0.00"}}
+            </view>
+          <view class="colored everymoey">{{Money}}</view>
+        </view>
+
+        <view>
+          <view class="borderlef withdt everymoey">已使用金额</view>
+          <view 
+           class="everymoey" 
+           wx:for="{{moenyList}}" 
+           wx:key="index"
+           >
+           {{item.TotalUsedMoney?common.threeNum(item.TotalUsedMoney):"0.00"}}
+           </view>
+          <view class="colored everymoey">{{TotalUsedMoney}}</view>
+        </view>
+
+         <view>
+          <view class="borderlef withdt everymoey">可用余额</view>
+          <view 
+           class="everymoey" 
+           wx:for="{{moenyList}}"
+           wx:key="index"
+          >
+          {{item.CanUseMoney?common.threeNum(item.CanUseMoney):"0.00"}}
+          </view>
+          <view class="colored everymoey">{{CanUseMoney}}</view>
+        </view>
+    </view>
+
+</scroll-view>
+
+</view>

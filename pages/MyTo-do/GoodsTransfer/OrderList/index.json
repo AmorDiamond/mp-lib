@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "调拨入库单",
+  "usingComponents": {
+    "mp-list-row": "../../../components/ChannelScanCode/RecordListPageRow/index",
+    "mp-nothing-page": "../../../components/NothingPage/index",
+    "mp-page-foot-tips": "../../../components/ListPageFooterTips/index"
+  }
+}

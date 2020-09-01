@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "我的进货",
+  "usingComponents": {
+    "wux-divider": "../components/weap/divider/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "wux-nothing-page": "../components/NothingPage/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
+  }
+}

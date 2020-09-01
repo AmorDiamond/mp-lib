@@ -1,0 +1,27 @@
+.btn-radio label {
+  color: #929292;
+  background-color: #ECECEC;
+  width: 30%;
+  margin-right: 5%;
+  border-radius: 4px;
+  height: 72rpx;
+  line-height: 72rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 24rpx;
+  box-sizing: border-box;
+}
+.btn-radio label:nth-child(3n) {
+  margin-right: 0;
+}
+.btn-radio label[aria-checked=true] {
+  color: #17ADF9;
+  background-color: rgba(228,246,255,1);
+  border: 1rpx solid #17ADF9;
+}
+.btn-radio label radio {
+  display: none;
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "未完成临时单",
+  "usingComponents": {
+    "mp-scan-row": "../../components/ChannelScanCode/ScanHistoryRow/index"
+  }
+}

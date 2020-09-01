@@ -1,0 +1,23 @@
+.container {
+  background-color: #fff;
+  padding: 20rpx;
+  color: #929292;
+  font-size: 14px;
+}
+.search-area {
+  line-height: 40px;
+  border: 1rpx solid #ddd;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+}
+.zoom-icon {
+  line-height: 0;
+}
+.zoom-icon image {
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  vertical-align: middle;
+}

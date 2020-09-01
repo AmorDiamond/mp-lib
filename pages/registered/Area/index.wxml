@@ -1,0 +1,58 @@
+<!--pages/registered/Area/index.wxml-->
+<view class="witweapr">
+<view class="titleheader">
+  <view class="with"></view>
+    <view class="{{titelarr?'pingps':'pingp'}}" bindtap="handeltocom">品牌公司</view>
+    <image src="../../../img/goto.png" class="nxetbul" wx:if="{{titelarr?true:false}}"></image>
+
+  </view>
+
+    <scroll-view scroll-x="true" style="width:75%" class="scroll_box" 
+     scroll-into-view="{{toView}}">
+        <view 
+        wx:for="{{titelarr}}" wx:key="index" wx:for-index="indx" 
+        class="{{titelarr.lenght==1?'pingp':'flrxtite'}}"
+        catchtap="handeltotitle"
+        data-code="{{item.code}}"
+        id="{{item.code}}"
+        >
+        {{item.name}}
+        <image src="../../../img/goto.png" class="nxetbul"></image>
+      </view>
+ </scroll-view>
+
+</view>
+
+
+<view class="top">
+  <view  wx:for="{{organiList}}" wx:key="index" wx:for-idx="{{index}}">
+
+      <van-radio-group value="{{ radio }}" bind:change="handelcheck" shape class="linetext">
+
+        <view class="guojia">
+         <van-radio name="{{item.code+','+item.name}}">{{item.name}}</van-radio>
+        </view>
+
+        <view class="xiajibox" catchtap="handeltonext" data-name="{{item.name}}" 
+        data-code="{{item.code}}"
+        data-idx="{{index}}"
+        >
+        <image src="../../../img/nextcz.png" class="nextcz"></image>
+        <view class="colorxj">下级</view>
+      </view>
+      </van-radio-group>
+     
+
+
+
+  </view>
+</view>
+
+
+
+
+<view class="weaperok">
+ <view class="quedok" bindtap="handeltobac" wx:if="{{radio}}">确定</view>
+ <view class="quedoks" wx:if="{{!radio}}">确定</view>
+
+</view>

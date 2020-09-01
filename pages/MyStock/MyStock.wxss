@@ -1,0 +1,341 @@
+/* pages/MyStock/MyStock.wxss */
+
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #F1F2F1;
+  position: relative;
+}
+.searchbar{
+  width: 100%;
+  height: 64px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #DDDDDD;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+.biggerbox{
+  width: 100%;
+  /* overflow-x: hidden; */
+}
+.sreachimg{
+  width: 16px;
+  height: 16px;
+  padding: 10px;
+}
+.searchWeaper{
+  height: 40px;
+  width: 290px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #DDDDDD;
+
+}
+.sreachinput{
+  flex: 1;
+}
+.palceColol{
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(146,146,146,1);
+}
+
+.double{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+}
+.dchul{
+  font-size:15px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:500;
+  color:rgba(9,105,174,1);
+  border-bottom: 3px solid #0969AE;
+  line-height: 48px;
+}
+.ychul{
+  font-size:15px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(74,74,74,1);
+  line-height: 48px;
+}
+
+.sxuanimg{
+  width: 24px;
+  height: 24px;
+}
+.wilthebox{
+  width:343px;
+  background:rgba(255,255,255,1);
+  border-radius:4px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.textcolor{
+  font-size:15px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(99,178,13,1);
+}
+.textcolors{
+  font-size:15px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:#F58D11;
+}
+.textcolorts{
+  font-size:15px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:red;
+}
+.nmbercolor{
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(81,81,81,1);
+}
+.textitleweaper{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-sizing: border-box;
+  align-items: center;
+  border-bottom: 1px solid #DDDDDD;
+}
+.sanpweaper{
+  width: 100%;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+.jianscard{
+  width: 100%;
+  padding: 12px 0;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+.wux-divider{
+  margin: 0 !important;
+}
+.jiage{
+  display: flex;
+  justify-content: space-between;
+  margin-top:16px;
+}
+.money{
+  font-size:15px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+}
+.jianshu{
+  font-size:15px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(81,81,81,1);
+}
+.bianh{
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(146,146,146,1);
+  margin-top: 5px;
+}
+.mltext{
+  font-size:15px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(46,46,46,1);
+}
+
+.dwoncz{
+  height: 102px;
+  width: 100%;
+  border-top: 1px solid #DDDDDD;
+  padding: 0 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+}
+
+.downButton{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.colorbutton{
+  width:80px;
+  height:36px;
+  border-radius:4px;
+  border:1px solid rgba(8,97,166,1);
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(8,97,166,1);
+  text-align: center;
+  line-height: 36px;
+  margin-left: 15px;
+}
+.colorbuttonwt{
+  width:80px;
+  height:36px;
+  border-radius:4px;
+  border:1px solid #DDDDDD;
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:#DDDDDD;
+  text-align: center;
+  line-height: 36px;
+  margin-left: 15px;
+}
+
+.jiangetext{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(81,81,81,1);
+}
+.moneycolor{
+  font-size:16px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(208,2,27,1);
+}
+
+
+.mocheng{
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:rgba(0,0,0,0.2) none repeat scroll;
+
+}
+
+.ddanzt{
+  width: 100%;
+  border-bottom: 12px solid #F4F4F4;
+  padding: 24px 0;
+  /* padding-left: 20px; */
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.ddanzts{
+  width: 100%;
+  padding: 24px 0;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.textcolorddan{
+  font-size:16px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(81,81,81,1);
+  margin-left: 20px;
+}
+.xuanxingtext{
+ display: flex;
+ flex-wrap: wrap;
+}
+.quanbutextcolor{
+  padding: 8px 14px;
+  box-sizing: border-box;
+  background:rgba(228,246,255,1);
+  border-radius:4px;
+  border:1px solid rgba(23,173,249,1);
+  font-size:14px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(23,173,249,1);
+  margin-top: 13px;
+  margin-left: 10px;
+}
+.chustextColor{
+  background:rgba(236,236,236,1);
+  border-radius:6px;
+  padding: 8px 14px;
+  box-sizing: border-box;
+  font-size:14px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(146,146,146,1);
+  margin-top: 13px;
+  border:1px solid rgba(236,236,236,1);
+  margin-left: 10px;
+}
+
+.quanbutextcolorst{
+  padding: 8px 14px;
+  box-sizing: border-box;
+  background:rgba(228,246,255,1);
+  border-radius:4px;
+  border:1px solid rgba(23,173,249,1);
+  font-size:14px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(23,173,249,1);
+  margin-top: 13px;
+  margin-left:20px ;
+}
+.chustextColorst{
+  background:rgba(236,236,236,1);
+  border-radius:6px;
+  padding: 8px 14px;
+  box-sizing: border-box;
+  font-size:14px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(146,146,146,1);
+  margin-top: 13px;
+  border:1px solid rgba(236,236,236,1);
+  margin-left:20px ;
+}
+.xuanxingtexts{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.foolter{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top:1px solid #DDDDDD;
+  height: 48px;
+  display: flex;
+}
+.lefttext{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  line-height: 48px;
+  color:rgba(146,146,146,1);
+}
+.righttext{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  line-height: 48px;
+  background:rgba(8,97,166,1);
+  color:rgba(255,255,255,1);
+}
+.zhanwei{
+  height: 15px;
+  width: 100%;
+}
+.colortab .van-tab--active{
+  color:#0969AE !important;
+}

@@ -1,0 +1,32 @@
+@import '../../../../style/iconfont/iconfont.wxss';
+.container {
+  background-color: #fff;
+  font-size: 15px;
+  padding: 20rpx 0 20rpx 32rpx;
+  align-items: center;
+  margin-top: 24rpx;
+}
+.title {
+  display: flex;
+  padding-bottom: 18rpx;
+  color: #4a4a4a;
+  border-bottom: 1rpx solid #ddd;
+  padding-right: 32rpx;
+}
+.title .value {
+  flex: 1;
+}
+.row-bd {
+  padding-top: 10rpx;
+  padding-right: 32rpx;
+}
+.row-bd .item {
+  display: flex;
+  margin-top: 20rpx;
+}
+.row-bd .item .label {
+  color: #4a4a4a;
+}
+.more {
+  align-self: center;
+}

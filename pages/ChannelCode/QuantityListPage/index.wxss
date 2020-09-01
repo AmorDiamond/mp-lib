@@ -1,0 +1,18 @@
+.quantity-list {
+  padding: 0 32rpx;
+}
+.tips {
+  color: #d77133;
+  font-size: 12px;
+  margin: 40rpx 32rpx 65px;
+}
+.footer {
+  position: fixed;
+  bottom: 40rpx;
+  left: 10%;
+  right: 10%;
+}
+.footer .opt-btn {
+  padding: 0;
+  line-height: 45px;
+}

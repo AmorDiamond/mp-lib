@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="search-area">
+    <view class="zoom-icon">
+      <image src="../../../../img/sreach.png" />
+    </view>
+    <view class="input">请输入产品名称搜索</view>
+  </view>
+</view>

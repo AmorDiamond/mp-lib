@@ -1,0 +1,40 @@
+<van-popup
+  show="{{show}}"
+  position="{{position}}"
+  bind:close="onCloseHandle"
+  custom-class="filter-drawer"
+>
+  <view class="conditions-area">
+    <view class="section" wx:for="{{conditions}}" wx:key="id">
+      <view class="section-title">{{item.title}}</view>
+      <block wx:if="{{item.type === 'BtnRadio'}}">
+        <mp-radio name="{{item.id}}" value="{{searchValues[item.id]}}" type="{{item.type}}" options="{{item.options}}" bind:changeHandle="onChangeHandle" />
+      </block>
+      <block wx:elif="{{item.type === 'RangeDate'}}">
+        <view class="range-wrap">
+          <view class="item-wrap">
+            <mp-picker picker-item="picker-item" placeholder="开始时间" name="{{item.id[0]}}" value="{{searchValues[item.id[0]]}}" bind:changeHandle="onChangeHandle" />
+          </view>
+          <view class="separate">~</view>
+          <view class="item-wrap">
+            <mp-picker picker-item="picker-item" placeholder="结束时间" name="{{item.id[1]}}" value="{{searchValues[item.id[1]]}}" bind:changeHandle="onChangeHandle" />
+          </view>
+        </view>
+      </block>
+      <block wx:elif="{{item.type === 'DatePicker'}}">
+        <mp-picker name="{{item.id}}" mode="{{item.mode || 'date'}}" fields="{{item.fields || 'day'}}" value="{{searchValues[item.id]}}" bind:changeHandle="onChangeHandle" />
+      </block>
+      <block wx:else>
+        <mp-input name="{{item.id}}" value="{{searchValues[item.id]}}" bind:changeHandle="onChangeHandle" />
+      </block>
+    </view>
+    <!-- <view class="section">
+      <view class="section-title">输入框</view>
+      <input class="weui-input" name="input" placeholder="这是一个输入框" />
+    </view> -->
+  </view>
+  <view class="btn-area">
+    <view class="opt-btn plain" bind:tap="onResetHandle">重置</view>
+    <view class="opt-btn primary" bind:tap="onSubmitHandle">确认</view>
+  </view>
+</van-popup>

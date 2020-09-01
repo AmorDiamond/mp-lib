@@ -1,0 +1,79 @@
+<!--pages/DeliveryOrder/DeliveryOrder.wxml-->
+
+<view >
+<van-tabs 
+  active="{{ active }}"
+  bind:change="onChange"
+  color='#0969AE'
+  >
+  <van-tab title="交货单1"></van-tab>
+  <van-tab title="交货单2"></van-tab>
+  <van-tab title="交货单3"></van-tab>
+  <van-tab title="交货单4"></van-tab>
+  <van-tab title="交货单5"></van-tab>
+  <van-tab title="交货单6"></van-tab>
+</van-tabs>
+</view> 
+
+
+<!-- ========= xiam交货单号 -->
+
+  <view class="cpxxweaper">
+    <view class="spcolor">
+      <text class="shangpxx">交货单号 00000001</text>
+      <text class="liucz">未签收</text>
+    </view>
+
+   <view class="shuliang">
+     <view class="zuiweape">
+      <view>商品数量</view>
+      <view class="jilijian">30件</view>
+     </view>
+   
+     <view class="zuiweape">
+      <view>发货日期</view>
+      <view class="jilijian">2019-09-19</view>
+     </view>
+
+   <view class="zuiweapewm">
+      <view class="zuiweape">
+      <view>物流编号</view>
+      <view class="jilijian">00000000233</view>
+     </view>
+     <view class="wuliucolor" bindtap="handeltoDetail">物流详情   ></view>
+   </view>
+
+
+   </view>
+  <!-- 产品下面 -->
+    <view class="sanpweaper">
+      
+    <view class="jianscard">
+      <view class="mltext">52泸州老窖百年/09C款500ml*6</view>
+      <view class="bianh">商品编号：037373</view>
+      <view class="jiage">
+        <text class="money">￥4999.00</text>
+        <text class="jianshu">× 30件</text>
+      </view>
+    </view>
+    <!-- 分割 -->
+    <wux-divider show-text="{{false}}" /> 
+    <view class="jianscard">
+      <view class="mltext">52泸州老窖百年/09C款500ml*6</view>
+      <view class="bianh">商品编号：037373</view>
+      <view class="jiage">
+        <text class="money">￥4999.00</text>
+        <text class="jianshu">× 30件</text>
+      </view>
+    </view>
+
+     </view>
+     <!-- ====按钮-->
+     <view class="dooterbut">
+       <view class="butcolor">破损出库</view>
+       <view class="butcolor" bindtap="handeltoPutin" >入库</view>
+       <!-- <view class="butcolor">货物签收</view> -->
+     </view>
+
+
+   </view>

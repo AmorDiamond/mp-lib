@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "数量出入库",
+  "usingComponents": {
+    "mp-quantity-row": "../../components/ChannelScanCode/QuantityStorageHandleRow/index",
+    "mp-nothing-page": "../../components/NothingPage/index",
+    "mp-search-input": "../../components/ChannelScanCode/SearchInputHead/index",
+    "mp-search-page": "../../components/ChannelScanCode/SearchProductPage/index"
+  }
+}

@@ -1,0 +1,149 @@
+/* pages/CostUsageDetails/CostUsageDetails.wxss */
+
+page{
+  background-color: #F1F2F1;
+ }
+ 
+ .headerback{
+  height: 145px;
+  width: 100%;
+  background-color: #0969AD;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 71px;
+ }
+ .wilthebox{
+   width:343px;
+   background:rgba(255,255,255,1);
+   box-shadow:0px 2px 9px 0px rgba(0,0,0,0.2);
+   border-radius:6px;
+   position: absolute;
+   top:10px;
+   padding: 8px 0 8px 16px;
+   box-sizing: border-box;
+ }
+ .weapergs{
+   height: 47px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-right: 16px;
+   box-sizing: border-box;
+   font-size: 15px;
+ }
+ .gscolor{
+   color:rgba(74,74,74,1);
+ }
+ 
+ .luozucolor{
+   color:rgba(0,0,0,1);
+   font-size: 15px;
+   width: 199px;
+   white-space: nowrap;
+   text-align: right;
+ }
+ .luozucolorct{
+   color:rgba(0,0,0,1);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ .luozucolormoney{
+  color:rgba(0,0,0,1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color:rgba(245,141,17,1);
+ }
+ .weapergsts{
+   height: 47px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-right: 16px;
+   box-sizing: border-box;
+   font-size: 15px;
+   border-top: 1px solid #dddddd;
+   border-bottom: 1px solid #dddddd;
+ }
+ .weapergszj{
+  height: 47px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 16px;
+  box-sizing: border-box;
+  font-size: 15px;
+  border-bottom: 1px solid #dddddd;
+}
+ .shangximg{
+   height: 12px;
+   width: 12px;
+ }
+ .weaperpciker{
+  position: relative;
+  display: flex;
+  flex: 1;
+  height: 39px;
+ }
+ .picker{
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   line-height: 39px;
+ }
+ .xianwhilebox{
+   width: 100%;
+   background:rgba(255,255,255,1);
+   border-radius:4px;
+   margin:  0 auto;
+   padding-left: 16px;
+   padding-bottom: 16px;
+   box-sizing: border-box;
+ }
+ .xianwhileboxtx{
+   width: 100%;
+   padding: 0 16px;
+   box-sizing: border-box;
+   height: 132px;
+   display: flex;
+   align-items: flex-end;
+ }
+ .jizTime{
+   height: 39px;
+   width: 100%;
+   border-bottom: 1px solid #dddddd;
+   line-height: 39px;
+   font-size:14px;
+   color:rgba(81,81,81,1);
+   display: flex;
+   justify-content: space-between;
+   padding-right: 16px;
+   box-sizing: border-box;
+   align-items: center;
+ }
+ .boxjief{
+   font-size:15px;
+   font-family:PingFangSC-Regular,PingFang SC;
+   margin-top: 10px;
+ }
+ .moneycol{
+   color:rgba(245,141,17,1);
+ }
+ .textzi{
+   font-size:15px;
+   font-family:PingFangSC-Medium,PingFang SC;
+   color:rgba(74,74,74,1);
+ }
+ .zhanwei{
+   height: 15px;
+   width: 100%;
+ }

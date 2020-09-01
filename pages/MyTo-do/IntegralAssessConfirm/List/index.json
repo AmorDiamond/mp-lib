@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "积分考核结果",
+  "usingComponents": {
+    "mp-nothing-page": "../../../components/NothingPage/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "mp-page-foot-tips": "../../../components/ListPageFooterTips/index",
+    "mp-filter-drawer": "../../../components/FilterDrawer/index"
+  }
+}

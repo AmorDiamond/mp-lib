@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的合同",
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "wux-nothing-page": "../components/NothingPage/index"
+  }
+}

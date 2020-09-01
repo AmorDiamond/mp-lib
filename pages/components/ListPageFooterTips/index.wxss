@@ -1,0 +1,6 @@
+.page-footer-tips {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(0, 0, 0, .45);
+  padding: 20rpx;
+}

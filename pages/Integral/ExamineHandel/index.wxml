@@ -1,0 +1,27 @@
+<!--pages/Integral/ExamineHandel/index.wxml-->
+<view class="headerboxwhite">
+  <view class="niandu">年度：<text class="yesrdo">2020年</text></view>
+  <view class="niandu">季度：<text class="yesrdo">Q1</text></view>
+  <view class="niandu">积分考核结果：<text class="yesrdotd">10000</text>  分</view>
+</view>
+
+<!-- ========= -->
+<view class="kaohetit">考核结果说明</view>
+
+<view class="kaohwihtebox"> 
+ <textarea class="textareabox" disabled></textarea>
+</view>
+
+<!-- =========== -->
+
+<view class="kaohetit">备注信息：</view>
+
+<view class="kaohwihtebox"> 
+ <textarea class="textareabox" placeholder="请输入"></textarea>
+</view>
+
+
+<view class="folter">
+   <view class="leftbut">同意</view>
+   <view class="leftbut">不同意</view>
+</view>

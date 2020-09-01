@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "积分考核结果",
+
+  "usingComponents": {
+    "wux-nothing-page": "../../components/NothingPage/index"
+  }
+}

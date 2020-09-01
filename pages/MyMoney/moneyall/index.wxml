@@ -1,0 +1,22 @@
+<!--pages/MyCost/moneyall/index.wxml-->
+
+<view class="flrx" bindtap="handeltomoenyall">
+  <view class="fonter">
+    <view class="flexzj">
+       <image src="../../../img/zhij.png" class="zhijimg"></image>
+        资金总览
+    </view>
+    <image src="../../../img/goto.png" class="netx"></image>
+  </view>
+</view>
+
+<!-- ======== -->
+<view class="flrx" bindtap="handeltopage">
+  <view class="fonter">
+    <view class="flexbzj">
+      <image src="../../../img/baozj.png" class="baozjimg"></image>
+      保证金
+    </view>
+    <image src="../../../img/goto.png" class="netx"></image>
+  </view>
+</view>

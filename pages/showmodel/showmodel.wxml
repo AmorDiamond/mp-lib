@@ -1,0 +1,45 @@
+<!-- 切换品牌公司 -->
+<view>
+<van-popup show="{{ show }}" overlay="{{true}}">
+  <view class="wperat">
+
+   <view class="ppgs">请选择盘点周期</view>
+
+       <view class="mor-inpu" wx:for="{{barndList}}" wx:for-index="idx" wx:key="id">
+         <view class="banrdgj">{{item.name}}</view>
+         <view class="imginu" data-index="{{idx}}" catchtap="showPopup">
+           <view wx:if="{{!picValue[idx]}}">请选择</view> 
+           <view class="colorpic" wx:if="{{picValue[idx]}}">{{picValue[idx]}}</view> 
+         <image src="../../img/zkai.png" class="xksiimg"></image></view>
+       </view>
+
+
+    <!-- ========naniu -->
+
+    <view class="buttomtext">
+      <view class="quxtext" bindtap="onClose">取消</view>
+      <view class="quedtext" bindtap="quedtext">确定</view>
+    </view>
+   
+  </view>
+
+</van-popup>
+
+</view>
+
+<van-popup 
+  show="{{ showpicker }}" 
+   position="bottom"
+   custom-style="height: 45%" 
+   bind:close="closemodel"
+   round="{{false}}"
+   >
+
+  <van-picker 
+  show-toolbar
+  bind:cancel="closemodel"
+  bind:confirm="onConfirm" 
+  columns="{{ columns }}"
+   />
+
+</van-popup>

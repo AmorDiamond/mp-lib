@@ -1,0 +1,18 @@
+.container {
+  background-color: #fff;
+  padding: 32rpx;
+  font-size: 15px;
+  margin-bottom: 24rpx;
+}
+.title {
+  color: #2E2E2E;
+  display: flex;
+  font-size: 16px;
+}
+.head-bd .label {
+  color: #4A4A4A;
+}
+.item {
+  margin-top: 24rpx;
+  display: flex;
+}

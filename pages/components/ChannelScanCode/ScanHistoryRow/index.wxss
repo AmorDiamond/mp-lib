@@ -1,0 +1,36 @@
+.container {
+  font-size: 15px;
+  background-color: #fff;
+}
+.body {
+  padding: 32rpx;
+}
+.footer {
+  display: flex;
+  padding: 24rpx 14rpx;
+  justify-content: flex-end;
+  border-top: 1rpx solid #ddd;
+}
+.container .footer button {
+  margin: 0 20rpx;
+  padding: 8px 12px;
+  color: #0861a6;
+  width: auto;
+  border: 1rpx solid #0861a6;
+  font-size: 14px;
+  font-weight: 400;
+}
+.content .item {
+  display: flex;
+  margin-top: 20rpx;
+}
+.item .label {
+  color: #4a4a4a;
+}
+.item .num {
+  color: #fa6400;
+  margin: 0 4px;
+}
+.item .num:first-child {
+  margin-left: 0;
+}

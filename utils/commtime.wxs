@@ -1,0 +1,52 @@
+
+var formatNumber = function (n) {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+/**
+ * 将时间戳(1570550400)格式转为 yyyy-MM-dd格式
+ */
+var formatDate = function (datetime) {
+  var date = getDate(datetime);
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var day = date.getDate();
+  return [year, month, day].map(formatNumber).join('-');
+}
+
+/**
+ * 将时间戳(1570550400)格式转为 yyyy-MM格式
+ */
+var formatyears = function (datetime) {
+  var date = getDate(datetime);
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  return [year, month].map(formatNumber).join('-');
+}
+
+/**
+ * 将时间转换为 年-月-日 时:分:秒
+ * @param timestr 时间戳
+ */
+var formatTimeToString = function (time) {
+  var date = getDate(time)
+  var ymd = formatDate(time)
+  var h = date.getHours()
+  var m = date.getMinutes()
+  var s = date.getSeconds()
+  return ymd + ' ' + [h, m, s].map(formatNumber).join(':')
+}
+
+/**
+ * 将2020-09-09 00:00:00转为2020-09-09
+ */
+var timestrToDateStr = function (timestr) {
+  return timestr ? (timestr.trim() && timestr.split(' ')[0]) : timestr
+}
+
+module.exports = {
+  formatDate: formatDate,
+  formatyears:formatyears,
+  timestrToDateStr: timestrToDateStr,
+  formatTimeToString: formatTimeToString,
+}

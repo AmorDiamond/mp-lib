@@ -1,0 +1,51 @@
+.integral-approval-page {
+  padding-bottom: 120rpx;
+}
+.page-hd {
+  padding: 26rpx 32rpx;
+  background-color: #fff;
+  font-size: 15px;
+}
+.page-hd .item {
+  margin-bottom: 20rpx;
+  color: #4A4A4A;
+  display: flex;
+}
+.page-hd .value {
+  color: #000000;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.page-hd .value .num {
+  color: #FA6400;
+}
+
+.section .title {
+  color: #4A4A4A;
+  margin: 34rpx 32rpx 24rpx;
+  font-size: 15px;
+}
+.section .content {
+  min-height: 200rpx;
+  background-color: #fff;
+  padding: 20rpx 32rpx;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #fff;
+  box-shadow: 0px -2px 20px 0px rgba(0,0,0,0.1);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 18rpx 0;
+  width: 100%;
+}
+.footer .opt-btn {
+  width: 40%;
+  padding: 0;
+  line-height: 43px;
+}

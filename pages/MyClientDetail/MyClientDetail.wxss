@@ -1,0 +1,75 @@
+/* pages/MyClientDetail/MyClientDetail.wxss */
+
+.boxsoller{
+  width:343px;
+  height:153px;
+  background:rgba(255,255,255,1);
+  border-radius:4px;
+  margin: 0 auto;
+  margin-top: 16px;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+.textTitle{
+  font-size:15px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(46,46,46,1);
+  height: 48px;
+  width: 100%;
+  line-height: 48px;
+  border-bottom: 1px solid #DDDDDD;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 16px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.fontsz{
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(74,74,74,1);
+  margin-top: 8px;
+}
+.teyue{
+  width: 70px;
+  height: 20px;
+  font-size: 12px;
+  color: white;
+  background-color: #F52030;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.flexf{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 16px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.guanlian{
+  font-size:12px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(27,183,151,1);
+  width: 60px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  border-radius: 4px;
+  border: 1px solid #1BB797;
+  margin-top: 10px;
+}
+.zongd{
+  width: 34px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: white;
+  background-color: #1BB797;
+  font-size: 12px;
+  border-radius: 2px;
+}

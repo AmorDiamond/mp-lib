@@ -1,0 +1,10 @@
+<!--pages/Myquota/quotaUsageRelevance/index.wxml-->
+<scroll-view style="height:100vh" bindscrolltolower="scrolltolower">
+<view class="out-list" wx:for="{{mxList}}" wx:key="index">
+  <view class="list-item">
+     <view>订单编号：{{item.salesOrderHeadNumber || '--'}}</view>
+     <view>{{item.productName|| '--'}}</view>
+     <view>使用数量：{{item.amount|| '--'}}{{item.unit}}</view>
+  </view>
+</view>
+</scroll-view>

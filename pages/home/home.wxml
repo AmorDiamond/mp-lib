@@ -1,0 +1,194 @@
+<!--pages/home/home.wxml-->
+<wxs src="../../utils/commtime.wxs" module="formtime"/>
+
+<view wx:if="{{showjx}}">
+
+            <!-- 通知 -->
+    <view class="msg"  wx:if="{{noticetext.length>0}}" >
+    <view class="imgct"><image src="../../img/laba.png" class="lapaimg" /></view>
+      <swiper autoplay="{{true}}" interval="{{3000}}" duration="{{600}}" vertical style="{{swiperSizes}}">
+        <block wx:for="{{noticetext}}" wx:key="index">
+          <swiper-item>
+            <view class="magtext" height="63" bindtap="handeltotitle" data-id="{{item.id}}">
+              {{item.title}}
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+         <view class="moretan" bindtap="handelnoticebar">
+          更多
+          <image src="../../img/yansgoto.png" class="gansimg"></image>
+        </view>
+    </view>
+
+
+ 
+<!-- ============ -->
+<view class="whikebox">
+<view class="jxstitlebox">
+  <view class="jxstitle">
+    <view class="sizecolor">经销商</view>
+    <view class="textcolor">{{companyName}}</view>
+  </view>
+ 
+   <!-- <image src="../../img/jiehuan.png" 
+    class="qiehanimg" bindtap="handeljiehuan" 
+     wx:if="{{companylist.length!=0}}"
+    /> -->
+ 
+</view>
+
+</view>
+
+
+<!-- ============年度任务达成 homedata.count-->
+
+<view class="swper">
+    <view class="nadutext">
+     <view class="contname">{{contractde.Name || ""}}</view>
+    <view class="moretext" bindtap="handeltoContract">
+      更多
+      <image src="../../img/lansgoto.png" class="gansimg"></image>
+    </view>
+  </view>
+ 
+  <!-- 进度条 -->
+ <view class="jdtiao">
+    <van-progress 
+      percentage="{{contractde.AchieveRate*100}}" 
+      stroke-width="8"
+      color="linear-gradient(177deg,rgba(61,171,251,1) 0%,rgba(0,118,221,1) 100%);"
+    />
+ </view>
+<!-- ====下面时间 -->
+<view class="timetilyle">{{contractde.BeginTime?formtime.formatDate(contractde.BeginTime):''}} 至 {{contractde.EndTime?formtime.formatDate(contractde.EndTime):''}}</view>
+
+ <view class="eapermory">
+    <view class="weperes">
+      <view class="number">{{contractde.TargetMoney}}</view>
+      <view class="yeaer">合同总金额</view>
+    </view>
+    <!-- ======= -->
+    <view class="weperes">
+      <view class="number">{{contractde.OrderMoney}}</view>
+      <view class="yeaer">订单总金额</view>
+    </view>
+ </view>
+
+</view>
+
+
+
+<!-- ========== -->
+
+<view class="yupiaoimg">
+   <view 
+      class="weaperpic" 
+      wx:for="{{arrimg}}" 
+      wx:key="index"
+      data-id="{{item.id}}" 
+      catchtap="handelgtoto"
+   >
+      <wux-badge count="{{item.id==1?amout:''}}">
+         <image src="{{item.disabled ? item.disableImg : item.img}}" class="sizepic"></image>
+     </wux-badge>
+     <view class="textcolorys">{{item.name || ""}}</view>
+   </view>
+
+</view>
+
+
+</view>
+
+
+<!-- 特约经销商 -->
+
+<view wx:if="{{showty}}" class="weaperty">
+
+    <view class="msg" >
+    <view class="imgct"><image src="../../img/laba.png" class="lapaimg" /></view>
+      <swiper autoplay="{{true}}" interval="{{3000}}" duration="{{600}}" vertical style="{{swiperSizes}}">
+        <block wx:for="{{noticetext}}" wx:key="index">
+          <swiper-item>
+            <view class="magtext" height="63" bindtap="handeltotitle" data-id="{{item.id}}">
+              {{item.title}}
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+         <view class="moretan" bindtap="handelnoticebar">
+          更多
+          <image src="../../img/yansgoto.png" class="gansimg"></image>
+        </view>
+    </view>
+
+
+ 
+<!-- ============ -->
+<view class="whikebox">
+<view class="jxstitlebox">
+  <view class="jxstitle">
+    <view class="sizecolorty">特约经销商</view>
+    <view class="textcolor">{{companyName}}</view>
+  </view>
+ 
+ 
+</view>
+
+</view>
+
+  <view class="yupiaoimgs">
+   <view 
+      class="weaperpic" 
+      wx:for="{{arrimg}}" 
+      wx:key="index"
+      data-id="{{item.id}}" 
+      catchtap="handelgtoto"
+      wx:if="{{item.dealerShow}}"
+   >
+      <wux-badge count="{{item.id==1?amout:''}}">
+         <image src="{{item.disabled ? item.disableImg : item.img}}" class="sizepic"></image>
+     </wux-badge>
+     <view class="textcolorys">{{item.name}}</view>
+   </view>
+
+</view>
+ 
+
+</view>
+
+
+
+
+
+
+
+<!-- 切换品牌公司 -->
+
+<!-- <van-popup show="{{ show }}" bind:close="onClose">
+  <view class="wperat">
+
+   <view class="ppgs">选择品牌公司</view>
+    <van-radio-group value="{{ radio }}" bind:change="onChange">
+
+      <view class="gscomp" wx:for="{{companylist}}" wx:key="index">
+        <van-radio 
+        name="{{item.brandCode}}" 
+        >
+         {{item.brandName}}
+        </van-radio>
+      </view>
+
+    </van-radio-group>
+
+
+    
+
+    <view class="buttomtext">
+      <view class="quxtext" bindtap="onClose">取消</view>
+      <view class="quedtext" bindtap="quedtext">确定</view>
+    </view>
+   
+  </view>
+
+</van-popup> -->

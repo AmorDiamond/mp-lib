@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "回复反馈",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index"
+  }
+}

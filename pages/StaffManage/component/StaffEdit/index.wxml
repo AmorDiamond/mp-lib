@@ -1,0 +1,80 @@
+<view class="edit-state-container">
+  <view class="edit-state-form">
+    <form bindsubmit="formSubmit">
+      <view class="form-item">
+        <label>
+          <text>员工姓名</text>
+          <input type="text" maxlength="10" bind:input="nameInputChange" 
+          disabled="{{allData}}" value="{{name}}" placeholder-class="placeholder" placeholder="请输入" />
+        </label>
+      </view>
+      <view class="form-item">
+        <label>
+          <text>员工手机号</text>
+          <input type="text" bind:input="phoneInputChange" value="{{phone}}" placeholder-class="placeholder" placeholder="请输入" />
+        </label>
+      </view>
+      <view class="form-item">
+        <label class="staff-role">
+          <text>员工角色</text>
+          <!-- <input type="text" bind:input="phoneInputChange" value="{{roles}}" placeholder="请选择" /> -->
+          <view class="staff-role-con hide" bind:tap="openRoleModalHandle">
+            <block wx:if="{{userRoles.length}}">
+              <text wx:for="{{userRoles}}" wx:key="index" >{{item.roleName}}{{index!==(userRoles.length-1)?" /":""}}</text>
+            </block>
+            <block wx:else>
+              <text class="placeholder">请选择</text>
+            </block>
+          </view> 
+          <!-- <image src="../../../../img/goto.png" class="more-icon"></image> -->
+          <view class="iconfont iconsm-arrow-right more-icon"></view>
+        </label>
+      </view>
+      <view class="form-item">
+        <label class="staff-status">
+          <text>状态</text>
+          <picker bind:change="bindPickerChange" value="{{statusIndex}}" range="{{statusOptions}}" range-key="name" placeholder-class="placeholder" placeholder="请选择">
+            <view class="picker">
+              {{statusText}}
+            </view>
+          </picker>
+          <!-- <image src="../../../../img/goto.png" class="more-icon"></image> -->
+          <view class="iconfont iconsm-arrow-right more-icon"></view>
+        </label>
+      </view>
+      <view class="btn-area">
+        <button formType="submit">提交</button>
+      </view>
+    </form>
+  </view>
+  <!-- <view class="mask role-mask" wx:if="{{openRoleModal}}" bind:tap="closeRoleModalHandle">
+    <view class="role-modal" catchtap>
+      <checkbox-group bind:change="rolesChooseChange">
+        <label class="checkbox" wx:for="{{roles}}" wx:key="index">
+          <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+        </label>
+      </checkbox-group>
+    </view>
+  </view> -->
+</view>
+
+
+<van-popup
+  show="{{ openRoleModal }}"
+  closeable="{{false}}"
+  position="bottom"
+  custom-style="height: 40%"
+  bind:close="closeRoleModalHandle"
+>
+<scroll-view scroll-y="{{true}}" style="height:100%">
+
+<checkbox-group bind:change="rolesChooseChange" >
+     <label class="checkbox" wx:for="{{roles}}" wx:key="index">
+         <view>{{ item.roleName }}</view>
+         <checkbox value="{{item.id}}" checked="{{item.checked}}"/>
+     </label>
+</checkbox-group>
+
+</scroll-view>
+</van-popup>
+

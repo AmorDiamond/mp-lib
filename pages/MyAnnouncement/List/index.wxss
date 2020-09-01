@@ -1,0 +1,89 @@
+.announce-filter {
+  display: flex;
+  justify-content: space-around;
+  height: 96rpx;
+  line-height: 96rpx;
+  background-color: #fff;
+  margin-bottom: 24rpx;
+  font-size: 30rpx;
+  color: #4a4a4a;
+  box-shadow: 0 2rpx 6rpx 2rpx #ddd;
+  width: 100%;
+  margin-top: 1px;
+}
+ .active {
+  color: #0969ae;
+  font-weight: bold;
+  border-bottom: 2px solid #0969ae;
+}
+
+.announce-list {
+  padding: 0 32rpx;
+  margin-top: 253rpx;
+}
+.noting-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -120rpx;
+  color: #929292;
+  font-size: 28rpx;
+}
+.noting-container .iconfont {
+  font-size: 180rpx;
+  color: #929292;
+  margin-bottom: 10rpx;
+}
+
+.searchbar{
+  width: 100%;
+  height: 64px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #DDDDDD;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+.searchbars{
+  width: 100%;
+  height: 64px;
+}
+.weapertab{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top:0
+}
+.biggerbox{
+  width: 100%;
+  overflow-x: hidden;
+}
+.sreachimg{
+  width: 16px;
+  height: 16px;
+  padding: 10px;
+}
+.searchWeaper{
+  height: 40px;
+  width: 290px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #DDDDDD;
+
+}
+.sreachinput{
+  flex: 1;
+}
+.palceColol{
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(146,146,146,1);
+}
+.sxuanimg{
+  width: 24px;
+  height: 24px;
+}

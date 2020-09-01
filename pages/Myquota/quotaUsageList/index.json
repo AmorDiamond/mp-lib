@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "配额使用明细",
+
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "wux-nothing-page":"../../components/NothingPage/index"
+  }
+}

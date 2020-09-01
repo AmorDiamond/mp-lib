@@ -1,0 +1,131 @@
+/* pages/MyCost/MyCost.wxss */
+page{
+  background-color: #F1F2F1;
+}
+
+
+.headercolor{
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  margin: 10px auto;
+  overflow: hidden;
+}
+.keyuong{
+  font-size:13px;
+  text-align: center;
+  margin-top: 9px;
+}
+.jiagetext{
+  color: #F58D11;
+  text-align: center;
+  font-size:24px;
+  margin-top: 13px;
+}
+.yongtext{
+  font-size:14px;
+  color: #515151;
+}
+.feiyznan{
+  height: 54px;
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size:18px;
+  border-bottom: 1px solid #DDDDDD;
+  background-color: white;
+}
+.gotoimg{
+  width: 14px;
+  height: 14px;
+}
+
+.zhifmony{
+  display: flex;
+  height: 39px;
+  width: 100%;
+  font-size: 14px;
+  color:rgba(81,81,81,1);
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #DDDDDD;
+  background-color: white;
+}
+.zhifmonyt{
+  display: flex;
+  height: 39px;
+  width: 100%;
+  font-size: 14px;
+  color:rgba(81,81,81,1);
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.zhifmonyzj{
+  display: flex;
+  height: 39px;
+  width: 100%;
+  font-size: 14px;
+  color:rgba(208,2,27,1);
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+ .van-divider{
+  margin: 0 !important;
+}
+
+.fixWith{
+  width: 25%;
+  overflow:hidden; /*超出的部分隐藏起来。*/ 
+  white-space:nowrap;/*不显示的地方用省略号...代替*/
+  text-overflow:ellipsis;
+  margin-left: 12px;
+}
+
+.leftweaper{
+  display: flex;
+  font-size: 14px;
+  color: rgba(81,81,81,1);
+  background-color: white;
+}
+
+.biaotitext{
+  width: 45%;
+  box-shadow:0px 2px 9px 0px rgba(0,0,0,0.2);
+}
+
+.moneyweap{
+  display: flex;
+   flex: 1;
+}
+.colored{
+  color: rgba(208,2,27,1);
+}
+.fixleft{
+  padding-left: 14px;
+  height: 40px;
+  line-height: 40px;
+  white-space:nowrap;
+}
+
+.borderlef{
+  height: 40px;
+  border-bottom: 1px solid #DDDDDD;
+  line-height: 40px;
+}
+
+.withdt{
+  width: 120px;
+}
+
+.everymoey{
+  padding: 0 8px;
+  height: 40px;
+  line-height: 40px;
+  text-align: right;
+}

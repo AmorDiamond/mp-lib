@@ -1,0 +1,48 @@
+<view class="integral-assess-page">
+  <view class="page-hd">
+    <view class="search-area">
+      <view class="search-input">
+        <image src="../../../../img/sreach.png" class="zoom-icon"></image>
+        <input type="text" placeholder="请输入待办名称查询" placeholder-class="input-placeholder" confirm-type="搜索" bind:confirm="onSearchHandle" />
+      </view>
+      <image src="../../../../img/sxuan.png" class="filter-icon" bind:tap="onFilterOpenHandle"></image>
+    </view>
+    <view class="tabs">
+      <van-tabs active="{{activeType}}" bind:change="onTabChange" border="{{false}}">
+        <van-tab wx:for="{{tabTypes}}" wx:key="index" title="{{item.title}}" name="{{item.value}}"></van-tab>
+      </van-tabs>
+    </view>
+  </view>
+  <view class="page-bd">
+    <scroll-view scroll-y="{{true}}" bind:scrolltolower="onScrolListHandle">
+      <block wx:if="{{list && list.length !== 0 }}">
+        <view class="list-row" wx:for="{{list}}" wx:key="index" data-id="{{item.id}}" bind:tap="onGotoDetail">
+          <view class="title">{{item.name}}</view>
+          <view class="row-item">销售组织：{{item.brandName}}</view>
+          <view class="row-item">{{item.status != 'wait' ? item.time : ''}}</view>
+          <view class="foot">
+            <view class="status pendding" wx:if="{{item.status == 'wait'}}">待处理</view>
+            <view class="status pendding" wx:if="{{item.status == 'dealing'}}">处理中</view>
+            <view class="status success" wx:elif="{{item.status == 'finish'}}">已处理</view>
+            <view class="more">
+              <text>查看详情</text>
+              <view class="iconfont iconsm-arrow-right"></view>
+            </view>
+          </view>
+        </view>
+        <mp-page-foot-tips wx:if="{{list && list.length !== 0}}" querying="{{querying}}" hasMore="{{hasMore}}" />
+      </block>
+      <block wx:else>
+        <mp-nothing-page />
+      </block>
+    </scroll-view>
+  </view>
+</view>
+
+<!-- 筛选面板 -->
+<mp-filter-drawer
+  show="{{showFilter}}"
+  conditions="{{conditions}}"
+  bind:submitHandle="onSubmitHandle"
+  bind:closeHandle="onFilterCloseHandle"
+/>

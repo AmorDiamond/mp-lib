@@ -1,0 +1,63 @@
+<!--pages/setphone/setphone.wxml-->
+ <form bindsubmit="formSubmit">
+ <van-cell-group>
+  <van-field
+    value="{{ phonenum }}"
+    type="number"
+    name="phonenum"
+    label="手机号"
+    disabled
+    placeholder="请输入手机号"
+    bind:input="handelphone"
+  />
+
+    <van-field
+    value="{{ password }}"
+    clearable
+    label="密码"
+    name="password"
+    type="password"
+    placeholder="请输入密码"
+    bind:click-icon="onClickIcon"
+  />
+
+  <van-field
+    value="{{ newphone }}"
+    type="number"
+    name="newphone"
+    label="新手机号"
+    placeholder="请输入新手机号"
+    bind:input="handelnewphone"
+  />
+
+  <van-field
+    value="{{ code }}"
+    name="code"
+    label="验证码"
+    placeholder="请输入验证码"
+    use-button-slot
+  >
+   <view 
+   slot="button" 
+   class="butcode" 
+   bindtap="handeltocode"
+    wx:if="{{showtext}}"
+     
+    >获取验证码</view>
+    <view 
+     slot="button"
+     class="butcode"
+     bindtap="handeltocode"
+      wx:if="{{showcode}}">{{countdown}}s</view>
+  </van-field>
+
+
+
+</van-cell-group>
+ 
+  <view class="boxwth">
+    <button formType="submit" class="butenok">确认</button>
+  </view>
+
+ </form>
+

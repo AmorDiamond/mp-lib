@@ -1,0 +1,43 @@
+.container {
+  background-color: #fff;
+  font-size: 14px;
+  padding: 32rpx;
+  border-radius: 4px;
+  margin-top: 24rpx;
+}
+.row-hd, .row-bd {
+  display: flex;
+  align-items: center;
+}
+.row-hd {
+  margin-bottom: 32rpx;
+}
+.title {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.delete {
+  color: #e02020;
+  font-size: 13px;
+  padding: 2px 6px;
+}
+.label {
+  color: #4a4a4a;
+}
+.num-control {
+  flex: 1;
+  margin-left: 90rpx;
+  display: flex;
+  align-items: center;
+}
+.num-control input {
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+  flex: 1;
+  border: 1rpx solid #e4e4e4;
+  height: 64rpx;
+  border-radius: 4px;
+  text-align: center;
+}

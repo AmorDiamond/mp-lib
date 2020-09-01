@@ -1,0 +1,26 @@
+.staff-container {
+  padding: 32rpx;
+}
+.staff-container .add-staff-con {
+  position: absolute;
+  bottom: 40rpx;
+  text-align: center;
+  width: 606rpx;
+  left: 72rpx;
+}
+.staff-container .add-staff-con button {
+  line-height: 90rpx;
+  background-color: #0861A6;
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 4rpx;
+  width: 100%;
+  height: 90rpx;
+  font-weight: normal;
+  padding: 0;
+}
+.staff-container .add-staff-con .add-staff-icon {
+  margin-right: 10rpx;
+  font-size: 28rpx;
+  vertical-align: middle;
+}

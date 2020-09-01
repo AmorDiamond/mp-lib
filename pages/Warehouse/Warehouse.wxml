@@ -1,0 +1,56 @@
+<!--pages/Warehouse/Warehouse.wxml-->
+
+  <view class="searchbar">
+   <view class="searchWeaper">
+     <image src="../../img/sreach.png" class="sreachimg"></image>
+     <input 
+       type="text" 
+       placeholder="请输入交货单号查询"
+       placeholder-class="palceColol" 
+       class="sreachinput"
+       confirm-type="搜索"
+       value="{{inputValue}}"
+       bindconfirm="handelsreach"
+       bindinput="handelinpValue"
+       />
+   </view>  
+  
+ </view>
+
+<!-- =========== 两项选择 -->
+ <view class="double">
+   <view class="{{showBorder?'dchul':'ychul'}}" bindtap="handeldchul">待处理</view>
+   <view class="{{!showBorder?'dchul':'ychul'}}" bindtap="handelychul" >已处理</view>
+ </view>
+
+ <!-- ============ 小面卡片 -->
+<scroll-view scroll-y="true" style="height:calc(100vh - 113px)" bindscrolltolower="lower">
+  <view 
+     class="carsrach" 
+     wx:for="{{List}}"
+     wx:key="index"
+     data-name="{{item.costTypeC}}"
+     data-code="{{item.name}}"
+     data-content="{{item.applicationDescriptionC}}"
+     data-id="{{item.id}}"
+     data-checktime="{{item.checkTime}}"
+     catchtap="handeltoDetail"
+     >
+    <view class="titlesearch">{{item.costTypeC}} 
+    <text class="time">{{item.checkTime==null?"":item.checkTime}}</text></view>
+     <view class="chuli">
+        <view class="{{showBorder?'dchulitext':'ychultext'}}">
+         {{item.checkTime==null?'待处理':'已处理'}}
+        </view>
+        <view class="lookxq">
+         查看详情
+         <image src="../../img/goto.png" class="gotimg"></image>
+        </view>
+     </view>
+  </view>
+  <view class="gudu"></view>
+  <!-- ====没有数据背景 -->
+  <wux-nothing-page wx:if="{{!List||List.length==0}}" resetStyle="height:calc(100vh - 133px)"></wux-nothing-page>
+</scroll-view>
+   
+

@@ -1,0 +1,50 @@
+<!--pages/MyContract/ContractDel/index.wxml-->
+<wxs src="../../../utils/commtime.wxs" module="formtime"/>
+
+<view>
+  <van-tabs active="{{ active }}"  bind:change="onChangeScorll" color="#0969AD">
+    <van-tab title="{{item.brandName}}" name="{{item.brandCode}}" wx:for="{{tabList}}" wx:key="brandCode" />
+  </van-tabs>
+</view>
+
+
+<scroll-view scroll-y style="height:calc(100vh - 44px)" >
+<view wx:for="{{contractLsit}}" wx:key="index" class="heihrt">
+<view class="swper">
+    <view class="nadutext">
+     <view class="contname">{{item.Name || ""}}</view>
+
+  </view>
+ 
+  <!-- 进度条 -->
+ <view class="jdtiao">
+    <van-progress 
+      percentage="{{item.AchieveRate*100}}" 
+      stroke-width="8"
+      color="linear-gradient(177deg,rgba(61,171,251,1) 0%,rgba(0,118,221,1) 100%);"
+    />
+ </view>
+<!-- ====下面时间 -->
+<view class="timetilyle">{{item.BeginTime?formtime.formatDate(item.BeginTime):''}} 至 {{item.EndTime?formtime.formatDate(item.EndTime):''}}</view>
+
+ <view class="eapermory">
+    <view class="weperes">
+      <view class="number">{{item.TargetMoney}}</view>
+      <view class="yeaer">合同总金额</view>
+    </view>
+    <!-- ======= -->
+    <view class="weperes">
+      <view class="number">{{item.OrderMoney}}</view>
+      <view class="yeaer">订单总金额</view>
+    </view>
+ </view>
+
+</view>
+
+</view>
+   <!-- ====没有数据背景 -->
+  <wux-nothing-page wx:if="{{!contractLsit||contractLsit.length==0}}" resetStyle="height:calc(100vh - 44px)"></wux-nothing-page>
+
+</scroll-view>
+
+

@@ -1,0 +1,19 @@
+<!--pages/MyTo-do/Myto-do.wxml-->
+  <view class="wilweaper">
+    <!-- ==== -->
+    <view 
+       class="{{item.name?'wilthebox':'wiltheboxs'}}" 
+       wx:for="{{arrpic}}" 
+       wx:key="index"
+       data-id="{{item.id}}"
+       catchtap="handeltopic"
+       wx:if="{{type == 1 || (type == 2 && item.dealerShow)}}"
+       >
+      <wux-badge count="{{0}}">
+        <image src="{{item.pic}}" class="wuliuimg"></image>
+      </wux-badge>
+      <text wx:if="{{item.name}}">{{item.name}}</text>
+      <text wx:if="{{!item.name}}">积分考核\n结果确认</text>
+    </view>
+    
+  </view>

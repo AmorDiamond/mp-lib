@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "渠道扫码",
+  "usingComponents": {
+    "wux-divider": "../components/weap/divider/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index"
+  }
+}

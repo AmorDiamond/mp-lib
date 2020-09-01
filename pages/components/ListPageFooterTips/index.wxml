@@ -1,0 +1,4 @@
+<view class="page-footer-tips">
+  <view class="loading-more" hidden="{{!querying}}">加载中...</view>
+  <view class="tips-text" hidden="{{hasMore}}">已加载全部</view>
+</view>

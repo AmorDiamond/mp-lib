@@ -1,0 +1,70 @@
+<view class="ponints-exchange-list">
+  <view class="page-hd">
+    <view class="search-area">
+      <view class="search-input">
+        <image src="../../../img/sreach.png" class="zoom-icon"></image>
+        <input type="text" placeholder="请输入兑付方名称查询" placeholder-class="input-placeholder" confirm-type="搜索" bind:confirm="onSearchHandle" />
+      </view>
+      <view class="filter" bind:tap="onOpenFilterHandle">
+        <image class="filter-icon" src="../../../img/sxuan.png" />
+      </view>
+    </view>
+    <view class="tabs">
+      <van-tabs active="{{activeType}}" bind:change="onTabChange" border="{{false}}">
+        <van-tab wx:for="{{tabTypes}}" wx:key="index" title="{{item.title}}" name="{{item.value}}"></van-tab>
+      </van-tabs>
+    </view>
+  </view>
+  <view class="page-bd">
+    <scroll-view scroll-y="{{true}}" bind:scrolltolower="onListScrollHandle">
+      <view class="list-row" wx:for="{{list}}" wx:key="index">
+        <view class="head">
+          <view class="name">兑付编号：{{item.code}}</view>
+          <view class="{{item.status == 1 ? 'status pendding' : (item.status == 2 ? 'status success' : 'status error')}}">
+            {{item.status == 1 ? '兑付中' : (item.status == 2 ? '已兑付' : '未兑付')}}
+          </view>
+        </view>
+        <view class="body">
+          <view class="info">
+            <view class="item title">{{item.name}}</view>
+            <view class="item">兑付方：{{item.exchangeUser}}</view>
+            <view class="item">{{item.time}}</view>
+          </view>
+          <view class="number plus" wx:if="{{item.type == 'UP'}}">+{{item.number}}</view>
+          <view class="number minus" wx:else>-{{item.number}}</view>
+        </view>
+        <!-- 兑付中显示兑付确认操作 -->
+        <view class="footer" wx:if="{{item.status == '1'}}">
+          <view class="opt-btn primary plain" bind:tap="onConfirmHandle">兑付确认</view>
+        </view>
+      </view>
+      <view class="special-dealer" wx:if="{{isSpecialDealer}}"></view>
+    </scroll-view>
+  </view>
+</view>
+<!-- 底部按钮，特约经销商显示 -->
+<view class="page-footer opt-btn primary" wx:if="{{isSpecialDealer}}" bind:tap="onGoExchangeHandle">去兑付</view>
+<!-- 特约经销商去兑付弹框操作 -->
+<van-dialog show="{{showDialog}}" title="积分兑付" bind:confirm="onDialogConfirmHandle" bind:cancel="onDialogCancelHandle" confirm-button-color="#006AB3" cancel-button-color="#696969" use-slot show-cancel-button>
+  <view class="dialog-content">
+    <view class="label-title">年度-季度：2020-Q1</view>
+    <view class="control-itme">
+      <view class="label">兑付方：</view>
+      <view class="control">
+        <picker bind:change="onPickerChangeHandle" range="{{exchangeDealerList}}" range-key="name">
+          <view class="picker" wx:if="{{selectExchangeDealer.name}}">{{selectExchangeDealer.name}}<view class="arrow-icon"></view></view>
+          <view class="picker placeholder" wx:else>请选择兑付方<view class="arrow-icon"></view></view>
+        </picker>
+      </view>
+    </view>
+    <view class="label-title">可兑付积分：100分</view>
+    <view class="control-itme">
+      <view class="label">兑付积分：</view>
+      <view class="control">
+        <input type="text" placeholder="请输入兑付积分" type="number" bind:blur="onChangeExchangeNum" />
+      </view>
+    </view>
+  </view>
+</van-dialog>
+<!-- 筛选面板 -->
+<mp-filter-drawer show="{{showFilter}}" conditions="{{conditions}}" bind:submitHandle="onSubmitHandle" bind:closeHandle="onCloseFilterHandle" />

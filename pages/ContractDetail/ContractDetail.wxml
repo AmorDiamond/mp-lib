@@ -1,0 +1,309 @@
+<!--pages/ContractDetail/ContractDetail.wxml-->
+<wxs src="../../utils/commtime.wxs" module="formtime"/>
+
+ <view class="weithwilebox" wx:if="{{titleDtail.Name}}">
+   <view class="weaperht">
+     <view>{{titleDtail.Name || ''}}</view>
+     <view class="{{status=='true'?'shix':'sxiaocolor'}}">{{titleDtail.EffectiveStatus||''}}</view>
+   </view>
+
+           <!-- -========== -->
+  <view class="httextwepar" wx:for="{{Elements}}" wx:key="index">
+      <view class="linboxk">{{item.name}}:<text class="numcolor">{{item.value||""}}</text> </view>
+  </view>
+
+ </view>
+
+<!-- ======== -->
+<view class="weapervoll">
+  <van-collapse value="{{ activeNames }}" bind:change="onChange">
+
+    <van-collapse-item title="经销商产品及区域" name="1" wx:if="{{titleDtail.ProductsAndArea}}"
+      class="color" 
+    >
+        <view wx:for="{{titleDtail.ProductsAndArea}}" wx:key="index" class="flrx">
+           <view class="weaperflecx">
+             <text >经销商区域名称:</text>
+             <text class="numcolorte">{{item.RegionName||""}}</text>
+           </view>
+
+            <view class="weaperflecx">
+             <text>销售渠道:</text>
+             <text class="numcolorte">{{item.DistributeTypeName||""}}</text>
+           </view>
+
+           <view class="weaperflecx">
+             <text>产品类别:</text>
+             <text class="numcolorte">{{item.ProductLevelName||''}}</text>
+           </view>
+
+           <view class="weaperflecx">
+             <text>限制数量:</text>
+             <text class="numcolorte">{{item.LimitAmount||''}}</text>
+           </view>
+
+           <view class="weaperflecx">
+             <text>限制金额:</text>
+             <text class="numcolorte">{{item.LimitMoney||''}}</text>
+           </view>
+           
+          <view class="weaperflecx">
+             <text>限制交易次数:</text>
+             <text class="numcolorte">{{item.LimitTransaction||''}}</text>
+           </view>
+          <van-divider/>
+        </view>
+    </van-collapse-item>
+
+
+    <van-collapse-item title="产品销售年度目标" name="2" wx:if="{{titleDtail.SalesTargets}}"
+     class="color" 
+    >
+        <view wx:for="{{titleDtail.SalesTargets}}" wx:key="index">
+           <view class="weaperflecx">
+             <text>产品类别:</text>
+             <text class="numcolorte">{{item.ProductLevelName||''}}</text>
+           </view>
+           
+
+            <view class="weaperflecx">
+             <text>地区名称:</text>
+             <text class="numcolorte">{{item.RegionName||''}}</text>
+           </view>
+           
+            <view class="weaperflecx">
+             <text>金额:</text>
+             <text class="numcolorte">{{item.TargetMoney||''}}</text>
+           </view>
+
+            <view class="weaperflecx">
+             <text>总销售数量:</text>
+             <text class="numcolorte">{{item.TargetAmount||''}}</text>
+           </view>
+
+            <view class="weaperflecx">
+             <text>时间:</text>
+             <text class="numcolorte">{{item.BeginTime?formtime.formatDate(item.BeginTime):''}} 至 {{item.EndTime?formtime.formatDate(item.EndTime):''}}</text>
+           </view>
+           <van-divider/>
+        </view>
+    </van-collapse-item>
+ 
+
+
+    <van-collapse-item title="产品销售月度目标" name="8" wx:if="{{titleDtail.SalesTargetSplits}}"
+     class="color" 
+    >
+        <view wx:for="{{titleDtail.SalesTargetSplits}}" wx:key="index">
+           <view class="weaperflecx">
+             <text>产品类别:</text>
+             <text class="numcolorte">{{item.ProductLevelName||''}}</text>
+           </view>
+           
+
+            <view class="weaperflecx">
+             <text>地区名称:</text>
+             <text class="numcolorte">{{item.RegionName||''}}</text>
+           </view>
+           
+            <view class="weaperflecx">
+             <text>金额:</text>
+             <text class="numcolorte">{{item.TargetMoney||''}}</text>
+           </view>
+
+            <view class="weaperflecx">
+             <text>总销售数量:</text>
+             <text class="numcolorte">{{item.TargetAmount||''}}</text>
+           </view>
+
+
+            <view class="weaperflecx">
+             <text>时间:</text>
+             <text class="numcolorte">{{item.BeginTime?formtime.formatDate(item.BeginTime):''}} 至 {{item.EndTime?formtime.formatDate(item.EndTime):''}}</text>
+           </view>
+           <van-divider/>
+        </view>
+    </van-collapse-item>
+
+
+
+
+    <van-collapse-item title="价格体系" name="3" wx:if="{{titleDtail.PriceSystem}}"
+     class="color" 
+    >
+        <view wx:for="{{titleDtail.PriceSystem}}" wx:key="index">
+           <view class="weaperflecx">
+             <text>物料描述:</text>
+             <text class="numcolorte">{{item.ProductName||''}}</text>
+           </view>
+           
+
+            <view class="weaperflecx">
+             <text>价格类型:</text>
+             <text class="numcolorte">{{item.PriceTypeName||''}}</text>
+           </view>
+           
+            <view class="weaperflecx">
+             <text>客户分销渠道:</text>
+             <text class="numcolorte">{{item.DistributionChannelName||''}}</text>
+           </view>
+
+            <view class="weaperflecx">
+             <text>计价单位:</text>
+             <text class="numcolorte">{{item.PriceUnit||''}}</text>
+           </view>
+
+            <view class="weaperflecx">
+             <text>价格:</text>
+             <text class="numcolorte">{{item.Price||''}}</text>
+           </view>
+
+            <view class="weaperflecx">
+             <text>国际贸易条件:</text>
+             <text class="numcolorte">{{item.TradeTermName||''}}</text>
+           </view>
+
+            <view class="weaperflecx">
+             <text>时间:</text>
+             <text class="numcolorte">{{item.BeginTime?formtime.formatDate(item.BeginTime):''}} 至 {{item.EndTime?formtime.formatDate(item.EndTime):''}}</text>
+           </view>
+           <van-divider/>
+        </view>
+    </van-collapse-item>
+
+
+
+  <van-collapse-item title="促销保证金" name="4" wx:if="{{titleDtail.PromotionalDeposit}}"
+     class="color" 
+    >
+        <view wx:for="{{PromotionalDeposit}}" wx:key="index">
+           <view class="weaperflecx">
+             <text>物料描述:</text>
+             <text class="numcolorte">{{item.ProductName||''}}</text>
+           </view>
+           
+
+            <view class="weaperflecx">
+             <text>价格类型:</text>
+             <text class="numcolorte">{{item.PriceTypeName||''}}</text>
+           </view>
+           
+
+            <view class="weaperflecx">
+             <text>计价单位:</text>
+             <text class="numcolorte">{{item.PriceUnit||''}}</text>
+           </view>
+
+            <view class="weaperflecx">
+             <text>金额:</text>
+             <text class="numcolorte">{{item.Money||''}}</text>
+           </view>
+
+
+            <view class="weaperflecx">
+             <text>时间:</text>
+             <text class="numcolorte">{{item.BeginTime?formtime.formatDate(item.BeginTime):''}} 至 {{item.EndTime?formtime.formatDate(item.EndTime):''}}</text>
+           </view>
+           <van-divider/>
+        </view>
+    </van-collapse-item>
+
+
+
+  <van-collapse-item title="合同奖励政策" name="5" wx:if="{{titleDtail.ContractIncentivePolicy}}"
+     class="color" 
+    >
+        <view wx:for="{{titleDtail.ContractIncentivePolicy}}" wx:key="index">
+           <view class="weaperflecx">
+             <text>产品类别名称:</text>
+             <text class="numcolorte">{{item.ProductLevelName||''}}</text>
+           </view>
+           
+
+            <view class="weaperflecx">
+             <text>物料名称:</text>
+             <text class="numcolorte">{{item.ProductName||''}}</text>
+           </view>
+           
+
+            <view class="weaperflecx">
+             <text>计量单位:</text>
+             <text class="numcolorte">{{item.MeasureUnitName||''}}</text>
+           </view>
+
+            <view class="weaperflecx">
+             <text>金额:</text>
+             <text class="numcolorte">{{item.Money||''}}</text>
+           </view>
+
+            <view class="weaperflecx">
+             <text>优惠比例%:</text>
+             <text class="numcolorte">{{item.DiscountPercent||''}}</text>
+           </view>
+
+            <view class="weaperflecx">
+             <text>大于等于金额:</text>
+             <text class="numcolorte">{{item.BaseMoney||''}}</text>
+           </view>
+
+            <view class="weaperflecx">
+             <text>时间:</text>
+             <text class="numcolorte">{{item.BeginTime?formtime.formatDate(item.BeginTime):''}} 至 {{item.EndTime?formtime.formatDate(item.EndTime):''}}</text>
+           </view>
+           <van-divider/>
+        </view>
+    </van-collapse-item>
+
+
+  <van-collapse-item title="费用支持比例" name="6" wx:if="{{titleDtail.CostSupportRatio}}"
+     class="color" 
+    >
+        <view wx:for="{{titleDtail.CostSupportRatio}}" wx:key="index">
+           <view class="weaperflecx">
+             <text>费用支持比例%:</text>
+             <text class="numcolorte">{{item.Rate||''}}</text>
+           </view>
+           
+
+            <view class="weaperflecx">
+             <text class="wuliao">物料名称:</text>
+             <text class="numcolorte">{{item.ProductName||''}}</text>
+           </view>
+           
+
+            <view class="weaperflecx">
+             <text>时间:</text>
+             <text class="numcolorte">{{item.BeginTime?formtime.formatDate(item.BeginTime):''}} 至 {{item.EndTime?formtime.formatDate(item.EndTime):''}}</text>
+           </view>
+           <van-divider/>
+        </view>
+    </van-collapse-item>
+
+
+
+  <van-collapse-item title="铺货目标" name="7" wx:if="{{titleDtail.DeliveryTarget}}"
+     class="color" 
+    >
+        <view wx:for="{{titleDtail.DeliveryTarget}}" wx:key="index">
+           <view class="weaperflecx">
+             <text>渠道名称:</text>
+             <text class="numcolorte">{{item.DistributeTypeName||''}}</text>
+           </view>
+           
+
+            <view class="weaperflecx">
+             <text>数量(件):</text>
+             <text class="numcolorte">{{item.Amount||''}}</text>
+           </view>
+           
+
+            <view class="weaperflecx">
+             <text>时间:</text>
+             <text class="numcolorte">{{item.BeginTime?formtime.formatDate(item.BeginTime):''}} 至 {{item.EndTime?formtime.formatDate(item.EndTime):''}}</text>
+           </view>
+           <van-divider/>
+        </view>
+    </van-collapse-item>
+
+  </van-collapse>
+</view>

@@ -1,0 +1,250 @@
+/* pages/complaints/complaints.wxss */
+.searchbar{
+  width: 100%;
+  height: 64px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #DDDDDD;
+  justify-content: space-around;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+}
+.searchbars{
+  width: 100%;
+  height: 64px;
+}
+.biggerbox{
+  width: 100%;
+  overflow-x: hidden;
+}
+.sreachimg{
+  width: 16px;
+  height: 16px;
+  padding: 10px;
+}
+.searchWeaper{
+  height: 40px;
+  width: 290px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #DDDDDD;
+
+}
+.sreachinput{
+  flex: 1;
+}
+.palceColol{
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(146,146,146,1);
+}
+.sxuanimg{
+  width: 24px;
+  height: 24px;
+}
+
+.xianwhilebox{
+  width:100%;
+  background:rgba(255,255,255,1);
+  border-radius:4px;
+  padding-left: 16px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+.xianwhiletcj{
+  height:123px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.weaper-boxup{
+  height: 12px;
+}
+.jizTime{
+  height: 39px;
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
+  line-height: 39px;
+  font-size:14px;
+  color:rgba(81,81,81,1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+.boxjief{
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  margin-top: 10px;
+}
+.moneycol{
+  color:rgba(245,141,17,1);
+}
+.textzi{
+  font-size:14px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  color:rgba(74,74,74,1);
+}
+.sxiao{
+  font-size:15px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,60,43,1);
+}
+.ychul{
+  font-size:15px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(99,178,13,1);
+}
+.clchul{
+  font-size:15px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(245,141,17,1);
+}
+.lansgotoimg{
+width: 12px;
+height: 12px;
+}
+.addbutton{
+  width:303px;
+  height:45px;
+  background:rgba(8,97,166,1);
+  border-radius:2px;
+  position: fixed;
+  bottom: 20px;
+  font-size:16px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 45px;
+}
+.weaperbut{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== */
+/* 
+.saixuan{
+  position: absolute;
+  top:0;
+  left: 15%;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 30;
+} */
+
+.mocheng{
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:rgba(0,0,0,0.2) none repeat scroll;
+
+}
+
+.ddanzt{
+  width: 100%;
+  border-bottom: 12px solid #F4F4F4;
+  padding: 24px 0;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.ddanzts{
+  width: 100%;
+  padding: 24px 0;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.textcolorddan{
+  font-size:16px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(81,81,81,1);
+  margin-left: 20px;
+}
+.xuanxingtext{
+ display: flex;
+ flex-wrap: wrap;
+ /* margin-top: 13px; */
+}
+.quanbutextcolor{
+  padding: 8px 14px;
+  box-sizing: border-box;
+  background:rgba(228,246,255,1);
+  border-radius:4px;
+  border:1px solid rgba(23,173,249,1);
+  font-size:14px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(23,173,249,1);
+  margin-top: 13px;
+  margin-left:20px;
+}
+.chustextColor{
+  background:rgba(236,236,236,1);
+  border-radius:6px;
+  padding: 8px 14px;
+  box-sizing: border-box;
+  font-size:14px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(146,146,146,1);
+  margin-top: 13px;
+  border:1px solid rgba(236,236,236,1);
+  margin-left:20px;
+}
+.xuanxingtexts{
+  display: flex;
+  flex-wrap: wrap;
+  align-content:flex-start;
+}
+
+.foolter{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top:1px solid #DDDDDD;
+  height: 48px;
+  display: flex;
+}
+.lefttext{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  line-height: 48px;
+  color:rgba(146,146,146,1);
+}
+.righttext{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  line-height: 48px;
+  background:rgba(8,97,166,1);
+  color:rgba(255,255,255,1);
+}
+.pickers{
+  margin-left: 20px;
+  margin-top: 12px;
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.heighr{
+  height: 71px;
+}

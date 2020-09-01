@@ -1,0 +1,24 @@
+<view class="record-detail-page">
+  <view class="page-head">
+    <mp-page-head detail="{{detail}}" title="{{hdTitle}}" items="{{hdItems}}" />
+  </view>
+  <view class="scroll-area">
+  <block wx:for="{{detail.details}}" wx:key="index">
+    <view class="list-row">
+      <view class="title">{{item.name}}</view>
+      <view class="row-bd">
+          <view class="row-th">
+            <view class="row-td">现存量</view>
+            <view class="row-td">盘点量</view>
+            <view class="row-td">差异量</view>
+          </view>
+          <view class="row-tr">
+            <view class="row-td">{{item.stockBoxQuantity}}箱{{item.stockBottleQuantity}}盒</view>
+            <view class="row-td">{{item.checkBoxQuantity}}箱{{item.checkBottleQuantity}}盒</view>
+            <view class="row-td">{{item.differenceBoxQuantity}}箱{{item.differenceBottleQuantity}}盒</view>
+          </view>
+      </view>
+    </view>
+  </block>
+  </view>
+</view>

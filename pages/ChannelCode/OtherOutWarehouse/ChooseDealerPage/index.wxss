@@ -1,0 +1,22 @@
+@import '../../../../style/iconfont/iconfont.wxss';
+.label-title {
+  margin: 40rpx 0 36rpx 32rpx;
+  font-size: 15px;
+}
+.required {
+  color: #E02020;
+  vertical-align: middle;
+  margin-right: 4rpx;
+}
+.cell-text {
+  margin-right: 10rpx;
+}
+.opt-btn {
+  position: fixed;
+  bottom: 40rpx;
+  width: 80%;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-left: 10%;
+  padding: 0;
+}

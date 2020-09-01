@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="row-hd">
+    <view class="title">{{title}}</view>
+    <view class="delete" bind:tap="onDeleteHandle">删除</view>
+  </view>
+  <view class="row-bd">
+    <view class="label">数量</view>
+    <view class="num-control">
+      <input value="{{chestNum}}" bind:blur="onChangeChestNum" type="number" maxlength="{{9}}" placeholder="请输入" />箱
+      <input value="{{boxNum}}" bind:blur="onChangeBoxNum" type="number" maxlength="{{9}}" placeholder="请输入" />盒
+    </view>
+  </view>
+</view>

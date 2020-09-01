@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的库存",
+  "usingComponents": {
+    "mp-nothing-page": "../../components/NothingPage/index",
+    "mp-filter-drawer": "../../components/FilterDrawer/index",
+    "mp-page-foot-tips": "../../components/ListPageFooterTips/index"
+  }
+}

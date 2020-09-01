@@ -1,0 +1,9 @@
+.warehouse-history-page {
+  padding: 26rpx 32rpx;
+}
+
+.tips {
+  font-size: 12px;
+  margin-top: 14px;
+  color: #0861a6;
+}

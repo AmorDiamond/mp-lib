@@ -1,0 +1,448 @@
+<!--pages/registered/registered.wxml-->
+
+<van-steps
+  steps="{{ steps }}"
+  active="{{ active }}"
+  active-color="#0969AE"
+  wx:if="{{fooyter}}"
+/>
+
+<view class="jientext" wx:if="{{pageone}}">基本信息</view>
+<view class="jientext" wx:if="{{pagetwo}}">资质上传</view>
+<view class="jientext" wx:if="{{pagethree}}">基本信息</view>
+
+
+<form bindsubmit="formSubmit" wx:if="{{pageone}}">
+  <van-cell-group>
+    <picker bindchange="bindPickerChange" value="{{indexone}}" range="{{brand}}" 
+    range-key="brandInfoName" >
+    <view class="picker">
+      <van-field
+      value="{{ brand[indexone].brandInfoName|| brandes }}"
+      label="所属品牌"
+      right-icon="arrow"
+      placeholder="请选择"
+      name="brand"
+      readonly	
+      input-class="textcolor"
+      input-align="right"
+    />
+   </view>
+  </picker>
+   
+
+  <van-field
+    value="特约经销商"
+    label="申请主体类型"
+    placeholder="请输入"
+    name="Application"
+    input-class="textcolor"
+    readonly	
+    input-align="right"
+
+  />
+
+<picker bindchange="bindAppcode" value="{{agentindex}}" range="{{angentlist}}"
+  range-key="agentName"
+  wx:if="{{readonley}}"
+>
+  <van-field
+    value="{{angentlist[agentindex].agentName || angentuli}}"
+    label="所属上级经销商"
+    title-width="98px"
+    placeholder="请输入"
+    name="DealerCode"
+    input-align="right"
+    right-icon="arrow"
+    readonly
+  />
+</picker>
+
+
+  <van-field
+    wx:if="{{!readonley}}"
+    value="{{angentuli}}"
+    label="经销商编码"
+    placeholder="请输入"
+    name="DealerCode"
+    input-align="right"
+    right-icon="arrow"
+    bindtap="handelshowtos"
+    readonly
+  />
+
+  <van-field
+    value="{{phoneumber}}"
+    label="手机号码"
+    placeholder="请输入"
+    name="phoneumber"
+    input-align="right"
+    type="number"
+    bindchange="handelphone"
+
+  />
+
+    <van-field
+    value="{{password}}"
+    label="密码"
+    type="password"
+    placeholder="请输入密码"
+    name="password"
+    disabled="{{disabled}}"
+    input-align="right"
+    bindchange="handelpassword"
+  />
+
+    <van-field
+    value="{{passwordAgin}}"
+    label="确认密码"
+    type="password"
+    disabled="{{disabled}}"
+    placeholder="请再次输入密码"
+    name="passwordAgin"
+    input-align="right"
+
+  />
+</van-cell-group>
+
+
+<view class="submit">
+  <button formType="submit" class="submit">下一步</button>
+</view>
+
+</form>
+
+
+<!-- ====================== two  pagetwo-->
+<form bindsubmit="formSubmitpagetwo" wx:if="{{pagetwo}}">
+<van-cell-group>
+
+  <van-radio-group value="{{ radio }}" bind:change="handelrocom">
+  <van-field
+    label="资质类型"
+    input-align="right"
+    disabled
+  >
+     <van-radio slot="right-icon" name="company" class="gs" checked-color="#0969AE">公司</van-radio>
+     <van-radio slot="right-icon" name="personal" class="gren" checked-color="#0969AE">个人</van-radio>
+   </van-field>
+  </van-radio-group>
+
+<view wx:if="{{radio!='personal'}}">
+   <van-field
+    value="{{compayName}}"
+    label="公司名称"
+    placeholder="请输入"
+    name="compayName"
+    input-align="right"
+    bindchange="handelcompayName"
+  />
+
+   <van-field
+    value="{{creditCode}}"
+    label="统一社会信用代码"
+    placeholder="请输入"
+    name="creditCode"
+    input-align="right"
+    title-width="114px"
+    bindchange="hdchangecode"
+  />
+
+    <van-field
+    value="{{TheContact}}"
+    label="联系人"
+    placeholder="请输入"
+    name="TheContact"
+    input-align="right"
+    bindchange="handelContact"
+  />
+
+   <van-field
+    value="{{ContactNumber}}"
+    label="联系人电话"
+    placeholder="请输入"
+    name="ContactNumber"
+    input-align="right"
+    bindchange="handelContactNumber"
+  />
+
+   <van-field
+    value="{{ContactAddress}}"
+    label="联系地址"
+    placeholder="请输入"
+    name="ContactAddress"
+    input-align="right"
+    bindchange="handelContactAddress"
+  />
+
+  <view class="yingye">营业执照</view>
+<view class="uppicimg">
+   <view class="pic-yiye">
+     <image 
+      src="{{pics}}"
+       class="yinye" 
+       wx:if="{{upimg}}"
+       bindtap="previewImg"
+      ></image>
+     <image src="../../img/edite.png" class="addimg" wx:if="{{upimg}}" bindtap='chooseImg'></image>
+     <image
+        src="../../img/yinye.png" class="yinye" 
+        wx:if="{{!upimg}}" 
+        bindtap='chooseImg'
+      ></image>
+     <image 
+      src="../../img/addimg.png" 
+      class="addimg" 
+      wx:if="{{!upimg}}"
+       bindtap='chooseImg' 
+     ></image>
+     <view class="textsize">实体店铺营业执照</view>
+   </view>
+</view>
+
+</view>
+
+<view wx:if="{{radio=='personal'}}" class="person">
+   <van-field
+    value="{{realname}}"
+    label="姓名"
+    placeholder="请输入"
+    name="realname"
+    input-align="right"
+    bindchange="handelgetname"
+  />
+
+  <van-field
+    value="{{cardID}}"
+    label="身份证号码"
+    placeholder="请输入"
+    name="cardID"
+    input-align="right"
+    bindchange="handelgetIdcard"
+  />
+
+  <van-field
+    value="{{compayName}}"
+    label="公司名称"
+    placeholder="请输入"
+    name="compayName"
+    input-align="right"
+    bindchange="handelcompayName"
+  />
+
+ <view class="yingye">身份证照片</view>
+<view class="uppicimg">
+   <view class="pic-yiye">
+     <image 
+      src="{{persone}}"
+       class="yinye" 
+       wx:if="{{showperone}}"
+       bindtap="previewidcard"
+      ></image>
+     <image src="../../img/edite.png" class="addimg" wx:if="{{showperone}}" bindtap='chooseImgperson'></image>
+     <image
+        src="../../img/cardone.png" class="yinye" 
+        wx:if="{{!showperone}}" 
+        bindtap='chooseImgperson'
+      ></image>
+     <image 
+      src="../../img/addimg.png" 
+      class="addimg" 
+      wx:if="{{!showperone}}"
+       bindtap='chooseImgperson' 
+     ></image>
+     <view class="textsize">身份证正面</view>
+   </view>
+</view>
+
+
+<view class="uppicimg">
+   <view class="pic-yiye">
+     <image 
+      src="{{persontw}}"
+       class="yinye" 
+       wx:if="{{showpert}}"
+       bindtap="previewImgcardt"
+      ></image>
+     <image src="../../img/edite.png" class="addimg" wx:if="{{showpert}}" bindtap='chooseImgcardt'></image>
+     <image
+        src="../../img/cardtwo.png" class="yinye" 
+        wx:if="{{!showpert}}" 
+        bindtap='chooseImgcardt'
+      ></image>
+     <image 
+      src="../../img/addimg.png" 
+      class="addimg" 
+      wx:if="{{!showpert}}"
+       bindtap='chooseImgcardt' 
+     ></image>
+     <view class="textsize">身份证反面</view>
+   </view>
+</view>
+
+
+
+</view>
+
+</van-cell-group>
+
+
+<view class="textflex">
+  <button formType="submit" class="onepage" bindtap="handeltoOne" >上一步</button>
+  <button formType="submit" class="nexttwo" bindtap="handeltothree" 
+  wx:if="{{radio!='personal'}}">下一步</button>
+  <button formType="submit" class="nexttwo" bindtap="handeltotperson"
+  wx:if="{{radio=='personal'}}"
+  >下一步</button>
+
+</view>
+  
+
+</form>
+
+
+
+
+<!-- =====================three pagethree-->
+<form bindsubmit="formSubmitpagethree" wx:if="{{pagethree}}" catchtouchmove="loop" >
+<van-cell-group>
+  <!-- <picker bindchange="bindPickerthree" value="{{organindex}}" range="{{organiList}}"
+  range-key="name"
+  > -->
+    <van-field
+    value="{{organame}}"
+    label="所属管理区域"
+    placeholder="请输入"
+    name="Subordinate"
+    readonly
+    input-align="right"
+    right-icon="arrow"
+    bindtap="bindPickerthree"
+  />
+  <!-- </picker> -->
+
+
+
+<!-- ============= -->
+  <picker bindchange="bindPickerfroue" value="{{busidex}}" range="{{businList}}"
+  range-key="name"
+  >
+    <van-field
+      value="{{businList[busidex].name}}"
+      label="关联业务人员"
+      placeholder="请输入"
+      name="Associated"
+      readonly
+      input-align="right"
+      right-icon="arrow"
+      
+    />
+ </picker>
+
+
+ <view class="quyu">经销产品及区域</view>
+ <view class="flexCode" wx:for="{{selectTeeth}}" wx:key="index" wx:for-item="itm" wx:for-index="idx">
+ <view class="withletf">
+ <!-- areaAll[idx].name -->
+     <view class="selectquy" catchtap="chooseRegion" data-current="{{idx}}" >
+       <input disabled value="{{selectTeeth[idx].name}}" class="inpt" name="address" 
+         placeholder="销售区域"
+         placeholder-class="placde" 
+        />
+        <image  src="../../img/v.png" class="vpng"></image>
+     </view>
+
+
+
+
+
+
+    <picker  bindchange="bindPickerChanges" data-current="{{idx}}" value="{{itm.indexs}}" 
+    range="{{songdong}}" range-key="name">
+
+     <view class="selectCode">
+       <input disabled value="{{songdong[itm.indexs].name}}" class="inpt" name="liftcode" 
+       />
+        <image  src="../../img/v.png" class="vpng"></image>
+     </view>
+  </picker>
+
+</view>
+
+  
+ 
+  <image src="../../img/jinz.png" class="jinz" bindtap="handelreduce"></image>
+</view>
+
+ <view class="addselect" bindtap="handeladdSelect">+添加</view>
+
+</van-cell-group>
+
+
+
+<view class="textflex">
+    <button formType="submit" class="onepage" bindtap="handeltotwo">上一步</button>
+  <button formType="submit" class="nexttwo" bindtap="handeltoupok">提交</button>
+</view>
+  
+</form>
+
+
+
+<view class="spantext" wx:if="{{fooyter}}">
+  <view bindtap="handeltosetpass">忘记密码?</view>
+  <view bindtap="handeltologin">立即登录</view>
+</view>
+
+
+
+
+<van-popup
+  show="{{ showRegion }}"
+  data-current="{{idx}}"
+  position="bottom"
+  custom-style="height: 45%"
+  bind:close="onClose"
+  class="scoll"
+>
+<view class="flextitle">
+  <view>省份</view>
+  <view>城市</view>
+  <view>区域</view>
+</view>
+<view class="withbox">
+<scroll-view scroll-y style="height:calc(100% - 45px)" >
+   <view 
+    wx:for="{{province}}" 
+    wx:key="index"
+   class="{{item.code==cityId?'nametext':'namehei'}}" 
+   data-code="{{item.code}}"
+   catchtap="handlgetcity"
+   >{{item.name}}</view>
+</scroll-view>
+
+<scroll-view scroll-y style="height:calc(100% - 45px)" >
+   <view 
+    wx:for="{{city}}" 
+    wx:key="index"
+    class="{{item.code==distrcitId?'nametext':'namehei'}}" 
+    data-code="{{item.code}}"
+    catchtap="handelgetdistrcit"
+   >{{item.name}}</view>
+
+</scroll-view>
+
+
+<scroll-view scroll-y style="height:calc(100% - 45px)" >
+   <view 
+     wx:for="{{distrcit}}"
+    wx:key="index"
+     class="{{item.code==ouenId?'nametext':'namehei'}}"
+     data-code="{{item.code}}"
+     catchtap="handelgetaladdes"
+   >{{item.name}}</view>
+
+</scroll-view>
+
+</view>
+</van-popup>

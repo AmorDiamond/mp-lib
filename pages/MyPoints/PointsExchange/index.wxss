@@ -1,0 +1,187 @@
+.ponints-exchange-list {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.page-hd {
+  background-color: #fff;
+}
+.page-bd {
+  flex: 1;
+  overflow: hidden;
+}
+.page-bd scroll-view {
+  height: 100%;
+}
+.search-area {
+  display: flex;
+  padding: 24rpx 32rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #ddd;
+}
+.search-input {
+  flex: 1;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  border: 1rpx solid #DDDDDD;
+  border-radius: 2px;
+}
+.search-input input {
+  flex: 1;
+}
+.zoom-icon {
+  width: 16px;
+  height: 16px;
+  padding: 10px;
+}
+.filter-icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: 50rpx;
+}
+
+.input-placeholder{
+  font-size: 14px;
+  font-family: PingFangSC-Regular,PingFang SC;
+  font-weight: 400;
+  color: rgba(146,146,146,1);
+}
+.tabs {
+  border-bottom: 1rpx solid #ddd;
+}
+.tabs .van-tabs__line {
+  background-color: #0969AE;
+}
+.tabs .van-tab {
+  color: #4A4A4A;
+  font-size: 15px;
+}
+.tabs .van-tab--active {
+  color: #0969AE;
+}
+
+.list-row {
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.list-row:last-child .row-con {
+  border-bottom: none;
+}
+.list-row .head {
+  padding: 24rpx 34rpx 18rpx;
+  margin-bottom: 34rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #ddd;
+}
+.list-row .head .status {
+  font-size: 15px;
+}
+.list-row .head .name {
+  font-size: 14px;
+  color: #929292;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list-row .head .pendding {
+  color: #F58D11;
+}
+.list-row .head .success {
+  color: #63B20D;
+}
+.list-row .head .error {
+  color: #FF3C2B;
+}
+.list-row .body {
+  padding: 0 34rpx 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-row .footer {
+  margin-left: 34rpx;
+  padding: 24rpx 34rpx;
+  border-top: 1rpx solid #ddd;
+  display: flex;
+  justify-content: flex-end;
+}
+.list-row .info {
+  font-size: 14px;
+  color: #929292;
+}
+.list-row .info .item {
+  margin-bottom: 10rpx;
+}
+.list-row .info .item:last-child {
+  margin-bottom: 0;
+}
+.list-row .info .title {
+  font-size: 15px;
+  color: #2E2E2E;
+}
+.list-row .number {
+  font-size: 16px;
+  color: #000000;
+  align-self: flex-end;
+}
+.list-row .plus {
+  color: #FF3C2B;
+}
+
+.special-dealer {
+  height: 120rpx;
+}
+
+.page-footer {
+  position: fixed;
+  line-height: 90rpx;
+  bottom: 16rpx;
+  left: 10%;
+  right: 10%;
+  padding: 0;
+}
+
+.dialog-content {
+  padding: 40rpx;
+  font-size: 14px;
+}
+.dialog-content .label-title, .control-itme {
+  margin-bottom: 30rpx;
+}
+.control-itme {
+  display: flex;
+  align-items: center;
+}
+.control-itme .label {
+  width: 70px;
+}
+.control-itme .control {
+  flex: 1;
+}
+.control-itme .picker, .control-itme input {
+  border: 1rpx solid #ddd;
+  border-radius: 4px;
+  /* line-height: 64rpx; */
+  padding: 16rpx 20rpx;
+  line-height: 1.4rem;
+}
+.control-itme .picker {
+  font-size: 14px;
+  position: relative;
+}
+.control-itme .picker .arrow-icon {
+  height: 0;
+  border-top: 4px solid #000000;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  position: absolute;
+  top: 17px;
+  right: 20rpx;
+}
+.control-itme .placeholder {
+  color: gray;
+}

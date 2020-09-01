@@ -1,0 +1,43 @@
+/**app.wxss**/
+@import "./style/iconfont/iconfont.wxss";
+Page {
+  background: #F1F2F1;
+}
+
+.opt-btn{
+  padding: 8px 12px;
+  border-radius:4px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  border: 1rpx solid #ddd;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+.opt-btn.primary{
+  background-color: #0861a6;
+  border-radius: 4px;
+  color: white;
+} 
+.opt-btn.plain {
+  color: #0861a6;
+  background-color: transparent;
+  border: 1rpx solid;
+}
+
+/* 覆盖vant的dialog里的按钮样式 */
+.van-dialog__footer button:not([size='mini']) {
+  width: 100%;
+}
+
+/* 状态颜色 */
+.status.pendding {
+  color: #F58D11;
+}
+.status.success {
+  color: #63B20D;
+}
+.status.error {
+  color: #FF3C2B;
+}
+

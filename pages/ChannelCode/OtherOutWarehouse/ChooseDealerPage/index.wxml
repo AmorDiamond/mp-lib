@@ -1,0 +1,25 @@
+<view class="choose-consignee-page">
+  <view class="type">
+    <view class="label-title"><text class="required">*</text>收货方类型</view>
+    <van-radio-group value="{{ selectType }}" bind:change="onChangeType">
+      <van-cell-group>
+        <van-cell wx:for="{{types}}" wx:key="index" title="{{item.title}}" data-name="{{item.value}}" bind:click="onClickCell" title-class="cell-text">
+          <van-radio slot="right-icon" name="{{item.value}}" />
+        </van-cell>
+      </van-cell-group>
+    </van-radio-group>
+  </view>
+  <view class="name">
+    <view class="label-title"><text class="required">*</text>收货方名称</view>
+    <view class="search-area">
+      <van-field
+        value="{{selectDealer.name}}"
+        clearable
+        placeholder="请输入收货方名称"
+        bind:clear="onClearInputHandle"
+        bind:change="onInputChange"
+      />
+    </view>
+  </view>
+  <view class="opt-btn primary" bind:tap="onSubmitHandle">提交</view>
+</view>

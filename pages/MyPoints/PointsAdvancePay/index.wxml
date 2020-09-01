@@ -1,0 +1,45 @@
+<view class="ponints-exchange-list">
+  <view class="page-hd">
+    <view class="search-area">
+      <view class="search-input">
+        <image src="../../../img/sreach.png" class="zoom-icon"></image>
+        <input type="text" placeholder="请输入下游客户名称查询" placeholder-class="input-placeholder" confirm-type="搜索" bind:confirm="onSearchHandle" />
+      </view>
+    </view>
+    <view class="tabs">
+      <van-tabs active="{{activeType}}" bind:change="onTabChange" border="{{false}}">
+        <van-tab wx:for="{{tabTypes}}" wx:key="index" title="{{item.title}}" name="{{item.value}}"></van-tab>
+      </van-tabs>
+    </view>
+  </view>
+  <view class="page-bd">
+    <scroll-view scroll-y="{{true}}" bind:scrolltolower="onListScrollHandle">
+      <view
+        class="list-row"
+        wx:for="{{list}}"
+        wx:key="index"
+        data-number="{{item.number}}"
+        data-code="{{item.code}}"
+        data-name="{{item.name}}"
+        bind:tap="onGotoDeatilHandle"
+      >
+        <view class="row-con">
+          <view class="num-tag" wx:if="{{item.number}}">{{item.number}}</view>
+          <view class="title">{{item.name}}</view>
+          <view class="footer">
+            <view class="type-tag" wx:if="{{item.type == 1}}">特约经销商</view>
+            <view class="type-tag terminal" wx:else>终端</view>
+            <view class="arrow-icon iconfont iconsm-arrow-right"></view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+<!-- 确认兑付弹框 -->
+<van-dialog show="{{showDialog}}" title="垫付确认" bind:confirm="onDialogConfirmHandle" bind:cancel="onDialogCancelHandle" confirm-button-text="已垫付" confirm-button-color="#006AB3" cancel-button-color="#696969" use-slot show-cancel-button>
+  <view class="dialog-content">
+    2020年Q1季度，您已向<text class="company-name">品胜酒业销售有限公司</text>垫付100积分，请确认是否垫付完成！
+  </view>
+</van-dialog>

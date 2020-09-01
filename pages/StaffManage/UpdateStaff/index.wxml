@@ -1,0 +1,11 @@
+<view class="update-staff-container">
+  <wux-edit-form
+    bind:formSubmit="onFormSubmit"
+    userRoles="{{roleNames}}"
+    name="{{name}}"
+    phone="{{phone}}"
+    status="{{isValid}}"
+    roles="{{roles}}"
+    allData="{{allData?true:fasle}}"
+  />
+</view>

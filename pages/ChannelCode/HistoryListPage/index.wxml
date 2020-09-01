@@ -1,0 +1,15 @@
+<view class="warehouse-history-page">
+  <mp-scan-row
+    wx:if="{{data}}"
+    chestNum="{{data.boxQuantity}}"
+    boxNum="{{data.bottleQuantity}}"
+    items="{{items}}"
+    detail="{{data}}"
+    bind:continueScan="onContinueScan"
+    bind:afreshScan="onAfreshScan"
+    bind:gotoDetail="onGotoDetail"
+  />
+  <view class="tips" wx:if="{{data}}">
+    注意：如果中途遇到手机锁屏或者来电，点击继续扫码即可；如果需要重新扫描，点击重新扫码
+  </view>
+</view>

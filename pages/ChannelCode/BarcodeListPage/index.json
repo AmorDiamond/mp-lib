@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "扫码出入库",
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index",
+    "mp-barcode-list": "../../components/ChannelScanCode/ScanBarcodeList/index",
+    "mp-barcode-input": "../../components/ChannelScanCode/ScanBarcodeListInput/index",
+    "mp-material-row": "../../components/ChannelScanCode/DetailMaterialRow/index",
+    "mp-product-quantity": "../../components/ChannelScanCode/ProductQuantityDetail/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  }
+}

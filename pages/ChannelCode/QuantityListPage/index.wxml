@@ -1,0 +1,31 @@
+<view class="container">
+  <mp-search-input bind:tap="onOpenSearch" />
+  <view class="quantity-list">
+    <block wx:if="{{productList.length !== 0}}">
+      <block wx:for="{{productList}}" wx:key="index">
+        <mp-quantity-row
+          data-code="{{item.matCode}}"
+          title="{{item.matName}}"
+          chestNum="{{item.boxQuantity}}"
+          boxNum="{{item.bottleQuantity}}"
+          bind:deleteHandle="onDeleteHandle"
+          bind:changeNumber="onChangeNumber"
+        />
+      </block>
+    </block>
+    <block wx:else>
+      <mp-nothing-page />
+    </block>
+  </view>
+  <view class="tips" wx:if="{{productList.length !== 0}}">
+    提示：若存在零瓶，请输入对应盒数，反之，整箱仅输入箱数即可。
+  </view>
+  <view class="footer">
+    <view class="opt-btn primary" bind:tap="onSubmitHandle">提交</view>
+  </view>
+</view>
+
+<!-- 搜索产品界面 -->
+<view wx:if="{{showSearchPage}}">
+  <mp-search-page bind:cancleHandle="onCancleSearch" bind:selectHandle="onAddProductHandle" />
+</view>

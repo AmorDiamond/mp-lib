@@ -1,0 +1,81 @@
+<!--pages/MyClient/MyClient.wxml-->
+<view wx:if="{{accountType==1}}">
+ <view class="numberhander">
+
+ <view class="border">
+   <view class="{{showjx?'boxnuber':'boxnubers'}}"  bindtap="handelzjx">
+      <view class="{{showjx?'nmber':'nmbers'}}" >{{conuts.sagentCount}}</view>
+      <view>特约经销商</view>
+   </view>
+</view>
+
+<view class="boders">
+    <view class="{{showzduan?'boxnuber':'boxnubers'}}" bindtap="handelzduan">
+      <view class="{{showzduan?'nmber':'nmbers'}}">{{conuts.terminalCount}}</view>
+      <view>终端</view>
+   </view>
+ </view>
+</view>
+<view>
+
+</view>
+<!-- ========= -->
+<scroll-view scroll-y="{{true}}" style="height:calc(100vh - 110px)" bindscrolltolower="lower">
+<view class="boxsollerwep" wx:for="{{customerList}}" wx:key="index">
+<view class="boxsoller">
+<view class="textTitle">
+  {{item.companyName}}
+  <view class="teyue" wx:if="{{showjx}}">特约经销商</view>
+  <view class="zongd" wx:if="{{showzduan}}">终端</view>
+</view>
+
+<view class="flexf">
+  <view class="fontsz">联系人姓名：<text>{{item.contact || ""}}</text></view>
+  <view class="guanlian" wx:if="{{showjx}}" bindtap="handeltogl" 
+  data-id="{{item.belongAreaCode}}" data-agentcode="{{item.agentCode}}"
+  data-brandcode="{{item.brandCode}}"
+  >关联终端</view>
+</view>
+<view class="fontsz">联系人电话：<text>{{item.phone || ""}}</text></view>
+<view class="fontsz">地址：<text>{{item.address || ""}}</text></view>
+</view>
+</view>
+  <!-- ====没有数据背景 -->
+  <wux-nothing-page wx:if="{{!customerList||customerList.length==0}}" resetStyle="height:calc(100vh - 110px)"></wux-nothing-page>
+ <!-- 站位 -->
+  <view class="zhanwei" wx:if="{{customerList.length!=0}}"></view>
+</scroll-view>
+
+</view>
+
+<!-- =========== 特约经销商 -->
+<view wx:if="{{accountType==2}}">
+  <view class="numberhander">
+      <view class="boxnuber">
+        <view class="nmber">12</view>
+        <view>终端</view>
+    </view>
+  </view>
+
+<scroll-view scroll-y="{{true}}" style="height:calc(100vh - 110px)" bindscrolltolower="lower">
+<view class="boxsollerwep" wx:for="{{customerList}}" wx:key="index">
+ <view class="boxsoller">
+  <view class="textTitle">
+    {{item.companyName}}
+    <view class="zongd">终端</view>
+  </view>
+
+  <view class="flexf">
+    <view class="fontsz">联系人姓名：<text>{{item.contact || ""}}</text></view>
+  </view>
+  <view class="fontsz">联系人电话：<text>{{item.phone || ""}}</text></view>
+  <view class="fontsz">地址：<text>{{item.address || ""}}</text></view>
+
+  </view>
+  </view>
+    <!-- ====没有数据背景 -->
+  <wux-nothing-page wx:if="{{!customerList||customerList.length==0}}" resetStyle="height:calc(100vh - 110px)"></wux-nothing-page>
+  <!-- 站位 -->
+  <view class="zhanwei" wx:if="{{customerList.length!=0}}"></view>
+</scroll-view>
+</view>

@@ -1,0 +1,32 @@
+<view class="choose-consignee-page">
+  <view class="name">
+    <view class="label-title"><text class="required">*</text>退货方名称</view>
+    <view class="search-area">
+      <van-field
+        value="{{selectDealer.name}}"
+        clearable
+        placeholder="请输入退货方名称"
+        bind:clear="onClearInputHandle"
+        bind:change="onInputChange"
+      />
+    </view>
+    <view class="scroll-list">
+      <view hidden="{{!querying}}" class="loading-area">
+        <view class="loading iconfont iconloading"></view>
+        <view class="loading-text">加载中...</view>
+      </view>
+      <view
+        class="list-row"
+        wx:for="{{delaerList}}"
+        wx:key="index"
+        data-name="{{item.name}}"
+        data-code="{{item.code}}"
+        data-type="{{item.type}}"
+        bind:tap="onClickDealer"
+      >
+        {{item.name}}
+      </view>
+    </view>
+  </view>
+  <view class="opt-btn primary" bind:tap="onSubmitHandle">提交</view>
+</view>

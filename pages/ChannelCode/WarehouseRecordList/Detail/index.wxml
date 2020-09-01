@@ -1,0 +1,16 @@
+<view class="record-detail-page">
+  <view class="page-head">
+    <mp-page-head detail="{{detail}}" title="{{hdTitle}}" items="{{hdItems}}" />
+  </view>
+  <view class="scroll-area">
+  <block wx:for="{{detail.matCodes}}" wx:key="index">
+    <mp-material-row
+    productName="{{item.matName}}"
+    chestNum="{{item.boxQuantity}}"
+    boxNum="{{item.bottleQuantity}}"
+    barcodeList="{{item.bars}}"
+    items="{{rowItems}}"
+    showCode="{{detail.way !== 'num'}}" />
+  </block>
+  </view>
+</view>

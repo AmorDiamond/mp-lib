@@ -1,0 +1,79 @@
+/* pages/MyInformation/MyInformation.wxss */
+page{
+  background-color: white;
+}
+.colors{
+  font-size:15px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(74,74,74,1);
+  line-height: 30px;
+}
+.tscolors{
+  font-size:15px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+}
+
+.mart{
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+.jben{
+  font-size:15px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(0,0,0,1);
+  margin-top: 16px;
+}
+.weithbox{
+  padding-left: 16px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.dwbox{
+  margin-top: 16px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #dddddd;
+}
+.pinp{
+  line-height: 27px;
+  font-size:15px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(74,74,74,1);
+}
+.ritext{
+  color:rgba(0,0,0,1);
+}
+.pinps{
+  line-height: 27px;
+  font-size:15px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(74,74,74,1);
+  display: flex;
+}
+.yinyimg{
+  width:140px;
+  height:90px;
+  border-radius: 4px;
+}
+.quyu{
+  color:rgba(0,0,0,1);  
+  flex: 1;
+}
+.dwboxs{
+  margin-top: 16px;
+  padding-bottom: 13px;
+}
+.yibox{
+  display: flex;
+}
+
+.lonmargin{
+  margin-top: 20px;
+}

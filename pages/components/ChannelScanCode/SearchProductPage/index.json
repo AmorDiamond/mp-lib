@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mp-nothing-page": "../NothingPage/index"
+  }
+}

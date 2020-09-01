@@ -1,0 +1,16 @@
+@import "../../../style/iconfont/iconfont.wxss";
+.noting-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: -120rpx; */
+  color: #929292;
+  font-size: 28rpx;
+}
+.noting-container .iconfont {
+  font-size: 180rpx;
+  color: #929292;
+  margin-bottom: 10rpx;
+}

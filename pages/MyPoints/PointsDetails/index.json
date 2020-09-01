@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "积分明细",
+  "usingComponents": {
+    "mp-nothing-page": "../../components/NothingPage/index",
+    "mp-filter-drawer": "../../components/FilterDrawer/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
+  }
+}

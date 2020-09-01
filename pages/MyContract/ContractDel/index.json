@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "合同达成率",
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "wux-nothing-page": "../../components/NothingPage/index",
+    "van-progress": "@vant/weapp/progress/index"
+  }
+}

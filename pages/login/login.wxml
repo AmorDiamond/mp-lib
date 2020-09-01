@@ -1,0 +1,108 @@
+<!--pages/login/login.wxml-->
+<view class="weaperbox">
+  <view class="backColor" style="height:{{navH==90?'314px':'261px'}}">
+    <view class="textTitle" style='line-height:{{navH==90?"135":"83"}}px'>经销商门户</view>
+    <view class="picbox"><image src="../../img/loginPic.png" class="loginpic"></image></view>
+    <view class="checkTextjx">
+      <view class="jxbox">
+        <view bindtap="handelchangeTitlejx">经销商</view>
+        <image src="../../img/sanj.png" class="sanj" wx:if="{{!PointTo}}"></image>
+      </view>
+      <view class="tybox">
+        <view bindtap="handelchangeTitlety">特约经销商</view>
+        <image src="../../img/sanj.png" class="tysanj" wx:if="{{PointTo}}" ></image>
+      </view>
+    </view>
+  </view>
+  <!-- from表单单 -->
+  <view class="frombox">
+    <form bindsubmit="formSubmit" >
+      <view class="{{focususer=='focus'?'userone':'userones'}}">
+      <input class="username" 
+        placeholder-class="phcolor" placeholder="请输入手机号" name="username"
+        bindfocus="handelchangeUsername"
+        bindblur="handelchangeUsernameblur"
+        bindinput="handelhasusername"
+        confirm-type="done"
+        value="{{usernameInput}}"
+        />
+      <image src="../../img/x.png" class="boxxize" bindtap="handelremove" 
+       wx:if="{{usernameInput}}" ></image>
+      </view>
+      <view class="{{focuspass=='focus'?'usertwo':'usertwos'}}">
+      <input class="password" 
+        password
+        placeholder-class="phcolor" placeholder="请输入密码"  name="password"
+        bindfocus="handelchangePassword"
+        bindblur="handelchangePasswordblur"
+        bindinput="handelhaspassword"
+        value="{{passwordInput}}"
+
+        />
+        <image src="../../img/x.png" class="boxxize" bindtap="handelpassremove" 
+        wx:if="{{passwordInput}}"></image>
+      </view>
+
+      <view class="{{focusSelect?'userthree':'userthrees'}}" >
+        <view 
+         class="pickerhodel"
+         wx:if="{{!index&&!tologin}}" 
+         bindtap="showPopup"
+         >
+        {{'请选择经销商名称'}}
+        </view>
+
+        <view class="picker" wx:if="{{tologin}}" bindtap="showPopups">
+          <input name="agentCode" value="{{array.length==1?array[0].text:index.text}}" disabled class="picker" />
+        </view>
+
+    <van-popup
+      show="{{ showpiker }}"
+      position="bottom"
+      custom-style="height: 40%"
+      bind:close="onClose"
+      closeable="{{false}}"
+    >
+      <van-picker
+        show-toolbar
+        columns="{{ array }}"
+        name='agentCode'
+        bind:cancel="PickeronCancel"
+        bind:confirm="bindPickerOk"
+      />
+     </van-popup>
+     
+          <image src="../../img/v.png" class="boxxize"></image>
+      </view>
+  <!-- 登录按钮 -->
+      <view class="loginbox">
+      <view wx:if="{{array.length!=1}}">
+          <button 
+            formType="submit" 
+            class="loginbutton" 
+            wx:if="{{!tologin}}"
+            bindtap="handeluplogin"
+            >
+            登录
+          </button>
+          <button class="loginbuttonColor" wx:if="{{tologin}}" bindgetuserinfo="handellogin" open-type="getUserInfo" formType="submit">
+              登录
+        </button>
+       </view>
+
+          <button class="loginbuttonColor" wx:if="{{array.length==1}}"        bindgetuserinfo="handellogin" open-type="getUserInfo" formType="submit">
+            登录
+          </button>
+
+      </view>
+    </form>
+    <!-- 忘记密码 注册 -->
+    <view class="buttomTetx">
+      <text bindtap="handeltopass">忘记密码？</text>
+      <text bindtap="handeltoregter">立即注册</text>
+    
+    </view>
+
+
+  </view>
+</view>

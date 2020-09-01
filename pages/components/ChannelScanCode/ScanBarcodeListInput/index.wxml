@@ -1,0 +1,12 @@
+<van-cell-group>
+  <van-field
+    value="{{ inputValue }}"
+    center
+    label="手动输入"
+    placeholder="请输入箱码/盒码/瓶码"
+    use-button-slot
+    bind:change="onInputChange"
+  >
+    <view slot="button" class="tijiao" bind:tap="onSubmitHandle">提交</view>
+  </van-field>
+</van-cell-group>

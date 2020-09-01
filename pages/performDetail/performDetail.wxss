@@ -1,0 +1,68 @@
+/* pages/performDetail/performDetail.wxss */
+
+page{
+  background-color: white;
+}
+.weaperfan{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  border-bottom: 1px solid #DDDDDD;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.borderclolor{
+  padding-left: 16px;
+  box-sizing: border-box;
+
+}
+.textcolor{
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(146,146,146,1);
+  margin-top: 8px;
+}
+.titlecolor{
+  font-size:17px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(46,46,46,1);
+}
+
+.textsize{
+  margin-top:20px;
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(81,81,81,1);
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+.quliy{
+  font-size:16px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  width:303px;
+  height:45px;
+  background:rgba(8,97,166,1);
+  border-radius:2px;
+  position: fixed;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 45px;
+  
+}
+.quliyweaper{
+  font-size:16px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  width:100%;
+  display: flex;
+  justify-content: center;
+}

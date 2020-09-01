@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="title" wx:if="{{title.id}}">
+    <view class="label" wx:if="{{title.label}}">{{title.label}}：</view>
+    <view class="value">{{rowData[title.id]}}</view>
+    <view class="more iconfont iconsm-arrow-right"></view>
+  </view>
+  <view class="row-bd">
+    <view wx:for="{{items}}" wx:key="index" class="item">
+      <view class="label">{{item.label}}：</view>
+      <view class="value">
+        <block wx:if="{{item.quantity}}">
+          <mp-product-quantity
+            chestNum="{{rowData[item.quantity.chestId]}}"
+            boxNum="{{rowData[item.quantity.boxId]}}"
+          />
+        </block>
+        <block wx:else>{{rowData[item.id]}}</block>
+      </view>
+    </view>
+  </view>
+</view>

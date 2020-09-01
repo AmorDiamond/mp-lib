@@ -1,0 +1,50 @@
+<!--pages/Addcomplaints/Addcomplaints.wxml-->
+
+<view class="weaperbox">
+  <view class="fankbt">反馈标题  
+  <input 
+  class="julie" 
+  bindinput="handelinputvalue"
+  placeholder="请填写反馈标题"
+  placeholder-class="palcolor"
+  maxlength="20"
+  value="{{inputvalue}}"
+  /></view>
+ <view class="fankui">反馈内容</view>
+  <view>
+   <textarea 
+     placeholder="请详细描述您遇到的问题，上传图片帮助更快解决！"
+     placeholder-class="palcolor"
+     bindinput="handeltextarea"
+     value="{{textareavalue}}"
+     maxlength="200"
+   />
+  </view>
+
+</view>
+
+
+<!-- ========上穿图片 -->
+
+<view class="weaperuppic">
+  <view class="tupicolor">上传图片</view>（选填，提供问题图片，最多上传4张）
+</view>
+
+<!-- ============ -->
+
+<view class="tupiup">
+  <van-uploader
+  file-list="{{ fileList }}"
+  max-count="4"
+  bind:after-read="afterRead"
+  bind:delete="handelDelete"
+/>
+
+</view>
+
+<!-- ========= -->
+<view class="zhanwei"></view>
+
+<view class="wepaeretj">
+  <view class="tjsezie" bindtap="handelsumbit">提交</view>
+</view>

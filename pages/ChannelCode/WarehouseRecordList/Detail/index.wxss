@@ -1,0 +1,3 @@
+.scroll-area {
+  padding: 0 32rpx;
+}

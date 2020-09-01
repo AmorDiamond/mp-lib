@@ -1,0 +1,65 @@
+/* pages/LogisticsTracking/LogisticsTracking.wxss */
+
+page{
+  background-color: #F1F2F1;
+}
+
+.weaperbox{
+  width:343px;
+  height:189px;
+  background:rgba(255,255,255,1);
+  border-radius:4px;
+  margin:0 auto;
+  margin-top: 16px;
+  padding: 16px 0 0 16px;
+  box-sizing: border-box;
+
+}
+.textsize{
+  font-size:16px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(46,46,46,1);
+}
+.banto{
+  display: flex;
+  margin-top: 12px;
+}
+.ztsize{
+ margin-left: 15px;
+ font-size: 15px;
+ color:rgba(0,0,0,1);
+}
+.wulsize{
+  font-size:15px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(74,74,74,1);
+}
+.colortinme{
+  font-size:12px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(146,146,146,1);
+}
+.chanklek{
+  font-size:15px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(9,105,174,1);
+}
+
+.boxfliex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 16px;
+  box-sizing: border-box;
+  margin-top: 4px;
+}
+.wlxqcolor{
+  font-size:12px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+}

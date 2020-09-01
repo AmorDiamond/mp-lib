@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "新建投诉建议",
+  "usingComponents": {
+    "van-uploader": "@vant/weapp/uploader/index"
+  }
+}

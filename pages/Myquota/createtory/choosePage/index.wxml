@@ -1,0 +1,47 @@
+<!--pages/Myquota/createtory/choosePage/index.wxml-->
+ <view class="searchbar">
+   <view class="searchWeaper">
+     <image src="../../../../img/sreach.png" class="sreachimg"></image>
+     <input 
+       type="text" 
+       placeholder="搜索"
+       placeholder-class="palceColol" 
+       class="sreachinput"
+       confirm-type="搜索"
+       value="{{inputvalue}}"
+       bindconfirm="handelsreach"
+       bindinput="handelchaneg"
+       />
+   </view>  
+
+ </view>
+
+ <view class="weapername">
+
+  <van-checkbox-group value="{{ result }}" bind:change="onChange">
+  <van-cell-group>
+    <van-cell
+      title="{{item.realName}}"
+      value-class="value-class"
+      data-name="{{item.realName}}" 
+      wx:for="{{arrList}}"
+      wx:key="index"
+      clickable
+      data-index="{{ index }}"
+      bind:click="toggle"
+    >
+      <van-checkbox
+        catch:tap="noop"
+        class="checkboxes-{{ index }}"
+        name="{{ item.id+','+item.realName }}"
+      />
+    </van-cell>
+  </van-cell-group>
+</van-checkbox-group>
+  
+ </view>
+
+
+<view class="felx">
+  <view class="felx-text" bindtap="handeltoOk">确定</view>
+</view>

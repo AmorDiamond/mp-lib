@@ -1,0 +1,12 @@
+.weui-input {
+  border: 1rpx solid #E4E4E4;
+  border-radius: 2px;
+  height: 72rpx;
+  line-height: 72rpx;
+  padding: 0 34rpx;
+  font-size: 14px;
+  color: #929292;
+}
+.input-placeholder {
+  color: #929292;
+}

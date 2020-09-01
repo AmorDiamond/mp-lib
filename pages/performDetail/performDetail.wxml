@@ -1,0 +1,20 @@
+<!--pages/performDetail/performDetail.wxml-->
+<view class="borderclolor">
+  <view class="weaperfan">
+    <view class="titlecolor">{{name}}</view>
+    <view class="textcolor">销售组织 {{budgCompC}}</view>
+    <view class="textcolor">执行案编号：{{code}}</view>
+  </view>
+</view>
+
+<!-- ==========下面内容 -->
+
+<view class="textsize">
+ {{content}}
+</view>
+
+<!-- ============下面确定按钮 -->
+
+<view class="quliyweaper">
+  <view class="quliy" bindtap="handeltok" wx:if="{{checkTime=='null'}}">确认</view>
+</view>

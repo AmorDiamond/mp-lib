@@ -1,0 +1,52 @@
+<!--pages/CodeWareHouse/CodeWareHouse.wxml-->
+<view class="barcode-list-page" wx:if="{{!confirmSubmit}}">
+  <view  class="page-hd">
+    <mp-barcode-input bind:submitHandle="onInputSubmitHandle" />
+  </view>
+
+  <scroll-view class="page-bd" scroll-y="{{true}}" style="height:calc(100vh - 122px)">
+    <view class="total-count">
+      <view class="label">总计：</view>
+      <view class="count">
+        <text class="num">{{countChestNum}}</text>箱<text class="num">{{countBoxNum}}</text>盒
+      </view>
+    </view>
+    <mp-barcode-list codeList="{{codeList}}" bind:deleteHandle="onDeleteHandle" />
+  </scroll-view>
+
+  <view class="footer">
+    <view class="opt-btn primary plain" bind:tap="onContinueScan">继续扫码</view>
+    <view class="opt-btn primary" bind:tap="onCompleteScan">结束扫码</view>
+  </view>
+</view>
+
+<!-- 扫码入库确认提交界面 -->
+<view class="warehouse-confirm-page" wx:if="{{confirmSubmit}}">
+  <view class="total-count">
+    <view class='label'>总计：</view>
+    <view class="count">
+      <mp-product-quantity chestNum="{{countChestNum}}" boxNum="{{countBoxNum}}" />
+    </view>
+  </view>
+  <view class="product-list">
+    <block wx:for="{{productList}}" wx:key="index">
+      <mp-material-row
+        productName="{{item.matName}}"
+        chestNum="{{item.boxQuantity}}"
+        boxNum="{{item.bottleQuantity}}"
+        showCode="{{true}}"
+        barcodeList="{{item.bars}}"
+      />
+    </block>
+  </view>
+  <view class="footer">
+    <button class="opt-btn primary" bind:tap="onOpenDialogHandle">确认提交</button>
+  </view>
+</view>
+
+<!-- 确认信息弹框 -->
+<van-dialog show="{{showDialog}}" title="提示" bind:confirm="confirmSubmitHandle" bind:cancel="onDialogCancelHandle" confirm-button-color="#006AB3" cancel-button-color="#696969" use-slot show-cancel-button>
+  <view class="dialog-content">
+    请确认本次入库数量<text class="num">{{countChestNum}}</text>箱<text class="num">{{countBoxNum}}</text>盒，其中异常数量<text class="num">{{differentChestNum}}</text>箱<text class="num">{{differentBoxNum}}</text>盒，<text wx:if="{{differentBarcodes}}">(异常条码：{{differentBarcodes}})，</text>确认后将增加您的库存！
+  </view>
+</van-dialog>

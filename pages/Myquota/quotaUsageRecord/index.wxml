@@ -1,0 +1,22 @@
+<!--pages/Myquota/quotaUsageRecord/index.wxml-->
+ <view class="item-weap" wx:for="{{itemList}}" wx:key="index">
+   <view class="item-curent" data-id="{{item.id}}" catchtap="handeltoDetails">
+
+      <view class="header-box">
+          <view>调整编号： {{item.id}}</view>
+           <image src="../../../img/goto.png" class="dotoimg"></image>
+      </view>
+
+        <view class="cont-szie">
+            <view>调整类型：{{item.modifyType=='UP'?'调增':'调减'}}</view>
+            <view>调整后剩余可用数量：{{item.modifyAfterNum||'--'}}件</view>
+            <view>调整时间：{{item.createTime}}</view>
+        </view>
+
+   </view>
+ 
+ </view>
+
+   <!-- ====没有数据背景 -->
+  <wux-nothing-page wx:if="{{!itemList||itemList.length==0}}" resetStyle="height:100vh">
+  </wux-nothing-page>

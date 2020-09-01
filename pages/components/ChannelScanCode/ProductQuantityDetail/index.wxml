@@ -1,0 +1,4 @@
+<view class="quantity-detail">
+  <text class="quantity-num">{{chestNum || 0}}</text>箱
+  <text class="quantity-num">{{boxNum || 0}}</text>盒
+</view>

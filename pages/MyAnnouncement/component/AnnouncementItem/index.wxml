@@ -1,0 +1,11 @@
+<view class="announce-item">
+  <view class="announce-info">
+    <view class="title {{new?'new':''}}">{{title}}</view>
+    <view class="time">{{time}}</view>
+    <rich-text  class="content" nodes="{{content}}"></rich-text>
+  </view>
+  <view class="announce-more" bind:tap="clickHandle">
+    <view class="more-text">查看详情</view>
+    <view class="iconfont iconsm-arrow-right more-icon"></view>
+  </view>
+</view>

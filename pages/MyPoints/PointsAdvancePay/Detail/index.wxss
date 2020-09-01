@@ -1,0 +1,168 @@
+.points-advance-detail {
+  padding-bottom: 150rpx;
+}
+.head-area {
+  padding: 40rpx 10rpx 48rpx;
+  background-color: #fff;
+  position: relative;
+  margin-bottom: 14rpx;
+}
+.filter-time {
+  position: absolute;
+  top: 40rpx;
+  right: 48rpx;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #4A4A4A;
+}
+.filter-time .arrow-icon {
+  height: 0;
+  border-top: 4px solid #515151;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  margin-left: 12rpx;
+}
+.head-area .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 52rpx;
+}
+.head-area .top .label {
+  color: #000000;
+  margin-bottom: 16rpx;
+}
+.head-area .top .number {
+  color: #0969AE;
+  font-size: 29px;
+}
+.head-area .bottom {
+  display: flex;  
+}
+.head-area .bottom .item {
+  width: 32%;
+  margin-right: 2%;
+  text-align: center;
+}
+.head-area .terminal-bottom .item {
+  width: 49%;
+}
+.head-area .bottom .item:last-child {
+  margin-right: 0;
+}
+.head-area .bottom .number {
+  color: #000000;
+  font-size: 19px;
+  margin-bottom: 10rpx;
+}
+.head-area .bottom .label {
+  color: #4A4A4A;
+  font-size: 14px;
+}
+
+.tabs {
+  border-bottom: 1rpx solid #ddd;
+}
+.tabs .van-tabs__line {
+  background-color: #0969AE;
+}
+.tabs .van-tab {
+  color: #4A4A4A;
+  font-size: 15px;
+}
+.tabs .van-tab--active {
+  color: #0969AE;
+}
+
+.list .section {
+  background-color: #fff;
+  margin-top: 22rpx;
+}
+.list .section:first-child {
+  margin-top: 0;
+}
+.section .time-title {
+  padding: 40rpx 32rpx 10rpx;
+  font-size: 14px;
+  color: #929292;
+}
+.section .van-cell__value {
+  color: #000000;
+  font-size: 16px;
+  flex: none;
+}
+.section .van-cell__title {
+  color: #2E2E2E;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.season-area .item-content {
+  font-size: 14px;
+  color: #929292;
+  border-top: 1rpx solid #ddd;
+  position: relative;
+  margin-bottom: 30rpx;
+  padding-top: 30rpx;
+}
+.season-area .item-content:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+.season-area .item-content:last-child {
+  margin-bottom: 0;
+}
+.season-area .item-content .item {
+  margin-bottom: 12rpx;
+}
+.season-area .item-content .extra-info {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+}
+.season-area .extra-info .number {
+  color: #4A4A4A;
+  margin-bottom: 12rpx;
+}
+.season-area .extra-info .pendding {
+  color: #F58D11;
+}
+.season-area .extra-info .success {
+  color: #63B20D;
+}
+
+.footer-btn {
+  position: fixed;
+  bottom: 40rpx;
+  line-height: 90rpx;
+  padding: 0;
+  left: 10%;
+  right: 10%;
+}
+
+
+.dialog-content {
+  padding: 40rpx;
+  font-size: 14px;
+}
+.dialog-content .label-title, .control-itme {
+  margin-bottom: 30rpx;
+}
+.control-itme {
+  display: flex;
+  align-items: center;
+}
+.control-itme .label {
+  /* width: 70px; */
+}
+.control-itme .control {
+  flex: 1;
+}
+.control-itme input {
+  border: 1rpx solid #ddd;
+  border-radius: 4px;
+  padding: 16rpx 20rpx;
+}

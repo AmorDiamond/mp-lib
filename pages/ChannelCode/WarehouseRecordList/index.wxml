@@ -1,0 +1,35 @@
+<view class="record-list-page">
+  <view class="search-bar">
+    <view class="search-wrap">
+      <image src="../../../img/sreach.png" class="sreachimg"></image>
+      <input type="text" placeholder="请输入入库单号查询" placeholder-class="palceColol" class="sreachinput" confirm-type="搜索" bind:blur="onSearchInputChange" bind:confirm="onSearchHandle" />
+    </view>
+    <image src="../../../img/sxuan.png" class="filter-icon" bind:tap="onFilterOpenHandle"></image>
+  </view>
+  <view class="warehouse-list-content">
+    <scroll-view scroll-y bind:scrolltolower="onScrollHandle" class="scroll-wrap">
+      <block wx:if="{{list.length !== 0}}">
+        <mp-list-row
+          wx:for="{{list}}"
+          wx:key="index"
+          rowData="{{item}}"
+          items="{{rowItems}}"
+          title="{{rowTitle}}"
+          bind:tap="onGotoDetail"
+          data-code="{{item.code}}"
+        />
+        <mp-page-foot-tips wx:if="{{list && list.length !== 0}}" querying="{{querying}}" hasMore="{{hasMore}}" />
+      </block>
+      <block wx:else>
+        <mp-nothing-page />
+      </block>
+    </scroll-view>
+  </view>
+  <!-- 筛选面板 -->
+  <mp-filter-drawer
+    show="{{showFilter}}"
+    conditions="{{conditions}}"
+    bind:submitHandle="onSubmitHandle"
+    bind:closeHandle="onFilterCloseHandle"
+  />
+</view>

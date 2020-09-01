@@ -1,0 +1,6 @@
+<radio-group class="{{type == 'BtnRadio' ? 'btn-radio' : 'radio'}}" name="{{name}}" bind:change="onChangeHandle">
+  <label wx:for="{{options}}" wx:key="index">
+    <radio value="{{item.value}}" checked="{{item.value == value}}" />
+    {{item.title}}
+  </label>
+</radio-group>

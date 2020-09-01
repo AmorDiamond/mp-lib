@@ -1,0 +1,18 @@
+/* pages/Myquota/quotaUsageDetails/index.wxss */
+
+page{
+  background-color: white;
+}
+
+.text-key{
+  font-size: 15px;
+  color: #4A4A4A;
+  margin-top: 12px;
+}
+.text-styl{
+  color:black;
+}
+.weaper-page{
+  padding-left: 16px;
+  box-sizing: border-box;
+}

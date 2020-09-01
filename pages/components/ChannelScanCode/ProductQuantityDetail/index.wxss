@@ -1,0 +1,10 @@
+.quantity-detail {
+  display: flex;
+}
+.quantity-detail .quantity-num {
+  color: #fa6400;
+  margin: 0 4px;
+}
+.quantity-detail .quantity-num:first-child {
+  margin-left: 0;
+}

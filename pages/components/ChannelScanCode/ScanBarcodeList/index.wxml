@@ -1,0 +1,17 @@
+<wxs src="../../../../utils/methods.wxs" module="method" />
+<view class="container">
+  <view class="barcode-list-hd">
+    <view class="barcode">条码编号</view>
+    <view class="type">类型</view>
+    <view class="opt">操作</view>
+  </view>
+  <view class="barcode-list-bd">
+    <view class="row-item" wx:for="{{codeList}}" wx:key="index">
+      <view class="barcode">{{item[mapping.code]}}</view>
+      <view class="type">{{method.mappingUnitType(item[mapping.type])}}</view>
+      <view class="opt">
+        <view class="iconfont icondelete" data-code='{{item[mapping.code]}}' bind:tap="onDeleteHandle"></view>
+      </view>
+    </view>
+  </view>
+</view>

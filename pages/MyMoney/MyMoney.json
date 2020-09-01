@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "资金总览",
+  "usingComponents": {
+    "van-divider": "@vant/weapp/divider",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
+  }
+}

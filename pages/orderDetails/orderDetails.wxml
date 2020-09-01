@@ -1,0 +1,166 @@
+<!--pages/orderDetails/orderDetails.wxml-->
+<wxs src="../../utils/commtime.wxs" module="formtime"/>
+
+<view class="titleheader">
+  <view class="timeweaper">
+    <view class="leftzt">{{allData.DeliveryAddressTypeName}}</view>
+    <view class="rightTme">计划起运日：
+    {{allData.PlanDeliveryDate?formtime.formatDate(allData.PlanDeliveryDate):""}}</view>
+  </view>
+   <!-- =======位置 -->
+   <view class="addressWeaper">
+     <image src="../../img/address.png" class="addressimg"></image>
+       <view class="wailoft">
+           <text class="companycolor">{{allData.ReceiveCustomerName}}</text>
+           <view class="addcolor">{{allData.RegionPathAddress}}</view>
+       </view>
+   </view>
+</view>
+ <!-- ==============商品信息 -->
+<view class="scoller">
+  <view class="cpxxweaper">
+    <view class="spcolor">
+      <text class="shangpxx">商品信息</text>
+     <text class="textcolor" wx:if="{{type=='2'}}">已完成</text>
+     <text class="textcolors" wx:if="{{type=='1'}}">流程中</text>
+     <text class="textcolorts" wx:if="{{type=='0'}}">未进入</text>
+     <text class="textcolorts" wx:if="{{type=='3'}}">被终止</text>
+    </view>
+    <!-- 分割线 -->
+     <!-- <wux-divider show-text="{{false}}" />  -->
+     <view class="sanpweaper">
+
+      <view class="jianscard" wx:for="{{allData.ItemList}}" wx:key="index" >
+        <view class="mltext">{{item.ProductName||""}}</view>
+        <view class="bianh">商品编号：{{item.ProductId||""}}</view>
+        <view class="jiage">
+          <text class="money">￥{{item.Price||''}}</text>
+          <text class="jianshu">× {{item.Amount||''}}件</text>
+        </view>
+      </view>
+
+<!-- ========== -->
+
+
+    </view> 
+    <!-- ===========金额 -->
+    <view class="jinemingx">
+      <view class="jemingxfexl">
+         <view>金额明细</view>
+         <view class="weapershouqi" wx:if="{{showmoeny}}" bindtap="handeluplow">
+            <image src="../../img/souqi.png" class="shouqiimg"></image>
+            <view>收起</view>
+         </view>
+        <view class="weapershouqi" wx:if="{{!showmoeny}}" bindtap="handeluplows">
+            <image src="../../img/zkai.png" class="shouqiimg"></image>
+            <view>展开</view>
+         </view>
+      </view>
+      <!-- ===== -->
+      <view class="weapercolorflrx" wx:if="{{showmoeny}}">
+       <view class="zhekouje">
+         <view class="zkcolor">折扣金额</view>
+         <view class="jgecolor">￥{{allData.DiscountMoney}}</view>
+       </view>
+
+        <view class="zhekouje">
+         <view class="zkcolor">费用兑现金额</view>
+         <view class="jgecolor">￥{{allData.ExpenseMoney}}</view>
+       </view>
+
+        <view class="zhekouje">
+         <view class="zkcolor">保证金</view>
+         <view class="jgecolor">￥{{allData.MarginMoney}}</view>
+       </view>
+
+        <view class="zhekouje">
+         <view class="zkcolor">销售金额</view>
+         <view class="jgecolor">￥{{allData.SalesMoney}}</view>
+       </view>
+
+     </view>
+
+    </view>
+<!-- =========分割 -->
+  <view class="classzjian">
+    <view class="zgongjiage"><text class="moenycolor">￥{{allData.Money}}</text>共 {{allData.TotalAmount}} 件商品 实付款:</view>
+  </view>
+
+  </view>
+
+  <!-- =========分割 -->
+ <view class="jibenxx">
+   <view class="jibenxxbox">基本信息</view>
+  <view class="ppaddem">
+    <view class="fapneix">
+      <view class="biaohcolor">订单编号:</view>
+      <view class="nmbercode">{{allData.Number}}</view>
+    </view>
+
+    <wux-divider show-text="{{false}}" />
+    <view class="fapneix">
+      <view class="biaohcolor">订单类型:</view>
+      <view class="nmbercode">{{allData.SalesOrderTypeName}}</view>
+    </view>
+
+    <wux-divider show-text="{{false}}" />
+    <view class="fapneix">
+      <view class="biaohcolor">下单时间:</view>
+      <view class="nmbercode">
+      {{allData.AddTime?formtime.formatDate(allData.AddTime):""}}</view>
+    </view>
+
+    <wux-divider show-text="{{false}}" />
+    <view class="fapneix">
+      <view class="biaohcolor">销售组织:</view>
+      <view class="nmbercode">{{allData.SalesOrganizationName}}</view>
+    </view>
+
+  </view>
+ </view>
+<!-- =========分割 -->
+<view class="jibenxxs">
+   <view class="jibenxxbox">发票信息</view>
+  <view class="ppaddem">
+    <view class="fapneix">
+      <view class="biaohcolor">发票类型:</view>
+      <view class="nmbercode">增值税发票</view>
+    </view>
+
+    <wux-divider show-text="{{false}}" />
+    <view class="fapneix">
+      <view class="biaohcolor">开票金额:</view>
+      <view class="nmbercode">￥14999.00</view>
+    </view>
+
+    <wux-divider show-text="{{false}}" />
+    <view class="fapneix">
+      <view class="biaohcolor">已开票金额:</view>
+      <view class="nmbercode">￥14999.00</view>
+    </view>
+
+    <wux-divider show-text="{{false}}" />
+    <view class="fapneix">
+      <view class="biaohcolor">未开票金额:</view>
+      <view class="nmbercode">￥00.00</view>
+    </view>
+
+  </view>
+
+ </view>
+
+
+ </view>
+
+<view class='placeholder-view'></view>
+   <!-- =====按钮 -->
+ <view class="annuiy">
+ <!-- class="boyyontext" -->
+  <view 
+   class="boyyontextsw"
+   wx:for="{{buttonList}}"
+   wx:key="index"
+   data-id="{{item.id}}"
+   catchtap="handelbutton"
+  >{{item.name}}</view>
+ </view>

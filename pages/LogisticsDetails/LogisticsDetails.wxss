@@ -1,0 +1,36 @@
+/* pages/LogisticsDetails/LogisticsDetails.wxss */
+page{
+  background-color: #F1F2F1;
+}
+.headerbox{
+  height: 125px;
+  width: 100%;
+  background-color: white;
+  padding: 16px 0 0 16px;
+  box-sizing: border-box;
+}
+
+.margintop{
+  margin-top: 12px;
+}
+.textsize{
+  font-size:16px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(46,46,46,1);
+}
+.banto{
+  display: flex;
+  margin-top: 12px;
+}
+.ztsize{
+ margin-left: 15px;
+ font-size: 15px;
+ color:rgba(0,0,0,1);
+}
+.wulsize{
+  font-size:15px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(74,74,74,1);
+}

@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="search-area">
+    <view class="input-area">
+      <view class="zoom-icon">
+        <image src="../../../../img/sreach.png" />
+      </view>
+      <input class="search-input" bind:confirm="onSearchHandle" focus placeholder="请输入产品名称搜索"/>
+    </view>
+    <view class="cancle-btn" bind:tap="onCancleSearch">取消</view>
+  </view>
+  <view class="search-bd">
+    <block wx:if="{{list && list.length !== 0}}">
+      <scroll-view class="scroll-list" scroll-y="{{true}}" bind:scrolltolower="onScrollBottomHandle">
+        <view
+          class="list-row"
+          wx:for="{{list}}"
+          wx:key="index"
+          data-code="{{item.prodBarcode}}"
+          data-name="{{item.matName}}"
+          bind:tap="onSelectRowHandle"
+        >{{item.matName}}</view>
+      </scroll-view>
+    </block>
+    <block wx:else>
+      <mp-nothing-page />
+    </block>
+  </view>
+</view>

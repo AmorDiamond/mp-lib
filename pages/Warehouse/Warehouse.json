@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "入库管理",
+
+  "usingComponents": {
+    "wux-nothing-page": "../components/NothingPage/index"
+  }
+}

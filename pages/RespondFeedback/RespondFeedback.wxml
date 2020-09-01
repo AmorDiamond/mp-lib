@@ -1,0 +1,98 @@
+<!--pages/RespondFeedback/RespondFeedback.wxml-->
+<!-- 站位 -->
+<view style='height:{{navH==90?"93":"71"}}px'></view>
+<view class="header" style='height:{{navH==90?"93":"71"}}px'>
+   <image src="../../img/back.png" class="imgback" 
+   style='margin-top:{{navH==90?"57":"34"}}px' bindtap="handelback"></image>
+   <view class="colorhf" style='line-height:{{navH==90?"135":"83"}}px'>回复反馈</view>
+</view>
+<view class="wilhrbox">
+   <view class="xptitle">{{feekbackDetail.feedbackTitle}}</view>
+  <!-- <view class="textcolor">{{feekbackDetail.messages[0].message}}</view> -->  
+  <view class="tupiams">
+    <view class="tupiam" wx:for="{{url}}" wx:key="index">
+      <image src="{{item}}" class="tupiam" catchtap="handelpew" data-url="{{item}}"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 站位 -->
+<view class="zwei"></view>
+
+<view class="fankj">
+ <view class="dantext">反馈记录</view>
+ 
+<!-- 经销商 -->
+<scroll-view scroll-y  style="height:calc(100vh - {{navH==90?'500':'478'}}px)" scroll-into-view="{{tolast}}">
+ <view  wx:for="{{feekbackList}}" wx:key="index" >
+
+ <view wx:if="{{item.type==1}}">
+    <view class="weaperbox"> 
+        <view class="weaperimg">
+          <view>
+            <view class="keftext">{{item.type==1?item.sendName:'客服'}}</view>
+            <view class="timesize">{{item.createdTime}}</view>
+          </view>
+          <image src="{{item.type==1?avarurl:'../../img/kefu.png'}}" class="kefuimg"></image>
+        </view>
+    </view>
+    <view class="huih" id="{{'id'+item.id}}">{{item.message}}</view>
+
+ </view>
+
+
+ <!-- 客服 -->
+  <view wx:else  >
+
+   <view class="weaperimg">
+    <image src="{{item.type==1?avarurl:'../../img/kefu.png'}}" class="kefuimg"></image>
+    <view>
+      <view class="kefleft">{{item.type==1?item.sendName:'客服'}}</view>
+      <view class="timesize">{{item.createdTime}}</view>
+    </view>
+  </view>
+
+  <!-- ======= -->
+  <view class="huihleft">{{item.message}}</view>
+
+
+  </view>
+
+</view>
+
+ <view class="botzwei"></view>
+</scroll-view>
+
+</view>
+
+
+
+
+<!-- =========下面输入框 -->
+
+  <view class="flexput" wx:if="{{status!=2}}">
+    <image src="../../img/pen.png" class="penimg" bindtap="handelsend"></image>
+    <textarea
+     class="inptflex" 
+     style="height:50px"
+     placeholder="请输入回复内容" 
+     placeholder-class="textpil" 
+     confirm-type="send"
+     cursor-spacing='16'
+     bindconfirm="handelsend"
+     show-confirm-bar="true"
+     adjust-position="true"
+     bindinput="inputValue"
+     value="{{inputValue}}"
+     />
+  </view>
+
+<van-popup show="{{ showtost }}" bind:close="onClose">
+  <view class="boxok">
+    <view class="mesge">该问题是否已解决？</view>
+    <view class="fotter">
+      <view class="wju" bindtap="handelcencel">未解决</view>
+      <view class="yju" bindtap="handelcrfimok">已解决</view>
+    </view>
+  </view>
+</van-popup>

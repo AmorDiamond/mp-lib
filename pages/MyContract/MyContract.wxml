@@ -1,0 +1,90 @@
+<!--pages/MyContract/MyContract.wxml-->
+<wxs src="../../utils/commtime.wxs" module="formtime"/>
+
+ <view class="searchbar">
+   <view class="searchWeaper">
+     <image src="../../img/sreach.png" class="sreachimg"></image>
+     <input 
+       type="text" 
+       placeholder="请输入合同编号或合同名称查询"
+       placeholder-class="palceColol" 
+       class="sreachinput"
+       confirm-type="搜索"
+       value="{{inputvalue}}"
+       bindconfirm="handelsreach"
+       bindinput="handelchaneg"
+       />
+   </view>  
+  
+ </view>
+
+
+<van-tabs active="{{ active }}" bind:click="changelibs" color="#0969AD">
+  <van-tab title="{{item.brandName}}" name="{{item.brandCode}}" wx:for="{{tabList}}" wx:key="index" />
+</van-tabs>
+
+
+
+ <!-- =========== -->
+
+<scroll-view scroll-y style="height:calc(100vh - 109px)" bindscrolltolower="hadnellower">
+<view 
+  class="whilewlft"
+  bindtap="handeltoDetail"
+  data-id="{{item.Number}}"
+  wx:for="{{arrList}}"
+  wx:key="index"
+>
+ <view class="xianwhilebox">
+  <view class="jizTime">
+     <view class="text-flex">{{item.Name}}</view>
+     <view class="{{history?'shix':'sxiao'}}">{{item.ContractStatusName || ''}}</view>
+  </view>
+
+    <view class="boxjief">
+    <text>合同编号：</text><text class="textzi">{{item.Number || ''}}</text>
+  </view>
+
+      <view class="boxjief">
+    <text>有效期：</text><text class="textzi">{{item.BeginTime&&formtime.formatDate(item.BeginTime)|| ''}} 至 {{item.EndTime&&formtime.formatDate(item.EndTime)||''}}</text>
+  </view>
+
+ </view>
+</view>
+
+<view class="zhw-height" wx:if="{{arrList.length!=0}}"></view>
+  <!-- ====没有数据背景 -->
+  <wux-nothing-page wx:if="{{!arrList||arrList.length==0}}" resetStyle="height:calc(100vh - 109px)"></wux-nothing-page>
+</scroll-view>
+<!-- ======== -->
+
+<!-- <view 
+  class="xianwhilebox"
+  bindtap="handeltoDetail"
+  wx:if="{{history}}"
+
+>
+  <view class="jizTime">
+     <view>2018年泸州老窖百年经销合同1232</view>
+     <view class="{{history?'shix':'sxiao'}}">{{history?'已终止':'生效中'}}</view>
+  </view>
+
+    <view class="boxjief">
+    <text>合同编号：</text><text class="textzi">1000000</text>
+  </view>
+
+      <view class="boxjief">
+    <text>有效期：</text><text class="textzi">2019-12-01 至 2019-12-30</text>
+  </view>
+
+</view> -->
+
+
+<!-- ========= -->
+
+<view class="flecwobox">
+    <view class="hetdwon">
+      <view bindtap="handeltoHistory">{{history?'生效合同查看':'历史合同查看'}}</view>
+      <image src="../../img/lansgoto.png" class="lansgotoimg"></image>
+    </view>
+</view>   

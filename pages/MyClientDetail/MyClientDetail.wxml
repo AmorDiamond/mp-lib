@@ -1,0 +1,20 @@
+<!--pages/MyClientDetail/MyClientDetail.wxml-->
+ <scroll-view scroll-y="{{true}}" style="height:calc(100vh - 0px)" bindscrolltolower="lower">
+<view class="boxsoller" wx:for="{{childer}}" wx:key="index">
+<view class="textTitle">
+  {{item.companyName || ""}}
+  <view class="zongd">终端</view>
+</view>
+
+<view class="flexf">
+  <view class="fontsz">联系人姓名：<text>{{item.contact}}</text></view>
+</view>
+<view class="fontsz">联系人电话：<text>{{item.phone}}</text></view>
+<view class="fontsz">地址：<text>{{item.address}}</text></view>
+
+</view>
+<!-- 占无数据样式 -->
+      <wux-nothing-page  
+      wx:if="{{!childer||childer.length==0}}" 
+      resetStyle="margin-top: -112px"></wux-nothing-page>
+</scroll-view>

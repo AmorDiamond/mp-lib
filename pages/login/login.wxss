@@ -1,0 +1,203 @@
+/* pages/login/login.wxss */
+page{
+  background-color: white;
+}
+.backColor{
+  width:100%;
+  height:261px;
+  overflow: hidden;
+  background:linear-gradient(175deg,rgba(12,128,195,1) 0%,rgba(5,73,144,1) 100%);
+}
+.weaperbox{
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.textTitle{
+  font-size:16px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  color: white;
+  text-align: center;
+}
+.checkTextjx{
+  font-size:14px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  margin-top:20px;
+  z-index: 200;
+}
+.loginpic{
+  width: 108px;
+  height: 108px;
+}
+.picbox{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sanj{
+  z-index: 20;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top:36px;
+  left: 8px;
+}
+.tysanj{
+  z-index: 20;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top:36px;
+  left: 25px;
+}
+
+.jxbox{
+  position: relative;
+}
+.tybox{
+  position: relative;
+}
+.frombox{
+ width: 100%;
+ height: auto;
+ padding: 0 36px;
+ box-sizing: border-box;
+}
+.boxxize{
+  width: 21px;
+  height: 21px;
+}
+.userone{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid #064E95;
+  margin-top: 26px;
+}
+.usertwo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin-top: 10px;
+  border-bottom: 1px solid #064E95;
+}
+.userthree{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  margin-top: 10px;
+  border-bottom: 1px solid #064E95;
+}
+/* 该表border颜色 */
+.userones{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid #AAAAAA;
+  margin-top: 26px;
+}
+.usertwos{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin-top: 10px;
+  border-bottom: 1px solid #AAAAAA;
+}
+.userthrees{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  margin-top: 10px;
+  border-bottom: 1px solid #AAAAAA;
+}
+/* ====== */
+.username{
+  width: 90%;
+  height: 27px;
+  font-size: 15px;
+}
+.password{
+  width: 90%;
+  height: 27px;
+  font-size: 15px;
+}
+.picker{
+  width: 100%;
+  height: 50px;
+  /* position: absolute;
+  top:0;
+  left: 0px;
+  bottom: 0px;
+  right: 0; */
+  line-height: 50px;
+  font-size: 15px;
+}
+.pickerhodel{
+  width: 100%;
+  height: 50px;
+  /* position: absolute;
+  top:0;
+  left: 0px;
+  bottom: 0px;
+  right: 0; */
+  line-height: 50px;
+  font-size: 15px;
+  color: #A9A9A9;
+}
+.pickers{
+  width: 100%;
+  height: 50px;
+  position: relative;
+  top:0;
+  left: 0px;
+  bottom: 0px;
+  right: 0;
+}
+.phcolor{
+  color:#A9A9A9 ;
+  font-size: 15px;
+}
+.loginbox{
+  margin-top:32px;
+  border-radius: 4px;
+  width: 100%;
+}
+.loginbutton{
+ background-color: #75ADF3;
+ color: white;
+ font-size: 14px;
+ width: 100% !important;
+ height: 45px;
+ line-height:33px;
+}
+.loginbuttonColor{
+  background:linear-gradient(180deg,rgba(12,128,195,1) 0%,rgba(5,73,144,1) 100%);
+  color: white;
+  font-size: 14px;
+  width: 100% !important;
+  height: 45px;
+  line-height:33px;
+}
+.buttomTetx{
+  font-size: 12px;
+  color: #1890FF;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 26px;
+}

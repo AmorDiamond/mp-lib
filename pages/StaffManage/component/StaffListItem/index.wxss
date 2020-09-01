@@ -1,0 +1,47 @@
+@import "../../../../style/iconfont/iconfont.wxss";
+.staff-item {
+  min-height:68px;
+  padding: 24rpx 32rpx 14rpx;
+  background: rgba(255,255,255,1);
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+.staff-info {
+  flex: 1;
+}
+.staff-more {
+  width: 40rpx;
+}
+.staff-more .more-icon {
+  /* width: 32rpx;
+  height: 32rpx; */
+  color: #4a4a4a;
+  font-size: 40rpx;
+}
+.staff-user {
+  margin-bottom: 14rpx;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  color: rgba(74,74,74,1);
+}
+.staff-name {
+  font-size: 32rpx;
+  margin-right: 24rpx;
+  font-weight: bold;
+  color: rgba(46,46,46,1);
+}
+.staff-role {
+  flex: 1;
+  font-size: 24rpx;
+  color: #17ADF9;
+}
+.staff-role-item {
+  margin: 10rpx;
+  background: rgba(221,244,255,1);
+  border-radius: 20rpx;
+  padding: 4rpx 16rpx;
+  display: inline-block;
+}

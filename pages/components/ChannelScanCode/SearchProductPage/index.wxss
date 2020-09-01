@@ -1,0 +1,55 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #F1F2F1;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+}
+.search-area {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  font-size: 14px;
+}
+.input-area {
+  border: 1rpx solid #ddd;
+  border-radius: 2px;
+  display: flex;
+  flex: 1;
+  height: 40px;
+  align-items: center;
+}
+.zoom-icon {
+  line-height: 0;
+}
+.zoom-icon image {
+  width: 16px;
+  height: 16px;
+  margin: 0 16px;
+  vertical-align: middle;
+}
+.cancle-btn {
+  padding: 6px 8px;
+  color: #037AFF;
+  margin-left: 30rpx;
+}
+.search-bd {
+  background-color: #fff;
+  flex: 1;
+  overflow: hidden;
+}
+.scroll-list {
+  height: 100%;
+}
+.list-row {
+  padding: 30rpx 0;
+  margin-left: 32rpx;
+  border-bottom: 1rpx solid #ddd;
+  font-size: 14px;
+}

@@ -1,0 +1,212 @@
+/* pages/RespondFeedback/RespondFeedback.wxss */
+page{
+  background-color: white;
+}
+
+.wilhrbox{
+  width:100%;
+  background:rgba(255,255,255,1);
+  padding: 18px 16px 18px 16px;
+  box-sizing: border-box;
+  min-height: 249px;
+}
+
+.xptitle{
+  font-size:15px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(74,74,74,1);
+}
+.textcolor{
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(74,74,74,1);
+  margin-top: 6px;
+}
+.tupiam{
+  width:90px;
+  height:90px;
+  margin-top: 6px;
+  margin-left: 10px;
+}
+.tupiams{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.fankj{
+  width: 100%;
+  /* height:147px; */
+  background:rgba(255,255,255,1);
+  margin-top: 12px;
+}
+
+.dantext{
+  height: 43px;
+  padding-left: 16px;
+  box-sizing: border-box;
+  line-height: 43px;
+  border-bottom: 1px solid #dddddd;
+  font-size:15px;
+  font-family:PingFangSC-Medium,PingFang SC;
+}
+.kefuimg{
+  height: 36px;
+  width: 36px;
+}
+.weaperimg{
+  width: 188px;
+  margin-top: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+.keftext{
+  font-size:14px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  color:rgba(74,74,74,1);
+  text-align: right;
+}
+.timesize{
+  font-size:12px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(146,146,146,1);
+  /* width: 200px; */
+}
+.huih{
+  padding-right: 16px;
+  box-sizing: border-box;
+  font-size:13px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(74,74,74,1);
+  margin-top: 14px;
+  float: right;
+  width: 51%;
+  margin-bottom: 30px;
+}
+.flexput{
+  position: fixed;
+  bottom: 10px;
+  height:50px;
+  width: 100%;
+  background:#FFFEFF;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+.penimg{
+  height: 16px;
+  width: 16px;
+ 
+}
+.inptflex{
+flex: 1;
+padding-left: 12px;
+padding-top: 16px;
+box-sizing: border-box;
+}
+
+.textpil{
+  font-size:15px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(169,169,169,1);
+}
+
+.header{
+  height: 71px;
+  width: 100%;
+  background-color: #0969AD;
+  padding: 0 18px;
+  box-sizing: border-box;
+  position: fixed;
+  top:0;
+}
+.colorhf{
+  height:16px;
+  font-size:16px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  color: white;
+  line-height: 86px;
+  text-align: center;
+}
+.imgback{
+  width:19px;
+  height:19px;
+  float: left;
+  margin-top: 34px;
+}
+.zwei{
+  height: 18px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+.botzwei{
+  height: 62px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  bottom: 0px;
+}
+.boxok{
+  width: 260px;
+  height: 170px;  
+  position: relative;
+}
+.mesge{
+  text-align: center;
+  line-height: 100px;
+}
+.van-popup{
+  border-radius: 6px !important;
+}
+.fotter{
+  border-top: 1px solid #f2f2f2;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display:flex;
+}
+.yju{
+ width: 50%;
+ text-align: center;
+ line-height: 50px;
+ color: #17ADF9;
+ border-left: 1px solid #f2f2f2;
+}
+.wju{
+  width: 50%;
+  text-align: center;
+  line-height: 50px;
+}
+
+.weaperbox{
+  float: right;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+.kefleft{
+  font-size:14px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  color:rgba(74,74,74,1);
+}
+
+.huihleft{
+  padding-left: 16px;
+  box-sizing: border-box;
+  font-size:13px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(74,74,74,1);
+  margin-top: 14px;
+  width: 51%;
+}

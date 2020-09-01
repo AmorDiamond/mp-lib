@@ -1,0 +1,17 @@
+<view class="messaage-center-page">
+  <view class="message-row" bind:tap="onViewDetailHandle">
+    <view class="tag"></view>
+    <view class="title">积分调整</view>
+    <view class="time">2019-10-25 12:20</view>
+    <view class="content">根据考核办法，2020年Q1季度就考核项”暗流价“，调减积分100分，请知晓！根据考核办法，2020年Q1季度就考核项”暗流价“，调减积分100分，请知晓！</view>
+  </view>
+  <view class="message-row" bind:tap="onViewDetailHandle">
+    <!-- <view class="tag"></view> -->
+    <view class="title">积分调整</view>
+    <view class="time">2019-10-25 12:20</view>
+    <view class="content">根据考核办法，2020年Q1季度就考核项”暗流价“，调减积分100分，请知晓！根据考核办法，2020年Q1季度就考核项”暗流价“，调减积分100分，请知晓！</view>
+  </view>
+</view>
+
+<!-- 弹框显示详细内容 -->
+<van-dialog id="van-dialog" />

@@ -1,0 +1,161 @@
+<!--pages/MyStock/MyStock.wxml-->
+
+ <view class="searchbar">
+   <view class="searchWeaper">
+     <image src="../../img/sreach.png" class="sreachimg"></image>
+     <input 
+       type="text" 
+       placeholder="请输入订单编号或商品名称查询"
+       placeholder-class="palceColol" 
+       class="sreachinput"
+       confirm-type="搜索"
+       bindconfirm="handelsreach"
+       value="{{inputvalue}}"
+       />
+   </view>  
+   <image src="../../img/sxuan.png" class="sxuanimg" bindtap="handelshowmodel"></image>
+  
+ </view>
+
+<!-- =========== 两项选择 -->
+ <view class="double">
+
+   <van-tabs active="{{ active }}" bind:click="handemroeall" 
+   color="#0861A6"
+   class="colortab"
+   >
+    <van-tab title="全部" name="all" />
+    <van-tab title="初始状态" name="INITIAL_CREATION" />
+    <van-tab title="发送物流系统" name="SEND_ERP_AND_LOGISTICS" />
+    <van-tab title="已发送ERP" name="SEND_ERP" />
+    <van-tab title="订单已撤销" name="REVOKED" />
+  </van-tabs>
+ </view>
+
+ <!-- ============ 下面的卡片 -->
+ <scroll-view scroll-y="true" style="height:calc(100vh - 123px)" bindscrolltolower="scollower">
+<view class="biggerbox" wx:for="{{orderList}}" wx:key="index">
+  <view class="wilthebox">
+   <view class="textitleweaper">
+     <text class="nmbercolor">订单编号:{{item.Number}}</text>
+     <text class="textcolor" wx:if="{{item.TaskLevelStatusCode==2}}">已完成</text>
+     <text class="textcolors" wx:if="{{item.TaskLevelStatusCode==1}}">流程中</text>
+     <text class="textcolorts" wx:if="{{item.TaskLevelStatusCode==0}}">未进入</text>
+     <text class="textcolorts" wx:if="{{item.TaskLevelStatusCode==3}}">被终止</text>
+
+   </view>
+   <!-- ===========主要内容卡片 -->
+    <view class="sanpweaper" wx:for="{{item.ItemList}}" wx:for-item="listItem" 
+    wx:key="index">
+      <view class="jianscard">
+        <view class="mltext">{{listItem.ProductName}}</view>
+        <view class="bianh">商品编号：{{listItem.ProductId}}</view>
+        <view class="jiage">
+          <text class="money">￥{{listItem.Price}}</text>
+          <text class="jianshu">× {{listItem.Amount}}件</text>
+        </view>
+      </view>
+    <!-- 分割线 -->
+    <!-- <wux-divider show-text="{{false}}" />  -->
+
+</view>
+
+
+    <!-- ==========下面按钮 -->
+    <view class="dwoncz">
+      <view class="jiangetext"><text class="moneycolor">￥{{item.Money}}</text>共 {{item.count}} 件商品 实付款:</view>
+       <view class="downButton">
+         <view 
+           class="colorbutton" 
+           bindtap="handeltoDetail" 
+           data-number="{{item.Number}}"
+           data-type="{{item.TaskLevelStatusCode}}"
+           >查看详情</view>
+           <!--class = colorbutton -->
+         <view class="colorbuttonwt" bindtap="handeltowul" >物流跟踪</view>
+         <view class="colorbuttonwt" bindtap="handeltojhuo">交货单</view>
+
+       </view>
+    </view>
+
+  </view>
+
+</view>
+ <!-- 站位 -->
+ <!-- <view class="zhanwei"></view> -->
+<!-- 占无数据样式 -->
+      <wux-nothing-page  
+      wx:if="{{!orderList||orderList.length==0}}" 
+      resetStyle="height:calc(100vh - 123px)"></wux-nothing-page>
+
+</scroll-view>
+
+
+
+
+<!-- 侧边栏筛选弹出 showmodel-->
+<van-popup
+  show="{{ showmodel }}"
+  position="right"
+  custom-style="height: 100%;width:80%"
+  bind:close="onClose"
+>
+  <view class="saixuan">
+  <!-- 订单状态 -->
+     <view class="ddanzt">
+        <text class="textcolorddan">订单状态</text>
+          <view class="xuanxingtext">
+              <view 
+                 class="{{checkId==item.id?'quanbutextcolor':'chustextColor'}}"
+                 wx:for="{{xuanxingtext}}" 
+                 data-id="{{item.id}}"
+                 data-name="{{item.name}}"
+                 wx:key="index"
+                 catchtap="handelcheckdd"
+                 >
+                 {{item.title}}
+                 </view>
+          </view>
+     </view>
+     <!-- 审批状态 -->
+     <view class="ddanzts">
+        <text class="textcolorddan">审批状态</text>
+        <view class="xuanxingtexts">
+            <view class="quanbutextcolorst"
+              class="{{checkztId==item.id?'quanbutextcolorst':'chustextColorst'}}"
+              wx:for="{{xuanxingtexts}}" 
+              data-id="{{item.id}}"
+              wx:key="index"
+              catchtap="handelcheckzt"
+            >
+            {{item.name}}
+           </view>
+        </view>
+     </view>
+
+ <!-- 销售组织 -->
+     <view class="ddanzts">
+        <text class="textcolorddan">销售组织</text>
+        <view class="xuanxingtexts">
+            <view class="quanbutextcolorst"
+              class="{{checkzzId==item.brandCode?'quanbutextcolorst':'chustextColorst'}}"
+              wx:for="{{costockList}}" 
+              data-id="{{item.brandCode}}"
+              wx:key="index"
+              catchtap="handelorgan"
+            >
+            {{item.brandName}}
+           </view>
+        </view>
+     </view>
+
+
+      <!-- 下面按钮 -->
+      <view class="foolter">
+        <view class="lefttext" bindtap="handelreset">重置</view>
+        <view class="righttext" bindtap="handelok">确认</view>
+      </view>
+      
+    </view>
+
+    </van-popup>

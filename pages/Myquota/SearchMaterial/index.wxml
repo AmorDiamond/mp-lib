@@ -1,0 +1,36 @@
+<!--pages/Myquota/SearchMaterial/index.wxml-->
+
+<view class="searchbar">
+   <view class="searchWeaper">
+     <image src="../../../img/sreach.png" class="sreachimg"></image>
+     <input 
+       type="text" 
+       placeholder="搜索新增物料"
+       placeholder-class="palceColol" 
+       class="sreachinput"
+       confirm-type="搜索"
+       value="{{inputvalue}}"
+       bindconfirm="handelsreach"
+       bindinput="handelchaneg"
+       />
+   </view>  
+  
+ </view>
+
+
+  <van-cell-group>
+      <scroll-view scroll-y style="height:calc(100vh - 64px)" bindscrolltolower="scrolltolower">
+          <van-cell
+            wx:for="{{ sreachList }}"
+            wx:key="index"
+            title="{{item.matName+'-'+item.prodBarcode}}"
+            value-class="value-class"
+            clickable
+            data-index="{{ index }}"
+            data-code="{{item.prodBarcode}}"
+            data-name="{{item.matName}}"
+            bind:click="toggle"
+          />
+
+      </scroll-view>
+  </van-cell-group>

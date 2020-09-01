@@ -1,0 +1,15 @@
+<view class="staff-item" bind:tap="clickHandle">
+  <view class="staff-info">
+    <view class="staff-user">
+      <text class="staff-name">{{userInfo.userName}}</text>
+      <text class="staff-phone">{{userInfo.phone}}</text>
+    </view>
+    <view class="staff-role">
+      <text class="staff-role-item" wx:for="{{roles}}" wx:key="index">{{item}}</text>
+    </view>
+  </view>
+  <view class="staff-more">
+    <!-- <image src="../../../../img/goto.png" class="more-icon"></image> -->
+    <view class="iconfont iconsm-arrow-right more-icon"></view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<view class="transfer-task-list">
+  <view class="page-hd">
+    <view class="search-area">
+      <view class="search-input">
+        <image src="../../../../img/sreach.png" class="zoom-icon"></image>
+        <input type="text" placeholder="请输入产品名称/调出方名称查询" placeholder-class="input-placeholder" confirm-type="搜索" bind:confirm="onSearchHandle" />
+      </view>
+    </view>
+    <view class="tabs">
+      <van-tabs active="{{activeType}}" bind:change="onTabChange" border="{{false}}">
+        <van-tab wx:for="{{tabTypes}}" wx:key="index" title="{{item.title}}" name="{{item.value}}"></van-tab>
+      </van-tabs>
+    </view>
+  </view>
+  <view class="page-bd">
+    <scroll-view scroll-y="{{true}}" bind:scrolltolower="onScrolListHandle">
+      <block wx:if="{{list && list.length !== 0 }}">
+        <view class="list-row" wx:for="{{list}}" wx:key="index" data-code="{{item.code}}" bind:tap="onGotoOrderList">
+          <view class="row-hd">
+            <text class="title">{{item.matName}}</text>
+            <text class="status success" wx:if="{{item.status == 'finish'}}">已处理</text>
+            <text class="status pendding" wx:if="{{item.status == 'wait'}}">待处理</text>
+            <text class="status pendding" wx:if="{{item.status == 'dealing'}}">处理中</text>
+          </view>
+          <view class="row-bd">
+            <view class="item">调入数量：{{item.boxQuantity || 0}}箱{{item.bottleQuantity || 0}}盒</view>
+            <view class="item">调出方名称：{{item.allocationOutName}}</view>
+          </view>
+        </view>
+        <mp-page-foot-tips wx:if="{{list && list.length !== 0}}" querying="{{querying}}" hasMore="{{hasMore}}" />
+      </block>
+      <block wx:else>
+        <mp-nothing-page />
+      </block>
+    </scroll-view>
+  </view>
+</view>

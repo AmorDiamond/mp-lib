@@ -1,0 +1,90 @@
+<!--pages/percenter/percenter.wxml-->
+
+<!-- header背景颜色 -->
+<view class="headergr">
+   <view class="wilthebox">
+      <view class="weapercompany">
+       <text class="company">{{brandInfoName}}</text>
+       <text class="ringhtext">{{accountType==1?'经销商':'特约经销商'}}</text>
+      </view>
+   <view class="weaperclirl">
+      <view class="clirl">
+           <image src="{{avatarUrl}}" class="clirl" />
+      </view>
+      <!-- 电话信息 -->
+    <view class="morexxty">
+      <view wx:if="{{accountType==2}}" class="morexxty">
+        <view class="textname">{{person.realName}}</view>
+        <view class="textpnety">{{person.phone}}</view>
+      </view>
+
+      <view wx:if="{{accountType==1}}">
+        <text class="textname">{{person.realName}}</text>
+        <text class="textpne">{{person.phone}}</text>
+      </view>
+    
+      <view class="textconpany">
+         <view wx:for="{{companyall}}" wx:key="index" class="withs">{{item.brandName}}</view>
+      </view>
+    </view>
+    
+   </view>
+
+   </view>
+
+</view>
+
+<!-- =========== -->
+
+<!-- 背景下面 -->
+ <!-- 经销商 -->
+ <view class="downbox">
+    <view class="downboxin">
+
+      <view
+        class="flexbook" 
+        wx:for="{{arrpic}}" 
+        wx:key="index" 
+        data-id="{{item.id}}"
+        catchtap="handeltopage"
+        >
+        <image src="{{item.pic}}" class="bookimg"></image>
+        <view>{{item.name}}</view>
+      </view>
+
+    </view>
+ </view>
+
+<!-- ============ 设置--> 
+<view class="padd">
+   <view class="tzweaper" bindtap="handeltoMessage">
+       <view class="liteweaperts">
+         <image src="../../img/talck.png" class="tzimg"></image>
+         消息中心
+       </view>
+
+       <view class="fliex">
+       <!-- count="2" 放在下面 -->
+        <wux-badge   class="postion" /> 
+        <image src="../../img/goto.png" class="jifenimg"></image>
+      </view>
+    </view>
+
+      <view class="tzweapers" bindtap="handeltosetup">
+       <view class="liteweaper">
+         <image src="../../img/setting.png" class="tzimg"></image>
+         设置
+       </view>
+        <image src="../../img/goto.png" class="jifenimg"></image>
+
+    </view>
+</view>
+
+
+    <!-- ============退出按钮 -->
+     <view class="weaper">
+        <view class="goout"  bindtap="handeltologin">退出登录</view>
+     </view>
+  
+
+ 

@@ -1,0 +1,37 @@
+.message-row {
+  margin: 32rpx;
+  background-color: #fff;
+  padding: 30rpx 32rpx;
+  border-radius: 4px;
+  position: relative;
+}
+.tag {
+  position: absolute;
+  top: 30rpx;
+  left: 12rpx;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px; 
+  background-color: #FF2815;
+  margin-top: 7px;
+}
+.title {
+  color: #2E2E2E;
+  font-size: 15px;
+  margin-bottom: 12rpx;
+}
+.time {
+  color: #929292;
+  font-size: 12px;
+  margin-bottom: 20rpx;
+}
+.content {
+  color: #4A4A4A;
+  font-size: 13px;
+  line-height: 18px;
+  height: 36px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}

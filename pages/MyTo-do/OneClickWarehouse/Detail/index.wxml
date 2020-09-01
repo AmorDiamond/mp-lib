@@ -1,0 +1,60 @@
+<view class="warehouse-manage-detail">
+  <view class="logistics-info">
+    <view class="item">
+      <text class="label">物流公司：</text>
+      <text class="value">{{detail.logisticsName}}</text>
+    </view>
+    <view class="item">
+      <text class="label">物流编号：</text>
+      <text class="value">{{detail.logisticsNo}}</text>
+    </view>
+    <view class="item">
+      <text class="label">签收状态：</text>
+      <text class="value status pendding" wx:if="{{detail.signStatus == 'sign_out'}}">未签收</text>
+      <text class="value status success" wx:if="{{detail.signStatus == 'sign_in'}}">已签收</text>
+    </view>
+    <view class="item">
+      <text class="label">入库状态：</text>
+      <!-- 有入库时间为已入库 -->
+      <text class="value status pendding" wx:if="{{detail.stockInDate}}">已入库</text>
+      <text class="value status success" wx:else>未入库</text>
+    </view>
+    <view class="item">
+      <text class="label">商品数量：</text>
+      <view class="value" bind:tap="onViewProductList">
+        <text>{{detail.boxQuantity}}箱{{detail.bottleQuantity}}盒</text>
+        <view class="{{openProductList ? 'arrow-icon open' : 'arrow-icon'}}">
+          <text class="iconfont iconsm-arrow-right"></text>
+        </view>
+      </view>
+    </view>
+    <view class="product-list" hidden="{{!openProductList}}">
+      <view class="product-item" wx:for="{{productList}}" wx:key="index">
+        <view class="label">{{item.matName}}</view>
+        <view class="value">{{item.boxQuantity}}箱{{item.bottleQuantity}}盒</view>
+      </view>
+    </view>
+  </view>
+  <view class="foot-btn">
+    <!-- 未签收可入库操作 -->
+    <view class="opt-btn primary plain" bind:tap="onOpenWarehouse" wx:if="{{detail.signStatus !== 'sign_out'}}">入库</view>
+    <view class="opt-btn primary plain" bind:tap="onDamagedOut">破损出库</view>
+  </view>
+</view>
+
+<!-- 入库方式选择 -->
+<van-action-sheet
+  show="{{ openSheet }}"
+  actions="{{ sheetActions }}"
+  cancel-text="取消"
+  bind:cancel="onCloseSheetHandle"
+  bind:close="onCloseSheetHandle"
+  bind:select="onSheetSelectHandle"
+/>
+
+<!-- 确认弹框 -->
+<van-dialog show="{{showDialog}}" title="提示" bind:confirm="onDialogConfirmHandle" bind:cancel="onDialogCancelHandle" confirm-button-color="#006AB3" cancel-button-color="#696969" use-slot show-cancel-button>
+  <view class="dialog-content">
+    请确认本次入库数量<text class="num">{{detail.boxQuantity}}</text>箱<text class="num">{{detail.bottleQuantity}}</text>盒，确认后将增加您的库存！
+  </view>
+</van-dialog>

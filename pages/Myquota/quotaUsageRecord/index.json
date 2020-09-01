@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "调整记录",
+  "usingComponents": {
+    "wux-nothing-page": "../../components/NothingPage/index"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "入库管理",
+  "usingComponents": {
+    "mp-nothing-page": "../../../components/NothingPage/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "mp-page-foot-tips": "../../../components/ListPageFooterTips/index"
+  }
+}

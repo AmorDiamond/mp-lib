@@ -1,0 +1,93 @@
+.my-stock-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.head-area {
+  display: flex;
+  height: 96rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #ddd;
+  padding: 0 32rpx;
+  background-color: #fff;
+  justify-content: space-between;
+}
+.title {
+  color: #0969AE;
+  font-size: 15px;
+}
+.filter {
+  font-size: 13px;
+  color: #525252;
+}
+.filter-icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 32rpx;
+  vertical-align: middle;
+  margin-right: 12rpx;
+}
+.scroll-list {
+  flex: 1;
+  overflow: hidden;
+}
+scroll-view {
+  height: 100%;
+}
+.list-head {
+  padding: 32rpx;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 26rpx 32rpx 24rpx;
+}
+.list-head .time {
+  font-size: 14px;
+  color: #929292;
+  margin-bottom: 32rpx;
+}
+.hd-info {
+  overflow: hidden;
+}
+.hd-info .item {
+  width: 40%;
+  font-size: 15px;
+  float: left;
+}
+.hd-info .item:nth-child(n + 3) {
+  margin-top: 48rpx;
+}
+.hd-info .item:nth-child(2n + 1) {
+  width: 50%;
+  margin-right: 10%;
+}
+.hd-info .item .label {
+  color: #000;
+  margin-bottom: 20rpx;
+}
+.hd-info .item .value {
+  color: #2E2E2E;
+}
+.list-row {
+  padding: 32rpx;
+  border-radius: 4px;
+  background-color: #fff;
+  margin: 0 32rpx 24rpx;
+}
+.list-row .title {
+  font-size: 14px;
+  margin-bottom: 30rpx;
+}
+.table .th, .table .tr {
+  display: flex;
+  justify-content: space-between;
+  line-height: 72rpx;
+  font-size: 14px;
+  color: #4A4A4A;
+  padding: 0 20rpx;
+}
+.table .th {
+  background-color: #F1F2F1;
+}
+.table .tr {
+  border-bottom: 1rpx solid #ddd;
+}

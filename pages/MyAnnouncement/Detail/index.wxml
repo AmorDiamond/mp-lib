@@ -1,0 +1,22 @@
+
+<wxs src="../../../utils/commtime.wxs" module="formtime"/>
+
+<view class="announce-detail-container">
+  <view class="announce-title">
+    {{info.title}}
+  </view>
+  <view class="sub-desc">
+    <text>{{info.brandName}}</text>
+    <text>{{time}}</text>
+  </view>
+  <rich-text class="announce-content" nodes="{{text}}"></rich-text>
+
+  <view class="download-attachment">
+    <view>{{info.enclosure.enclosureName&&'附件'}}</view>
+    <view class="color" bindtap="handelgetsure">
+      {{info.enclosure.enclosureName|| ""}}
+     </view>
+  </view>
+</view>
+
+

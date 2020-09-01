@@ -1,0 +1,13 @@
+var mappingUnitType = function (type) {
+  // 条码类型，box：箱，bottle_box：盒，bottle：瓶
+  var unitEnum = {
+    box: '箱码',
+    bottleBox: '盒码',
+    bottle: '瓶码',
+  }
+  return unitEnum[type] ? unitEnum[type] : type
+}
+
+module.exports = {
+  mappingUnitType: mappingUnitType,
+}

@@ -1,0 +1,169 @@
+/* pages/ChannelCode/ChannelCode.wxss */
+.customheader{
+  width:100%;
+  height:97px;
+  background:#0969AD;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.fiex{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+.backimg{
+  width: 20px;
+  height: 20px;
+  float: left;
+}
+.titleText{
+  font-size:16px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  color: white;
+  text-align: center;
+  font-weight:500;
+  width: 100%;
+}
+.handel{
+  height: 82px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.weaperTime{
+  width: 100px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;  
+}
+.today{
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color: white;
+  font-size: 17px;
+  height: 29px;
+  border-bottom: 2px solid white;
+}
+.tomouth{
+  color: #8FB3D2;
+  font-size: 14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+
+}
+.putstorage{
+  width: 343px;
+  height: 80px;
+  border-radius: 4px;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 2px 9px 0px rgba(0,0,0,0.2);
+  position: absolute;
+  top:57px;
+  display: flex;
+  align-items: center;
+
+}
+.leftbox{
+  width: 170px;
+  border-right: 1px solid #C2D6E7;
+  height: 53px;
+}
+.rightbox{
+  width: 170px;
+  height: 53px;
+}
+
+.jiantimg{
+  width: 10px;
+  height: 10px;
+}
+
+.jluweaper{
+  font-size:11px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color: white;
+  width:48px;
+  height:18px;
+  background:linear-gradient(270deg,rgba(53,113,255,1) 0%,rgba(53,182,255,1) 100%);
+  border-radius:9px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tsaoma{
+  font-size:13px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(81,81,81,1);
+  display: flex;
+  justify-content: space-around;
+}
+.saonmber{
+  font-size:13px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(81,81,81,1);
+  margin-left: 16px;
+  margin-top: 8px;
+}
+.numbercolor{
+  font-size:20px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,40,21,1);
+}
+
+.rukubox{
+  margin-top: 63px;
+  width: 100%;
+  height: 116px;
+}
+.xiamwearper{
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+.gunal{
+  font-size:16px;
+  height: 20px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(46,46,46,1);
+  border-left: 3px solid #05559B;
+  padding: 0 7px;
+}
+.cgimg{
+  width: 32px;
+  height: 32px;
+}
+.rukucg{
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(46,46,46,1);
+  width: 56px;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 10px 10px 10px;
+}
+
+.tuweaper{
+  box-sizing: border-box;
+  display: flex;
+}
+.wux-divider{
+  margin:0px !important;
+}
+.rukuboxck{
+  margin-top: 27px;
+  width: 100%;
+  height: 116px;
+
+}

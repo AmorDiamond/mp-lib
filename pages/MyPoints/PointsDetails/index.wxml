@@ -1,0 +1,38 @@
+<view class="ponints-detail-list">
+  <view class="page-hd">
+    <view class="search-area">
+      <view class="search-input">
+        <image src="../../../img/sreach.png" class="zoom-icon"></image>
+        <input type="text" placeholder="请输入标题、单号查询" placeholder-class="input-placeholder" confirm-type="搜索" bind:confirm="onSearchHandle" />
+      </view>
+      <view class="filter" bind:tap="onOpenFilterHandle">
+        <image class="filter-icon" src="../../../img/sxuan.png" />
+      </view>
+    </view>
+    <view class="tabs">
+      <van-tabs active="{{activeType}}" bind:change="onTabChange" border="{{false}}">
+        <van-tab wx:for="{{tabTypes}}" wx:key="index" title="{{item.title}}" name="{{item.value}}"></van-tab>
+      </van-tabs>
+    </view>
+  </view>
+  <view class="page-bd">
+    <scroll-view scroll-y="{{true}}" bind:scrolltolower="onListScrollHandle">
+      <view class="list-row" wx:for="{{list}}" wx:key="index">
+        <view class="row-con">
+          <view class="title">
+            <view class="name">{{item.name}}</view>
+            <view class="{{item.status == 1 ? 'status pendding' : 'status success'}}" wx:if="{{activeType == '2'}}">{{item.status == 1 ? '审核中' : '审核通过'}}</view>
+            <view class="{{item.status == 1 ? 'status pendding' : 'status success'}}" wx:if="{{activeType == '3'}}">{{item.status == 1 ? '兑付中' : '已兑付'}}</view>
+          </view>
+          <view class="body">
+            <view class="info">{{item.code}} {{item.time}}</view>
+            <view class="number plus" wx:if="{{item.type == 'UP'}}">+{{item.number}}</view>
+            <view class="number minus" wx:else>-{{item.number}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<!-- 筛选面板 -->
+<mp-filter-drawer show="{{showFilter}}" conditions="{{conditions}}" bind:submitHandle="onSubmitHandle" bind:closeHandle="onCloseFilterHandle" />

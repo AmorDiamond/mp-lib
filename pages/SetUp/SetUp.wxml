@@ -1,0 +1,23 @@
+<!--pages/SetUp/SetUp.wxml-->
+<van-cell-group>
+  <van-field
+    label="修改密码"
+    right-icon="arrow"
+    disabled
+    bindtap="handelclick"
+  />
+  <van-field
+    label="修改手机号"
+    right-icon="arrow"
+    disabled
+    bindtap="handeltosetphone"
+  />
+  <van-field
+    label="关于经销商门户"
+    right-icon="arrow"
+    title-width="100px"
+    disabled
+    bindtap="handelguany"
+
+  />
+</van-cell-group>

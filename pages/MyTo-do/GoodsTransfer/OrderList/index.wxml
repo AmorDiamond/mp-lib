@@ -1,0 +1,8 @@
+<view class="transfer-order-detail">
+  <block wx:if="{{list.length !== 0}}">
+    <mp-list-row wx:for="{{list}}" wx:key="index" rowData="{{item}}" items="{{rowItems}}" title="{{rowTitle}}" bind:tap="onGotoDetail" data-code="{{item.code}}" />
+  </block>
+  <block wx:else>
+    <mp-nothing-page />
+  </block>
+</view>

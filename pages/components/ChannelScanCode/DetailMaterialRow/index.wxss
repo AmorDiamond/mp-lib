@@ -1,0 +1,52 @@
+.container {
+  background-color: #fff;
+  margin-bottom: 24rpx;
+  border-radius: 4px;
+}
+.product-info {
+  padding: 32rpx;
+  font-size: 15px;
+  white-space: nowrap;
+}
+.product-info .item {
+  display: flex;
+  margin-top: 20rpx;
+}
+.product-info .item:first-child {
+  margin-top: 0;
+}
+.product-info .label {
+  color: #4a4a4a;
+}
+.product-info .value {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.code-list {
+  font-size: 14px;
+  padding: 32rpx;
+  border-top: 1rpx solid #ddd;
+}
+.code-list .list-hd {
+  color: #a9a9a9;
+  display: flex;
+}
+.code-list .list-bd {
+  color: #4a4a4a;
+}
+.code-list .list-bd .item {
+  margin-top: 20rpx;
+  display: flex;
+}
+.code-list .code-column {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.code-list .type-column {
+  width: 60px;
+  text-align: right;
+}

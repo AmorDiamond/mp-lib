@@ -1,0 +1,129 @@
+<!--pages/MyCostDetail/MyCostDetail.wxml-->
+<wxs src="../../utils/commtime.wxs" module="formtime"/>
+
+<view class="headerback">
+   <view class="wilthebox">
+       <view class="weapergs">
+         <view class="gscolor">公司</view>
+         <view class="luozucolorct">{{company}}</view>
+       </view>
+<!-- ===== -->
+       <view class="weapergsts">
+         <view class="gscolor">开始时间</view>
+         <view class="luozucolor">
+        <picker mode="date" value="{{startTime}}" class="weaperpciker" bindchange="bindDateChange">
+          <view class="picker">
+            {{startTime}}
+          </view>
+        </picker>
+          <image src="../../img/shijsxia.png" class="shangximg"></image>
+           </view>
+       </view>
+<!-- ==== -->
+       <view class="weapergs">
+         <view class="gscolor">结束时间</view>
+         <view class="luozucolor">
+          <picker mode="date" value="{{endTime}}" 
+          class="weaperpciker" 
+          bindchange="bindDateChangeend">
+          <view class="picker">
+            {{endTime}}
+          </view>
+         </picker>
+          <image src="../../img/shijsxia.png" class="shangximg"></image>
+         </view>
+       </view>
+
+   </view>
+</view>
+<!-- ========== -->
+   <view class="checkname">
+     <view class="huando">
+        <view 
+         class="{{checkname?'checkcolor':'notcheckcolor'}}" 
+         bindtap="handelcheck"
+         >
+         费用报销明细
+         </view>
+       <!-- <view 
+        class="{{!checkname?'checkcolor':'notcheckcolor'}}" 
+        bindtap="handelcheckmix"
+        >
+        费用使用明细
+        </view> -->
+     </view>
+   </view>
+<!-- =============凭证 -->
+  <scroll-view 
+     scroll-y="{{true}}"  
+     style="height:calc(100vh - 213px)"
+     wx:if="{{checkname}}"
+     bindscrolltolower="scrollower"
+    >
+ <view class="xianwhileboxwm">
+<view 
+class="xianwhilebox" 
+wx:if="{{checkname}}"
+catchtap="handeltomix"
+wx:for="{{baxList}}"
+wx:key="index"
+data-id="{{item.ExpenseId}}"
+data-accountnumber="{{item.AccountNumber}}"
+data-accountname="{{item.AccountName}}"
+data-canusemoney="{{item.CanUseMoney||'--'}}"
+data-money="{{item.Money}}"
+>
+  <view class="jizTime"><view>报销单号  {{item.AccountNumber}}</view><view>
+  {{item.AddTime?formtime.formatDate(item.AddTime):''}}</view></view>
+  <view class="boxjief">
+    <text>报销单名称：</text><text class="textzi">{{item.AccountName}}</text>
+  </view>
+
+  <view class="boxjief">
+    <text>兑现方式：</text><text class="moneycol">{{item.ExpenseWayCodeAndName}}</text>
+  </view>
+
+    <view class="boxjief">
+    <text>金额：</text><text class="moneycol">￥{{item.Money}}</text>
+  </view>
+</view>
+</view>
+<!-- 站位 -->
+ <view class="zhanwei"></view>
+     <!-- ====没有数据背景 -->
+  <wux-nothing-page 
+  wx:if="{{!baxList||baxList.length==0}}" resetStyle="height:calc(100vh - 228px)"></wux-nothing-page>
+
+ </scroll-view>
+
+
+  <scroll-view 
+    scroll-y="{{true}}"  
+    style="height:calc(100vh - 213px)"
+    wx:if="{{!checkname}}"
+    bindscrolltolower="scrollowersy"
+  >
+<!-- ============ -->
+ <view class="xianwhileboxwm">
+ <view class="xianwhileboxmx" wx:if="{{!checkname}}" wx:for="{{sylist}}" wx:key="index">
+  <view class="jizTime"><view class="baox">使用单号  <text class="hiden">{{item.Number}}</text></view><view>
+    
+  {{formtime.formatDate(item.AddTime)}}</view></view>
+
+  <view class="boxjief">
+    <text>使用方式：</text><text class="moneycol">{{item.UseType}}</text>
+  </view>
+
+    <view class="boxjief">
+    <text>使用金额：</text><text class="moneycol">￥{{item.Money}}</text>
+  </view>
+
+</view>
+</view>
+<!-- 站位 -->
+ <view class="zhanwei"></view>
+    <!-- ====没有数据背景 -->
+<wux-nothing-page wx:if="{{!sylist||sylist.length==0}}" resetStyle="height:calc(100vh - 228px)"></wux-nothing-page>
+ </scroll-view>
+
+

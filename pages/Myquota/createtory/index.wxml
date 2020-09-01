@@ -1,0 +1,108 @@
+<!--pages/Myquota/createtory/index.wxml-->
+<view class="header-pd">
+   <view class="conpay-text">{{agenName}}</view>
+</view>
+<view class="section-container">
+  <view class="section-item" wx:for="{{weaperList}}" wx:key="index" wx:for-item="itemName" wx:for-index="idex">
+  <view class="weaper-box">
+    <view class="round-title">
+      <view class="round">{{itemName.brandNameShort}}</view>
+      <view class="padTime">盘点周期：{{itemName.description}}</view>
+    </view>
+
+    <view>
+      <view class="updtaimg">
+        <van-uploader
+          file-list="{{ fileList[itemName.brandCode] }}"
+          max-count="1"
+          data-brandcode="{{itemName.brandCode}}"
+          bind:after-read="afterRead"
+          bind:delete="handelDelete"
+          image-fit='aspectFill'
+        >
+          <view class="updata">+ 上传凭证</view>
+        </van-uploader>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="withe-box">
+
+    <view class="withe-title">
+        <view class="title-with">物料描述</view>
+        <view class="title-with">当前库存/件</view>
+        <view class="title-with">期间动销/件</view>
+    </view>
+
+  <view style="touch-action: none" wx:for="{{itemName.arrList}}" 
+  wx:key="prodBarcode" wx:for-item="itemguop" >
+    <van-swipe-cell right-width="{{ 65 }}" >
+        <view class="withe-content">
+            <view class="withe-item">
+              <view class="title-itemon" catchtap="handellong">
+                    {{itemguop.matName || '--'}}
+                </view>
+                <view class="title-vone" wx:if="{{material}}" wx:key="index" catchtap="handellong">
+                    {{itemguop.matName || '--'}}
+                </view>
+              <view class="title-itemt">{{itemguop.nowRealStock || itemguop.nowRealStock == 0 ? itemguop.nowRealStock : '--'}}</view>
+              <view class="title-itemt">{{itemguop.nowMove || itemguop.nowMove == 0 ? itemguop.nowMove : '--'}}</view>
+              <view class="title-color" 
+              data-id="{{itemguop.prodBarcode}}" 
+              data-name="{{itemguop.matName}}"
+              data-brandcode="{{itemName.brandCode}}"
+              bindtap="handeltoDetails"
+              >盘点</view>
+          </view>
+      </view>
+          <view slot="right" 
+          class="van-swipe-cell__right" 
+          data-id="{{itemguop.prodBarcode}}" 
+          data-index="{{idex}}"
+          catchtap="handelDetail"
+          >
+          删除
+          </view>
+    </van-swipe-cell>
+  </view>
+    <view class="wul-text" data-brandcode="{{itemName.brandCode}}" data-index="{{idex}}" bindtap="haneltootherpage">+ 新增物料</view>
+  </view>
+
+
+
+
+
+  <view class="bottom-box">
+    <view class="update-text">下一节点审批人</view>
+
+    <view class="leftbox" wx:for="{{itemName.nextTask}}" wx:key="index" wx:for-item="setWho" >
+        <view class="weapercel">
+          <view class="crlir"></view>
+          <view>
+            <view>{{setWho.nodeName}}</view>
+          </view>
+        </view>
+        <view class="yuancrl" data-id="{{setWho.roleIds}}" data-brandcode="{{itemName.brandCode}}" catchtap="handeltonewspage" wx:if="{{!itemName.userole || itemName.userole.length==0}}">+</view>
+
+      <view wx:if="{{itemName.userole.length!=0}}" wx:for="{{itemName.userole}}" wx:key="index">
+      <view>
+          <view class="yuancrls" >
+            {{item.name}}
+            <image src="../../../img/delete.png" class="delete" data-brandcode="{{itemName.brandCode}}" bindtap="handelDelper"></image>
+          </view>
+          <view class="textsizets">{{item.name}}</view>
+        </view>
+
+      </view>
+      
+
+    </view>
+  </view>
+  </view>
+</view>
+
+<view class="felx">
+  <view class="felx-text" bindtap="handelgetSave">保存并提交审核</view>
+</view>
+

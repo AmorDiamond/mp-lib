@@ -1,0 +1,23 @@
+<!--pages/MyQrCode/MyQrCode.wxml-->
+ <view class="mybox">
+   <view class="touxian">
+   <!-- 头像 -->
+     <view class="arred">
+       <image src="{{avatar}}" class="arred" />
+     </view> 
+
+    <view class="rightbox">
+     <view class="comytext">{{angetName}}</view>
+     <view>编码：{{agentCode}}</view>
+   </view>
+   </view>
+ 
+ <!-- 二维码、、 -->
+
+   <view class="erwei">
+     <image src="{{imgcode}}" class="erweis"></image>
+
+   </view>
+
+
+ </view>

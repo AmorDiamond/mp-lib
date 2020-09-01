@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "货物调拨",
+  "usingComponents": {
+    "mp-nothing-page": "../../../components/NothingPage/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "mp-page-foot-tips": "../../../components/ListPageFooterTips/index"
+  }
+}

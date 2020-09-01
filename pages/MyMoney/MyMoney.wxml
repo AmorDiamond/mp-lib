@@ -1,0 +1,107 @@
+<!--pages/MyMoney/MyMoney.wxml-->
+
+<van-tabs active="{{ active }}" animated bind:change="onChangeScorll" color="#0969AD">
+ <van-tab title="{{item.brandName}}"  name="{{item.brandCode}}" wx:for="{{tabList}}" wx:key="index" class="tablis" >
+ <view class="weaperzjzhongl">
+  <view class="zjzhongl">
+   <view class="boxzj">
+    <view class="zjcolor">
+      <text>资金总览</text>
+      <view class="lookxqto">
+         <view bindtap="handeltoNext" data-id="{{item.brandCode}}"
+          data-name="{{item.brandName}}">详情</view>
+         <image src="../../img/jiant.png" class="gotoimg"></image>
+      </view>
+    </view>
+    <view class="keyyue">可用余额</view>
+    <view class="jgetecolor"><text class="yangcolor">￥</text>{{summary.ksyye||'--'}}</view>
+   </view>
+
+      <!-- <van-divider/> -->
+      <view class="weperjge">
+        <view class="item-box">
+          <view class="keyyuets">财务余额</view>
+          <view class="jgetecolorts"><text class="yangcolorts">￥</text>{{summary.kjzmye||'--'}}</view>
+        </view>
+
+         <view class="item-box">
+          <view class="keyyuets">实际余额</view>
+          <view class="jgetecolorts"><text class="yangcolorts">￥</text>{{summary.sjye||'--'}}</view>
+        </view>
+
+      </view>
+
+      <van-divider/>
+      <view class="weperjge">
+        <view class="item-box">
+          <view class="keyyuemy">订单总金额</view>
+          <view class="keyyuemy">{{summary.ddze||'--'}}</view>
+        </view>
+
+         <view class="item-box">
+          <view class="keyyuemy">订单开票金额</view>
+          <view class="keyyuemy">{{summary.ddkpe||'--'}}</view>
+        </view>
+
+        <view class="item-box">
+          <view class="keyyuemy">订单未开票金额</view>
+          <view class="keyyuemy">{{summary.ddwkp||'--'}}</view>
+        </view>
+
+      </view>
+
+      <van-divider/>
+      <view class="weperjge">
+        <view class="item-box">
+          <view class="keyyuemy">汇票成本</view>
+          <view class="keyyuemy">{{summary.hpcb||'--'}}</view>
+        </view>
+
+         <view class="item-box">
+          <view class="keyyuemy">已收取</view>
+          <view class="keyyuemy">{{summary.ysqje||'--'}}</view>
+        </view>
+
+        <view class="item-box">
+          <view class="keyyuemy">汇票利息占用</view>
+          <view class="keyyuemy">{{summary.hplx||'--'}}</view>
+        </view>
+
+      </view>
+
+
+      <van-divider/>
+      <view class="weperjge">
+        <view class="item-box">
+          <view class="keyyuemy">未到期票据</view>
+          <view class="keyyuemy">{{summary.wdqpj||'--'}}</view>
+        </view>
+
+         <view class="item-box">
+          <view class="keyyuemy">可退款金额</view>
+          <view class="keyyuemy">{{summary.ktkje||'--'}}</view>
+        </view>
+
+        <view class="item-box">
+          <view class="keyyuemy">特批额度</view>
+          <view class="keyyuemy">{{summary.tped||'--'}}</view>
+        </view>
+
+      </view>
+
+
+      <van-divider/>
+      <view class="weperjmy">
+        <view class="item-last">
+          <view class="keyyuemy">股本担保赊销</view>
+          <view class="keyyuemy">{{summary.gqje||'--'}}</view>
+        </view>
+      </view>
+
+
+  </view>
+
+</view>
+  
+  </van-tab>
+</van-tabs>

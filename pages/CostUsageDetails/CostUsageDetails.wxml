@@ -1,0 +1,58 @@
+<!--pages/CostUsageDetails/CostUsageDetails.wxml-->
+<wxs src="../../utils/commtime.wxs" module="formtime"/>
+
+<view class="headerback">
+   <view class="wilthebox">
+       <view class="weapergs">
+         <view class="gscolor">报销单号</view>
+         <view class="luozucolorct">{{accountnumber}}</view>
+       </view>
+<!-- ===== -->
+       <view class="weapergsts">
+         <view class="gscolor">报销单名称</view>
+          <scroll-view scroll-x style="width:199px">
+          <view class="luozucolor">
+            {{accountname}}
+            </view>
+          </scroll-view>
+       </view>
+<!-- ==== -->
+       <view class="weapergszj">
+         <view class="gscolor">总金额</view>
+         <view class="luozucolormoney">
+           {{money}}
+         </view>
+       </view>
+
+       <view class="weapergs">
+         <view class="gscolor">可用费用金额</view>
+         <view class="luozucolormoney">
+           {{canusemoney}}
+         </view>
+       </view>
+
+   </view>
+</view>
+
+
+<!-- =============记账日期 -->
+<scroll-view scroll-y="{{true}}" style="height:calc(100vh - 216px)">
+<view class="xianwhileboxtx" wx:for="{{arrList}}" wx:key="index">
+<view class="xianwhilebox">
+  <view class="jizTime"><view>单号  {{item.Number}}</view><view>
+  {{formtime.formatDate(item.AddTime)}}</view></view>
+  <view class="boxjief">
+    <text>使用方式：</text><text class="moneycol">{{item.UseType}}</text>
+  </view>
+
+  <view class="boxjief">
+    <text>使用金额：</text><text class="moneycol">￥{{item.Money}}</text>
+  </view>
+
+ </view>
+</view>
+ <!-- 站位 -->
+ <view class="zhanwei"></view>
+     <!-- ====没有数据背景 -->
+<wux-nothing-page wx:if="{{!arrList||arrList.length==0}}" resetStyle="height:calc(100vh - 231px)"></wux-nothing-page>
+</scroll-view>

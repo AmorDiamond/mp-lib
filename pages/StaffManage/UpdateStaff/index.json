@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "编辑",
+  "usingComponents": {
+    "wux-edit-form": "../component/StaffEdit/index"
+  }
+}

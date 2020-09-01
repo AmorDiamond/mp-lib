@@ -1,0 +1,32 @@
+<view class="integral-approval-page">
+  <view class="page-hd">
+    <view class="item">
+      <view class="label">销售组织：</view>
+      <view class="value">泸州老窖国窖有限公司</view>
+    </view>
+    <view class="item">
+      <view class="label">年度：</view>
+      <view class="value">2020年</view>
+    </view>
+    <view class="item">
+      <view class="label">季度：</view>
+      <view class="value">Q1</view>
+    </view>
+    <view class="item">
+      <view class="label">积分考核结果：</view>
+      <view class="value"><text class="num">10000</text>分</view>
+    </view>
+  </view>
+  <view class="section">
+    <view class="title">考核结果说明</view>
+    <view class="content">说的是事实</view>
+  </view>
+  <view class="section">
+    <view class="title">备注信息：</view>
+    <view class="content"></view>
+  </view>
+</view>
+<view class="footer">
+  <view class="opt-btn primary plain">同意</view>
+  <view class="opt-btn primary plain">不同意</view>
+</view>

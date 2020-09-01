@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "库存盘点记录",
+
+  "usingComponents": {
+    "wux-nothing-page": "../../components/NothingPage/index",
+    "side-Search" : "../../components/sideSearch/sideSearch",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index"
+  }
+}

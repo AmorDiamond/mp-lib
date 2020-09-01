@@ -1,0 +1,70 @@
+<!--pages/MyInformation/MyInformation.wxml-->
+
+<!-- 我的信息经销商 allmsglist-->
+<view class="mart" wx:if="{{accountType==1}}" >
+  <view class="colors">经销商编号：<text class="tscolors">{{agentmsg.agentCode||""}}</text></view>
+   <view class="colors">主体类型：<text class="tscolors">经销商</text></view>
+   <view wx:for="{{allmsglist}}" wx:key="index"  class="lonmargin">
+      <view class="colors">所属品牌：<text class="tscolors">{{item.brandName||""}}</text></view>
+ 
+      <view class="colors">所属片区：<text class="tscolors">{{item.belongAreaName||""}}</text></view>
+
+      <view class="colors">关联业务人员：<text class="tscolors">{{item.businessPersonName||""}}</text>
+      </view>
+      
+      <view class="colors">业务人员联系电话：<text class="tscolors">{{item.businessPersonPhone||""}}
+      </text></view>
+  </view>
+</view>
+
+
+<!-- 我的信息特约经销商 -->
+
+<view class="weithbox" wx:if="{{accountType==2}}">
+   <view class="jben">基本信息</view>
+   <view class="dwbox">
+     <view class="pinp">申请主体：<text class="ritext">特约经销商</text></view>
+     <view class="pinp">注册手机号码：<text class="ritext">{{agentmsg.registerPhone||''}}</text></view>
+   </view>
+
+
+   <view class="jben">资质认证</view>
+  <view class="dwbox">
+     <view class="pinp">调整类型：<text class="ritext">公司</text></view>
+     <view class="pinp">公司名称：<text class="ritext">{{agentmsg.companyName||""}}</text></view>
+     <view class="pinp">统一社会信用代码：<text class="ritext">{{agentmsg.socialCode||''}}</text></view>
+     <view class="pinps" wx:if="{{agentmsg.qualifType==1?false:true}}">营业执照：<view class="yinyimg">
+        <image src="{{agentmsg.businessLicense}}" class="yinyimg" ></image>
+     </view></view>
+     <view class="pinps" wx:if="{{agentmsg.qualifType==1?true:false}}">身份证：<view class="yibox">
+        <image src="{{agentmsg.idCardUrlOne}}" class="yinyimg" ></image>
+        <image src="{{agentmsg.idCardUrlTwo}}" class="yinyimg" ></image>
+     </view></view>
+     <view class="pinp">联系人：<text class="ritext">{{agentmsg.contact||''}}</text></view>
+     <view class="pinp">联系人电话：<text class="ritext">{{agentmsg.phone||''}}</text></view>
+     <view class="pinp">联系人地址：<text class="ritext">{{agentmsg.address||''}}</text></view>
+   </view>
+
+
+  <view class="jben">其他信息</view>
+
+  <view class="dwboxs" wx:for="{{allmsglist}}" wx:key="index">
+      <view class="pinp">所属品牌：<text class="ritext">{{item.brandName||""}}</text></view>
+     <view class="pinp">所属管理区域：<text class="ritext">{{item.belongAreaName||""}}</text></view>
+     <view class="pinp">关联业务人员：<text class="ritext">{{item.businessPersonName||""}}</text></view>
+     <view class="pinps">经销产品及区域：
+        <view class="quyu">
+          <view wx:for="{{item.productAndArea}}" wx:key="index">{{item}}</view>
+        </view>
+     </view>
+
+      <view class="pinps">所属上级经销商：
+       <view class="quyu">
+          <text class="ritext">{{item.parentName}}\n{{item.parentCode}}</text>
+        </view>
+     </view>
+
+   </view>
+
+
+</view>

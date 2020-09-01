@@ -1,0 +1,77 @@
+/* pages/Myquota/Myquota/index.wxss */
+page{
+  background-color: white;
+}
+.file-box{
+  padding-left: 16px;
+  border-bottom: 1px solid #dddddd;
+}
+.flie-flex{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-right: 16px;
+  box-sizing: border-box;
+  height: 50px;
+  line-height: 50px;
+  font-size: 15px;
+  color: #4A4A4A;
+  font-weight:400;
+  border-bottom: 1px solid #dddddd;
+}
+.value-flie{
+  font-weight: 500;
+  text-align: right;
+}
+
+.inut-flex{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-right: 16px;
+  box-sizing: border-box;
+  height: 50px;
+  line-height: 50px;
+  font-size: 15px;
+}
+.value-inut{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.beizu-szie{
+  font-size:13px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(74,74,74,1);
+}
+
+.beizu-szie{
+  width: 341px;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+
+.save-btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.save-color{
+  width:303px;
+  height:45px;
+  background:rgba(8,97,166,1);
+  border-radius:2px;
+  color: white;
+  text-align: center;
+  line-height: 45px;
+  position: fixed;
+  bottom: 20px;
+}
+.hei-zw{
+  height: 100px;
+}
+
+ .nickname_input {
+  text-align: right;
+}

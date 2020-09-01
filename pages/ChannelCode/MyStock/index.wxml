@@ -1,0 +1,59 @@
+<view class="my-stock-page">
+  <view class="head-area">
+    <view class="title">按自然月统计</view>
+    <view class="filter" bind:tap="onFilterOpenHandle">
+      <image src="../../../img/sxuan.png" class="filter-icon" />筛选
+    </view>
+  </view>
+  <view class="scroll-list">
+    <scroll-view scroll-y="{{true}}">
+      <view class="list-head">
+        <view class="time">{{year}}年{{month}}月</view>
+        <view class="hd-info">
+          <view class="item">
+            <view class="label">期初库存</view>
+            <view class="value">{{countInfo.beginBoxQuantity || 0}} 箱 {{countInfo.beginBottleQuantity || 0}}盒</view>
+          </view>
+          <view class="item">
+            <view class="label">入库量</view>
+            <view class="value">{{countInfo.inBoxQuantity || 0}} 箱 {{countInfo.inBottleQuantity || 0}}盒</view>
+          </view>
+          <view class="item">
+            <view class="label">出库量</view>
+            <view class="value">{{countInfo.outBoxQuantity || 0}} 箱 {{countInfo.outBottleQuantity || 0}}盒</view>
+          </view>
+          <view class="item">
+            <view class="label">期末库存</view>
+            <view class="value">{{countInfo.endBoxQuantity || 0}} 箱 {{countInfo.endBottleQuantity || 0}}盒</view>
+          </view>
+        </view>
+      </view>
+      <view class="list-row" wx:for="{{list}}" wx:key="index">
+        <view class="title">{{item.matName}}</view>
+        <view class="table">
+          <view class="th">
+            <view class="td">期初库存</view>
+            <view class="td">入库量</view>
+            <view class="td">出库量</view>
+            <view class="td">期末库存</view>
+          </view>
+          <view class="tr">
+            <view class="td">{{item.beginBoxQuantity}}箱{{item.beginBottleQuantity}}盒</view>
+            <view class="td">{{item.inBoxQuantity}}箱{{item.inBottleQuantity}}盒</view>
+            <view class="td">{{item.outBoxQuantity}}箱{{item.outBottleQuantity}}盒</view>
+            <view class="td">{{item.endBoxQuantity}}箱{{item.endBottleQuantity}}盒</view>
+          </view>
+        </view>
+      </view>
+      <mp-page-foot-tips wx:if="{{list && list.length !== 0}}" querying="{{querying}}" hasMore="{{hasMore}}" />
+    </scroll-view>
+  </view>
+</view>
+
+<!-- 筛选面板 -->
+<mp-filter-drawer
+  show="{{showFilter}}"
+  conditions="{{conditions}}"
+  bind:submitHandle="onSubmitHandle"
+  bind:closeHandle="onFilterCloseHandle"
+/>

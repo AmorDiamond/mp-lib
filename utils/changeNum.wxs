@@ -1,0 +1,22 @@
+
+var threeNum = function (num) {  //参数是数字
+  var thisNum = (num || 0).toString().split('.');//判断如果有小数点就分割这个数为一个数组
+  var num = thisNum[0]; //截取小数点前面的部分保存
+  var fuNum = thisNum[0]; //如果是负数先保存备用
+  var result = ''; //最后结果
+  if (fuNum<0){
+    num = num.slice(1); //是负数先把负号截取掉
+  }
+  while (num.length > 3) {  //循环每三位添加一个逗号
+    result = ',' + num.slice(-3) + result;
+    num = num.slice(0, num.length - 3);
+  }
+  if (num) {result = num + result;} 
+  if (fuNum < 0) { result = '-' + result } //负数加上负号
+  if (thisNum[1]) { result = result + '.' + thisNum[1];} //拼接上小数
+  return result;
+}
+ 
+module.exports = {
+  threeNum:threeNum
+}

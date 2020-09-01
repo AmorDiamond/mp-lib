@@ -1,0 +1,27 @@
+/* pages/setphone/setphone.wxss */
+/* pages/SetPassword/SetPassword.wxss */
+.color{
+  color: #F7B500;
+}
+.butcode{
+  padding-left: 19px;
+  border-left: 1px solid #DDDDDD;
+  color: #006AB3;
+  width: 70px;
+  text-align: center;
+}
+.butenok{
+  width: 303px !important;
+  height: 45px !important;
+  position:fixed;
+  bottom: 32px;
+  line-height: 32px;
+  color: white;
+  font-size: 16px;
+  background:rgba(8,97,166,1);
+}
+.boxwth{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

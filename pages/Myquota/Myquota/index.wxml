@@ -1,0 +1,102 @@
+<!--pages/Myquota/Myquota/index.wxml-->
+ 
+ <view class="file-box">
+    <form>
+        <view class="flie-flex">
+          <view>物料编号</view>
+          <view class="value-flie" name="code">{{allData.prodBarcode}}</view>
+        </view>
+
+        <view class="flie-flex">
+          <view>物料描述</view>
+          <view class="value-flie" name="goupName">{{allData.matName}}</view>
+        </view>
+
+        <view class="flie-flex">
+          <view>期初库存（含未到货）</view>
+          <view class="value-flie">{{allData.beginningRealStock||0}}/件</view>
+        </view>
+
+        <view class="flie-flex">
+          <view>期间开单</view>
+          <view class="value-flie">{{allData.nowAog||0}}/件</view>
+        </view>
+
+        <view class="flie-flex">
+          <view>当前实物库存</view>
+           <view class="value-inut">
+            <input 
+                placeholder="请输入"
+                type="number" 
+                value="{{allData.nowRealStock}}"
+                class="nickname_input"
+                placeholder-style="color:#A9A9A9"
+                bindinput="handelgetvalue"
+                wx:if="{{!detail}}"
+             />
+             <view class="value-flie" wx:if="{{detail}}">{{allData.nowRealStock||0}}</view>
+            <view>件</view>
+          </view>
+        </view>
+
+    <view class="flie-flex">
+          <view>当前未到货</view>
+           <view class="value-inut">
+            <input 
+                placeholder="请输入"
+                type="number" 
+                value="{{allData.onOrder}}"
+                class="nickname_input"
+                placeholder-style="color:#A9A9A9"
+                bindinput="handelgetnowover"
+                wx:if="{{!detail}}"
+             />
+             <view class="value-flie" wx:if="{{detail}}">{{allData.onOrder||0}}</view>
+            <view>件</view>
+          </view>
+        </view>
+
+
+        <view class="flie-flex">
+          <view>期间动销数</view>
+          <view class="value-flie">{{allData.nowMove}}/件</view>
+        </view>
+
+
+        <view class="inut-flex">
+          <view>下月订单计划</view>
+          <view class="value-inut">
+            <input
+                value="{{allData.nextMonthOrderNum}}"
+                placeholder="请输入"
+                class="nickname_input"
+                type="number"
+                placeholder-style="color:#A9A9A9"
+                bindinput="handelnextMonth"
+                wx:if="{{!detail}}"
+              />
+              <view class="value-flie" wx:if="{{detail}}">{{allData.nextMonthOrderNum||0}}</view>
+            <view>件</view>
+          </view>
+        </view>
+
+    </form>
+ </view>
+
+
+
+
+<view class="beizu-szie">
+   <view>备注：</view>
+   <view>1、期初库存（含未到货）：上期实物库存+上期未到货）</view>
+   <view>2、期间开单：上期期初库存-本期盘点时间期间的下单数量</view>
+   <view>3、当前实物：盘点时的库存数量</view>
+   <view>4、前未到货：盘点时所有下单未到货数</view>
+   <view>5、期间动销数=期初库存+期间开单-当前实物-当前未到货</view>
+</view>
+
+<view class="hei-zw"></view>
+
+<view class="save-btn" wx:if="{{!detail}}">
+  <view class="save-color" bindtap="handeltosave">保存</view>
+</view>

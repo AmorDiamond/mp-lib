@@ -1,0 +1,15 @@
+
+
+<view class="staff-container">
+   <scroll-view scroll-y="true" style="height:calc(100vh - 85px)" bindscrolltolower="lower">
+  <view class="staff-list">
+    <wux-staff-item wx:for="{{staffList}}" wx:key="index" userInfo="{{item}}" 
+    roles="{{item.role}}" bind:click="onToUpdate" />
+  </view>
+    <wux-nothing-page wx:if="{{!staffList||staffList.length==0}}" resetStyle="height:calc(100vh - 85px)"></wux-nothing-page>
+    
+</scroll-view>
+  <view class="add-staff-con">
+    <button bind:tap="addStaff"><text class="iconfont iconplus add-staff-icon"></text>新增员工</button>
+  </view>
+</view>

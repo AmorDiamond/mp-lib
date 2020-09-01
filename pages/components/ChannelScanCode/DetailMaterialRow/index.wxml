@@ -1,0 +1,46 @@
+<wxs src="../../../../utils/methods.wxs" module="method" />
+<view class="container">
+  <view class="product-info">
+    <view class="item" wx:for="{{items}}" wx:key="index">
+    <!-- 产品名称项 -->
+      <block wx:if="{{item.productName}}">
+        <view class="label" wx:if="{{item.label}}">{{item.label}}：</view>
+        <view class="value">{{productName}}</view>
+      </block>
+      <!-- 产品数量项 -->
+      <block wx:elif="{{item.quantity}}">
+        <view class="label" wx:if="{{item.label}}">{{item.label}}：</view>
+        <view class="value">
+          <mp-product-quantity chestNum="{{chestNum}}" boxNum="{{boxNum}}" />
+        </view>
+      </block>
+      <!-- 其他自定义项 -->
+      <block wx:elif="{{item.id}}">
+        <view class="label" wx:if="{{item.label}}">{{item.label}}：</view>
+        <view class="value">{{detail[item.id]}}</view>
+      </block>
+    </view>
+    <!-- <view class="item">
+      <view class="label">产品名称：</view>
+      <view class="value">{{productName}}</view>
+    </view>
+    <view class="item">
+      <view class="label">产品数量：</view>
+      <view class="value">
+        <mp-product-quantity chestNum="{{chestNum}}" boxNum="{{boxNum}}" />
+      </view>
+    </view> -->
+  </view>
+  <view class="code-list" wx:if="{{showCode}}">
+    <view class="list-hd">
+      <view class="code-column">条码</view>
+      <view class="type-column">类型</view>
+    </view>
+    <view class="list-bd">
+      <view class="item" wx:for="{{barcodeList}}" wx:key="index">
+        <view class="code-column">{{item.barCode}}</view>
+        <view class="type-column">{{method.mappingUnitType(item.barType)}}</view>
+      </view>
+    </view>
+  </view>
+</view>

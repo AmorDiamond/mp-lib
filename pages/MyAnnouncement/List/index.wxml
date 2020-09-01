@@ -1,0 +1,66 @@
+
+<view class="announce-container">
+
+<view class="weapertab">
+ <view class="searchbar">
+   <view class="searchWeaper">
+     <image src="../../../img/sreach.png" class="sreachimg" bindtap="handelsreach"></image>
+     <input 
+       type="text" 
+       placeholder="请输入公告标题查询"
+       placeholder-class="palceColol" 
+       class="sreachinput"
+       confirm-type="search"
+       bindinput="inputValue"
+       bindconfirm="handelsreach"
+       value="{{inputValue}}"
+       />
+   </view>  
+   <image src="../../../img/sxuan.png" class="sxuanimg" bindtap="handelshowmodel"></image>
+ </view>
+
+
+    <view class="announce-filter">
+      <view 
+        class="filter-item {{chooseType==item.id&&'active'}}" 
+        wx:for="{{statusList}}"
+        wx:key="index"
+        data-id="{{item.id}}"
+        catchtap="filterChoose"
+        >
+        {{item.name}}
+      </view>
+    </view>
+
+</view>
+
+  <view class="announce-list">
+    <wux-announce-item
+      wx:for="{{list}}"
+      wx:key="index"
+      bind:click="onToDetail"
+      data-time="{{item.receivedTime}}"
+      infoId="{{item.id}}"
+      title="{{item.title}}"
+      time="{{item.receivedTime}}"
+      new="{{item.status==0?true:false}}"
+      content="{{item.text}}"
+    />
+    <wux-nothing-page wx:if="{{!list||list.length==0}}" resetStyle="margin-top: -120rpx"></wux-nothing-page>
+
+  </view>
+</view>
+
+
+
+<side-search 
+  showSide="{{showSide}}"
+  companyList="{{tabList}}"
+  statusList="{{statusList}}"
+  statusId="{{chooseType}}"
+  bind:handelstatus="filterChoose"
+  hasall="{{true}}"
+  bind:hanonClosedelok="hanonClosedelok"
+  title="销售组织"
+  titleT="状态"
+/>

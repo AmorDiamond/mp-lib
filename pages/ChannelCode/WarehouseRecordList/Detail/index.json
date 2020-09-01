@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "入库详情",
+  "usingComponents": {
+    "mp-page-head": "../../components/ChannelScanCode/DetailPageHead/index",
+    "mp-material-row": "../../../components/ChannelScanCode/DetailMaterialRow/index"
+  }
+}

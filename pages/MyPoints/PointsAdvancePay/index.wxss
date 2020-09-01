@@ -1,0 +1,113 @@
+/* @import '../../../style/iconfont/iconfont.wxss'; */
+.ponints-exchange-list {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.page-hd {
+  background-color: #fff;
+}
+.page-bd {
+  flex: 1;
+  overflow: hidden;
+}
+.page-bd scroll-view {
+  height: 100%;
+}
+.search-area {
+  display: flex;
+  padding: 24rpx 32rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #ddd;
+}
+.search-input {
+  flex: 1;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  border: 1rpx solid #DDDDDD;
+  border-radius: 2px;
+}
+.search-input input {
+  flex: 1;
+}
+.zoom-icon {
+  width: 16px;
+  height: 16px;
+  padding: 10px;
+}
+.input-placeholder{
+  font-size: 14px;
+  font-family: PingFangSC-Regular,PingFang SC;
+  font-weight: 400;
+  color: rgba(146,146,146,1);
+}
+.tabs {
+  border-bottom: 1rpx solid #ddd;
+}
+.tabs .van-tabs__line {
+  background-color: #0969AE;
+}
+.tabs .van-tab {
+  color: #4A4A4A;
+  font-size: 15px;
+}
+.tabs .van-tab--active {
+  color: #0969AE;
+}
+
+.list-row {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 32rpx 32rpx 28rpx;
+  margin: 24rpx 32rpx 0;
+}
+.row-con {
+  position: relative;
+}
+.row-con .num-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #FF2815;
+  color: #fff;
+  padding: 0 2px;
+  border-radius: 8px;
+  font-size: 12px;
+  min-width: 16px;
+  line-height: 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.list-row .title {
+  font-size: 16px;
+  color: #2E2E2E;
+  margin-bottom: 34rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list-row .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .type-tag {
+  font-size: 12px;
+  color: #FFFFFF;
+  padding: 2rpx 10rpx;
+  border-radius: 2px;
+  background-color: #FA6400;
+}
+.footer .type-tag.terminal {
+  background-color: #1BB797;
+}
+
+.dialog-content {
+  padding: 38rpx 40rpx;
+  font-size: 14px;
+  color: #515151;
+}
+.dialog-content .company-name {
+  color: #0969AE;
+}

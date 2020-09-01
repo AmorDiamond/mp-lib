@@ -1,0 +1,113 @@
+<!--pages/AccountDetails/AccountDetails.wxml-->
+<wxs src="../../utils/commtime.wxs" module="formtime"/>
+
+<view class="headerback">
+   <view class="wilthebox">
+       <view class="weapergs">
+         <view class="gscolor">公司</view>
+         <view class="luozucolorct">{{company}}</view>
+       </view>
+<!-- ===== -->
+       <view class="weapergsts">
+         <view class="gscolor">开始时间</view>
+         <view class="luozucolor">
+        <picker mode="date" value="{{startTime}}" class="weaperpciker" bindchange="bindDateChange">
+          <view class="picker">
+            {{startTime}}
+          </view>
+        </picker>
+          <image src="../../img/shijsxia.png" class="shangximg"></image>
+           </view>
+       </view>
+<!-- ==== -->
+       <view class="weapergs">
+         <view class="gscolor">结束时间</view>
+         <view class="luozucolor">
+          <picker mode="date" value="{{endTime}}" 
+          class="weaperpciker" 
+          bindchange="bindDateChangeend">
+          <view class="picker">
+            {{endTime}}
+          </view>
+         </picker>
+          <image src="../../img/shijsxia.png" class="shangximg"></image>
+         </view>
+       </view>
+
+   </view>
+</view>
+
+
+<!-- =============记账日期 -->
+<scroll-view scroll-y style="height:calc(100vh - 200px)"  bindscrolltolower="scrolltolower">
+<view class="wepaeroutbox" wx:for="{{synList}}" wx:key="index">
+<view class="xianwhilebox" >
+  <view class="jizTime">记账日期  {{item.recordDate?formtime.formatDate(item.recordDate):''}}</view>
+  <view class="boxjief">
+    <text>借方：</text><text class="moneycol">{{item.lendMoney?'￥'+item.lendMoney:''}}</text>
+  </view>
+
+  <view class="boxjief">
+    <text>贷方：</text><text class="moneycol">{{item.loanMoney?'￥'+item.loanMoney:''}}</text>
+  </view>
+
+    <view class="boxjief">
+    <text>余额：</text><text class="moneycol">{{item.balance?'￥'+item.balance:''}}</text>
+  </view>
+
+  <view class="boxjief">
+    <text>参照：</text><text class="textzi">{{item.credentialCode||''}}</text>
+  </view>
+
+    <view class="boxjief">
+    <text>备注：</text><text class="textzi">{{item.description||''}}</text>
+  </view>
+
+</view>
+</view>
+ <!-- 站位 -->
+ <view class="height"></view>
+    <!-- ====没有数据背景 -->
+  <wux-nothing-page wx:if="{{!synList||synList.length==0}}" resetStyle="height:calc(100vh - 212px)">
+  </wux-nothing-page>
+    <view class="weaperreset">
+      <view 
+       class="reset" wx:if="{{!synList||synList.length==0}}" 
+       bindtap="handeltoreset"
+       >点击刷新</view>
+    </view>
+</scroll-view>
+
+
+<view class="weaper">
+<view class="flloter">
+  <view class="hejtext">合计</view>
+  <view class="zhanktext" bindtap="handeltomore">
+     <view wx:if="{{!showmore}}">展开</view>
+     <view wx:if="{{showmore}}">收起</view>
+
+    <image src="../../img/jruon.png"  class="jruon" wx:if="{{!showmore}}" />
+    <image src="../../img/jrutw.png"  class="jruon" wx:if="{{showmore}}" />
+
+  </view>
+</view>
+
+  <view wx:if="{{showmore}}" class="jiefang">
+   <view class="flextbox">
+     <view>借方</view>
+     <view>{{total.lendMoney||""}}</view>
+   </view>
+
+   <view class="flextbox">
+     <view>贷方</view>
+     <view>{{total.loanMoney||""}}</view>
+   </view>
+
+   <view class="flextbox">
+     <view>余额</view>
+     <view>{{total.balance||""}}</view>
+   </view>
+
+ </view>
+
+</view>

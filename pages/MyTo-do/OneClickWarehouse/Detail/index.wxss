@@ -1,0 +1,81 @@
+.warehouse-manage-detail {
+  margin: 24rpx 32rpx;
+  background-color: #fff;
+}
+.logistics-info {
+  padding: 32rpx;
+  font-size: 15px;
+}
+.logistics-info .item {
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.logistics-info .value {
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+.logistics-info .label {
+  color: #4A4A4A;
+}
+.logistics-info .arrow-icon {
+  margin-left: 50rpx;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.logistics-info .arrow-icon.open {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.foot-btn {
+  border-top: 1rpx solid #ddd;
+  padding: 24rpx;
+  text-align: right;
+}
+.foot-btn .opt-btn {
+  margin-left: 20rpx;
+  display: inline-block;
+  width: 80px;
+  line-height: 36px;
+  padding: 0;
+}
+.product-list {
+  font-size: 13px;
+}
+.product-list .label {
+  color: #515151;
+}
+.product-list .product-item {
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-list .label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 状态颜色 */
+.status.pendding {
+  color: #F58D11;
+}
+.status.success {
+  color: #63B20D;
+}
+.status.error {
+  color: #FF3C2B;
+}
+
+.dialog-content {
+  padding: 38rpx 40rpx;
+  font-size: 14px;
+  color: #515151;
+}
+.dialog-content .num {
+  color: #E02020;
+}
+

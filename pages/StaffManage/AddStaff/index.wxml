@@ -1,0 +1,3 @@
+<view class="add-staff-container">
+  <wux-edit-form bind:formSubmit="onFormSubmit" roles="{{roles}}" />
+</view>

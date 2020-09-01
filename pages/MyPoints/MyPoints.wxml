@@ -1,0 +1,102 @@
+<view class="my-points-page">
+  <view class="color-bg"></view>
+  <view class="points-hd">
+    <view class="tabs">
+      <van-tabs active="{{ activeBrand }}" bind:change="onTabChange" nav-class="transparent-tab" border="{{false}}">
+        <van-tab wx:for="{{brandList}}" wx:key="index" title="{{item.brandName}}" name="{{item.brandCode}}"></van-tab>
+      </van-tabs>
+    </view>
+    <view class="points-num-block">
+      <view class="title" bind:tap="onClickTimeHandle">{{yearText}}年{{quarterText}}<view class="icon-arrow"></view></view>
+      <!-- 经销商 -->
+      <view class="points-area" wx:if="{{dealerType == 1}}">
+        <view class="point-item">
+          <view class="number">50</view>
+          <view class="text">总积分</view>
+        </view>
+        <view class="point-item">
+          <view class="number">50</view>
+          <view class="text">已兑付积分</view>
+        </view>
+        <view class="point-item">
+          <view class="number">50</view>
+          <view class="text">可用积分</view>
+        </view>
+        <view class="point-item">
+          <view class="number">50</view>
+          <view class="text">垫付特约经销商积分</view>
+        </view>
+        <view class="point-item">
+          <view class="number">50</view>
+          <view class="text">垫付直营终端积分</view>
+        </view>
+        <view class="point-item">
+          <view class="number">50</view>
+          <view class="text">可兑付积分</view>
+        </view>
+        <view class="extra-tips">
+          其中包含特约经销商垫付给下游终端<text class="num">6</text>分
+        </view>
+      </view>
+      <!-- 特约经销商 -->
+      <view class="points-area special-area" wx:else>
+        <view class="point-item">
+          <view class="number">50</view>
+          <view class="text">总积分</view>
+        </view>
+        <view class="point-item">
+          <view class="number">50</view>
+          <view class="text">已兑付积分</view>
+        </view>
+        <view class="point-item">
+          <view class="number">50</view>
+          <view class="text">垫付终端积分</view>
+        </view>
+        <view class="point-item">
+          <view class="number">50</view>
+          <view class="text">可兑付积分</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="points-bd">
+    <!-- ========== 下面部分 -->
+    <view class="list-item" bind:tap="onGotoDetail">
+      <view class="item-text">
+        <view class="iconfont iconmulu icon-detail"></view>
+        积分明细
+      </view>
+      <view class="iconfont more iconsm-arrow-right"></view>
+    </view>
+    <view class="list-item" bind:tap="onGotoExchange">
+      <view class="item-text">
+        <view class="iconfont iconweb-icon- icon-exchange"></view>
+        积分兑付
+      </view>
+      <view class="item-right">
+        <view class="tag">5</view>
+        <view class="iconfont more iconsm-arrow-right"></view>
+      </view>
+    </view>
+    <view class="list-item" bind:tap="onGotoAdvancePay">
+      <view class="item-text">
+        <view class="iconfont iconjifenduihuan icon-advance"></view>
+        积分垫付
+      </view>
+      <view class="item-right">
+        <view class="tag">5</view>
+        <view class="iconfont more iconsm-arrow-right"></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 选择时间 -->
+<van-popup show="{{showPicker}}" bind:close="onPickerCancel" position="bottom">
+  <van-picker
+    show-toolbar
+    columns="{{ pickColumns }}"
+    bind:cancel="onPickerCancel"
+    bind:confirm="onPickerConfirm"
+  />
+</van-popup>

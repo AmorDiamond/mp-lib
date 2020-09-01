@@ -1,0 +1,7 @@
+.picker {
+  line-height: 72rpx;
+  border-radius: 4px;
+  color: #929292;
+  border: 1rpx solid #E4E4E4;
+  padding: 0 34rpx;
+}

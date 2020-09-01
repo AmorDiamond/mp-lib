@@ -1,0 +1,37 @@
+@import '../../../../style/iconfont/iconfont.wxss';
+.container {
+  padding: 32rpx;
+  font-size: 14px;
+  background-color: #fff;
+  margin: 0 32rpx;
+  border-radius: 4px;
+}
+.barcode-list-hd {
+  color: #a9a9a9;
+  display: flex;
+}
+.barcode-list-bd {
+  color: #4a4a4a;
+}
+.row-item {
+  margin-top: 24rpx;
+  display: flex;
+}
+.container .barcode {
+  width: 60vw;
+}
+.container .type {
+  width: 20vw;
+  text-align: center;
+}
+.container .opt {
+  width: 20vw;
+  text-align: right;
+}
+.row-item .opt {
+  color: #e23030;
+}
+.row-item .opt .iconfont {
+  display: inline-block;
+  padding: 0 6px;
+}

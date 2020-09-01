@@ -1,0 +1,167 @@
+@import '../../style/iconfont/iconfont.wxss';
+.color-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 230rpx;
+  background-color: #0969AD;
+}
+.points-hd {
+  position: relative;
+}
+.points-hd .tabs {
+  margin-bottom: 36rpx;
+}
+.points-num-block {
+  background-color: #fff;
+  padding: 24rpx 52rpx 42rpx;
+  width: 686rpx;
+  border-radius: 6px;
+  box-shadow: 0px 4px 18px 0px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  margin: auto;
+}
+.points-num-block .title {
+  text-align: center;
+  color: #2E2E2E;
+  font-size: 16px;
+  margin-bottom: 48rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%);
+  margin-left: 50%;
+}
+.title .icon-arrow {
+  border-top: 4px solid #515151;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  height: 0;
+  margin-left: 22rpx;
+}
+.points-area {
+  display: flex;
+  flex-wrap: wrap;
+}
+.point-item {
+  width: 30%;
+  margin-right: 5%;
+}
+.point-item:nth-child(n + 4) {
+  margin-top: 48rpx;
+}
+.point-item:nth-child(3n) {
+  margin-right: 0;
+}
+.special-area {
+  justify-content: space-between;
+}
+.special-area .point-item {
+  width: 22%;
+  margin: 0;
+  margin-right: 4%;
+}
+.special-area .point-item:last-child {
+  margin: 0;
+}
+.number {
+  font-size: 24px;
+  color: #0966AB;
+  margin-bottom: 6rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text {
+  color: #4A4A4A;
+  font-size: 14px;
+}
+.extra-tips {
+  border-radius: 4px;
+  background-color: #FDEAD5;
+  color: #9C7346;
+  font-size: 13px;
+  padding: 10rpx 24rpx;
+  width: 100vw;
+  margin-top: 20rpx;
+  position: relative;
+}
+.extra-tips:before {
+  content: '';
+  position: absolute;
+  height: 0;
+  border-bottom: 8px solid #FDEAD5;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  top: -8px;
+  left: 5%;
+}
+.extra-tips .num {
+  color: #E02020;
+  margin: 0 4rpx;
+}
+.van-tabs .van-tabs__scroll {
+  background-color: transparent;
+}
+.van-tabs .van-tab {
+  color: #8FB3D2;
+  font-size: 15px;
+}
+.van-tabs .van-tab--active {
+  color: #F1F2F1;
+}
+.van-tabs .van-tabs__line {
+  background-color: #F1F2F1;
+}
+.points-bd {
+  margin-top: 32rpx;
+  background-color: #fff;
+}
+.points-bd .list-item {
+  margin-left: 38rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #4A4A4A;
+  border-bottom: 1rpx solid #ddd;
+}
+.points-bd .list-item:last-child {
+  border-bottom: none;
+}
+.list-item .item-text {
+  display: flex;
+  align-items: center;
+}
+.list-item .iconfont {
+  margin-right: 38rpx;
+  width: 20px;
+}
+.list-item .item-text .iconfont {
+  font-size: 24px;
+  color: #085CA2;
+}
+.list-item .item-text .icon-detail {
+  font-size: 20px;
+}
+.list-item .item-text .icon-exchange {
+  font-size: 26px;
+}
+.item-right {
+  display: flex;
+  align-items: center;
+}
+.item-right .tag {
+  margin-right: 22rpx;
+  background-color: #FF2815;
+  color: #fff;
+  padding: 0 2px;
+  border-radius: 16rpx;
+  font-size: 12px;
+  min-width: 32rpx;
+  line-height: 32rpx;
+  box-sizing: border-box;
+  text-align: center;
+}

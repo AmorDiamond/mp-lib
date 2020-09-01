@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "投诉建议",
+  "usingComponents": {
+    "wux-badge": "../components/weap/badge/index",
+    "van-popup": "@vant/weapp/popup/index"
+  }
+}

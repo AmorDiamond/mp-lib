@@ -1,0 +1,179 @@
+/* pages/components/sideSearch/sideSearch.wxss */
+.ddanzt{
+  width: 100%;
+  border-bottom: 12px solid #F4F4F4;
+  padding: 24px 0;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.ddanzts{
+  width: 100%;
+  padding: 24px 0;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.textcolorddan{
+  font-size:16px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(81,81,81,1);
+  margin-left: 20px;
+}
+.xuanxingtext{
+ display: flex;
+ flex-wrap: wrap;
+ /* margin-top: 13px; */
+}
+.quanbutextcolor{
+  padding: 8px 14px;
+  box-sizing: border-box;
+  background:rgba(228,246,255,1);
+  border-radius:4px;
+  border:1px solid rgba(23,173,249,1);
+  font-size:14px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(23,173,249,1);
+  margin-top: 13px;
+  margin-left:20px;
+}
+.chustextColor{
+  background:rgba(236,236,236,1);
+  border-radius:6px;
+  padding: 8px 14px;
+  box-sizing: border-box;
+  font-size:14px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(146,146,146,1);
+  margin-top: 13px;
+  border:1px solid rgba(236,236,236,1);
+  margin-left:20px;
+}
+.xuanxingtexts{
+  display: flex;
+  flex-wrap: wrap;
+  align-content:flex-start;
+}
+
+.foolter{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top:1px solid #DDDDDD;
+  height: 48px;
+  display: flex;
+}
+.lefttext{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  line-height: 48px;
+  color:rgba(146,146,146,1);
+}
+.righttext{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  line-height: 48px;
+  background:rgba(8,97,166,1);
+  color:rgba(255,255,255,1);
+}
+.pickers{
+  margin-left: 20px;
+  margin-top: 12px;
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  border-bottom: 1px solid #DDDDDD;
+  display: flex;
+  color: #4a4a4a;
+  font-size: 15px;
+}
+.heighr{
+  height: 70px;
+  width: 100%;
+}
+.input-style{
+  width: 270px;
+  height: 36px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  display: flex;
+  padding: 0 16px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.datatime{
+  padding-left: 15px;
+  font-size: 14px;
+}
+.datatimest{
+  padding-left: 15px;
+  font-size: 14px;
+  color: #DDDDDD;
+}
+.zkai{
+  width: 14px;
+  height: 14px;
+}
+.hei-frle{
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #f2f2f2;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+.hei-hejight{
+  height: 200px;
+  width: 100%;
+
+}
+
+.size-col{
+  color: #DDDDDD;
+}
+.wepaer-inputse{
+  display: flex;
+}
+.inputpal{
+  width: 80px;
+  height: 36px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+}
+.input-stylese{
+  width: 164px;
+  height: 36px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  display: flex;
+  padding: 0 16px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.input-stylese view{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

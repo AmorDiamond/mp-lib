@@ -1,0 +1,43 @@
+<!--pages/Integral/IntegralSubsidiary/index.wxml-->
+ <view class="searchbar">
+   <view class="searchWeaper">
+     <image src="../../../img/sreach.png" class="sreachimg"></image>
+     <input 
+       type="text" 
+       placeholder="请输入标题、单号查询"
+       placeholder-class="palceColol" 
+       class="sreachinput"
+       confirm-type="搜索"
+       bindconfirm="handelsreach"
+       value="{{inputvalue}}"
+       />
+   </view>  
+   <image src="../../../img/sxuan.png" class="sxuanimg" bindtap="handelshowmodel"></image>
+  
+ </view>
+
+<!-- =========== 两项选择 -->
+   <van-tabs active="{{ active }}" bind:click="handemroeall"  
+   color="#0861A6"
+   class="colortab"
+   >
+    <van-tab title="返利明细" name="all" />
+    <van-tab title="调整明细" name="INITIAL_CREATION" />
+    <van-tab title="兑付明细" name="SEND_ERP_AND_LOGISTICS" />
+  </van-tabs>
+
+ <scroll-view scroll-y style="height:calc(100vh - 108px)" bindscrolltolower="scollower" >
+     <view wx:for="{{arrList}}" wx:key="index" class="outline">
+         <view class="weaperline">
+            <view>调拨调整积分</view>
+            <view class="flex-line">
+              <view>DD037373 2019-12-21 13:01:11</view>
+              <view class="color-line">+1000</view>
+            </view>
+          </view>
+     </view>
+ 
+ </scroll-view>
+
+
+ 

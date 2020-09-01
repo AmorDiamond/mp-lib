@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "关联终端",
+  "usingComponents": {
+    "wux-nothing-page": "../components/NothingPage/index"
+  }
+}

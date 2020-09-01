@@ -1,0 +1,25 @@
+<!--pages/LogisticsDetails/LogisticsDetails.wxml-->
+ <view class="headerbox"> 
+    <view class="textsize">交货单 00000001</view>
+    <view class="banto">
+      <view class="wulsize">物流公司</view>
+      <view class="ztsize">中通快递</view>
+    </view>
+
+    <view class="banto">
+      <view class="wulsize">物流编号</view>
+      <view class="ztsize">23333333333333</view>
+    </view>
+
+ </view>
+
+<view class="margintop">
+
+  <van-steps
+  steps="{{ steps }}"
+  active="{{ active }}"
+  direction="vertical"
+  active-color="#63B20D"
+  />
+
+</view>

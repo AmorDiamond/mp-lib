@@ -1,0 +1,134 @@
+/* pages/MyMoney/MyMoney.wxss */
+
+page{
+  background-color: #F1F2F1;
+}
+
+.zjzhongl{
+  width:100%;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 2px 9px 0px rgba(0,0,0,0.2);
+  border-radius:6px;
+  padding-bottom: 15px;
+  position: relative;
+  margin-top: 16px;
+}
+.weaperzjzhongl{
+  padding: 0 16px;
+  box-sizing: border-box;
+
+}
+
+.keyyue{
+  font-size:13px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(74,74,74,1);
+  margin-top: 18px;
+}
+.zjcolor{
+  font-size:18px;
+  font-family:PingFangSC-Semibold,PingFang SC;
+  font-weight:600;
+  color:rgba(46,46,46,1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+  .jgetecolor{
+    margin-top: 3px;
+    font-size:24px;
+    font-family:PingFangSC-Semibold,PingFang SC;
+    font-weight:600;
+    color:#F58D11;
+  }
+  .yangcolor{
+    font-size:14px;
+  }
+
+  .weperjge{
+    display: flex;
+    justify-content: space-around;
+    padding-right: 30px;
+    box-sizing: border-box;
+  }
+  .keyyuets{
+    font-size:13px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(74,74,74,1);
+    text-align: left;
+  }
+  .jgetecolorts{
+    font-size:16px;
+    font-family:PingFangSC-Medium,PingFang SC;
+    font-weight:500;
+    color:rgba(74,74,74,1);
+  }
+
+  .lookxqto{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    font-size:14px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    width:63px;
+    height:24px;
+    background:linear-gradient(157deg,rgba(250,217,97,1) 0%,rgba(247,107,28,1) 100%);
+    border-radius:100px 0px 0px 100px;
+  }
+  .gotoimg{
+    width: 10px;
+    height: 10px;
+  }
+
+
+ .boxzj{
+  padding: 20px 16px 16px 16px;
+  box-sizing: border-box;
+ }
+ .item-box{
+   text-align: right;
+ }
+
+ .keyyuemy{
+   width: 100px;
+  text-align: right;
+  font-size:12px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(74,74,74,1);
+ }
+.item-last{
+  margin-left: 3px;
+}
+
+.fonter{
+  width:343px;
+  height:60px;
+  background-color: white;
+  border-radius:6px;
+  margin-top: 14px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.flrx{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.netx{
+  height: 12px;
+  width: 12px;
+}

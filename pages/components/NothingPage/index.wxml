@@ -1,0 +1,4 @@
+<view class="noting-container" style="{{resetStyle}}">
+  <view class="iconfont iconkong"></view>
+  <text>{{text}}</text>
+</view>

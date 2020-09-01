@@ -1,0 +1,146 @@
+<!--pages/Myquota/inventory/index.wxml-->
+
+ <view class="searchbar">
+   <view class="searchWeaper">
+     <image src="../../../img/sreach.png" class="sreachimg"></image>
+     <input 
+       type="text" 
+       placeholder="请输入盘点编号查询"
+       placeholder-class="palceColol" 
+       class="sreachinput"
+       confirm-type="搜索"
+       value="{{inputvalue}}"
+       bindconfirm="handelsreach"
+       bindinput="handelchaneg"
+       />
+   </view>  
+   <image src="../../../img/sxuan.png" class="sxuanimg" bindtap="handleShowFilter"></image>
+  
+ </view>
+
+
+
+<scroll-view scroll-y style="height:calc(100vh - 130px)" bindscrolltolower="hadnellower">
+<view 
+  class="weaperbox"
+  catchtap="handeltoDetail"
+  data-id="{{item.tradeCode}}"
+  data-inventorystr="{{item.inventoryBegineTime}}"
+  data-status="{{item.approvalStatus}}"
+  data-time="{{item.createTime}}"
+  data-brandcode="{{item.brandCode}}"
+  data-business="{{item.tradeCode}}"
+  data-source="{{item.dataSource}}"
+  wx:for="{{arrList}}"
+  wx:key="index"
+>
+ <view class="xianwhilebox">
+  <view class="jizTime">
+  <view class="boxjief">
+     <view>
+        <text>盘点编号：</text><text class="textzi">{{item.tradeCode || ''}}</text>
+     </view>
+     <view class="bandtext">{{item.brandNameShort}}</view>
+  </view>
+     <view class='sxiao' wx:if="{{item.approvalStatus=='AUDITSUCC'}}">审核通过</view>
+     <view class='spseed' wx:if="{{item.approvalStatus =='AUDITING'}}">审核中</view>
+     <view class="spdel" wx:if="{{item.approvalStatus =='AUDITFAIL'}}">{{'审核失败'}}</view>
+  </view>
+
+    <view class="boxjiefts">
+    <text>盘点周期：</text><text class="textzi">{{item.description|| ''}}</text>
+  </view>
+
+  <view class="boxjiefts">
+    <text>盘点时间：</text><text class="textzi">{{item.createTime || ''}}</text>
+  </view>
+
+  <view class="boxjiefts">
+    <text>录入来源：</text><text class="textzi">{{item.dataSource=='SALESMAN'?'片区业务员':'经销商'}}</text>
+  </view>
+
+  </view>
+
+</view>
+  <!-- ====没有数据背景 -->
+  <wux-nothing-page wx:if="{{!arrList||arrList.length==0}}" resetStyle="height:calc(100vh - 130px)"></wux-nothing-page>
+</scroll-view>
+
+
+<!-- 撤面筛选 -->
+<side-Search
+  statusList="{{statusList}}"
+  showSide="{{showSide}}"
+  titleT="审批状态"
+  statusId="{{statusId}}"
+  showStaut="{{true}}"
+  pdweek="{{true}}"
+  pdcompany="{{true}}"
+  searchCompany="{{searchCompany}}"
+  searchData="{{searchData}}"
+  bind:handelpandok="handelpandok"
+  bind:handelzouqi="handelzouqi"
+
+/>
+
+
+<!-- 弹框 -->
+
+<van-popup show="{{ showmodel }}" bind:close="onClickHide" custom-class="hei-height">
+   <view class="hei-height">
+    <view class="hei-title">选择在盘点时间范围内公司</view>
+    <van-checkbox-group value="{{ selectedBrands }}" bind:change="onChange">
+     <scroll-view scroll-y style="height:140px">
+      <view 
+        class="hei-frle" 
+        wx:for="{{actions}}" wx:key="index"
+        data-name="{{item.brandNameShort}}"
+        wx:for-index="idx"
+        data-id="{{item.brandCode}}"
+        data-changeidx="{{idx}}"
+        >
+          <van-checkbox 
+          name="{{item.brandCode}}" 
+          data-brandcode="{{item.brandCode}}"
+          disabled="{{!item.isAllowd}}"
+          >
+          {{item.brandNameShort}}<text class="pdcolor">（盘点时间：{{item.inventoryTypeName}}）</text>
+          </van-checkbox>
+          <view wx:if="{{item.isAllowd}}" class="height-pick">
+            <span>盘点周期:</span>
+            <span class="colorpic">{{item.label}}</span> 
+        </view>
+      </view>
+      </scroll-view>
+    </van-checkbox-group>
+    <view class="flex-button">
+     <view class="hei-footer" catchtap="handelwethon">确定</view>
+    </view>
+  </view>
+</van-popup>
+
+
+
+
+
+<!-- 按钮 -->
+<view class="flsex">
+  <view class="button-start" bindtap="handelshowTime">开始盘点</view>
+</view>
+
+
+      <van-popup 
+        show="{{ showpicker }}" 
+        position="bottom"
+        custom-style="height: 45%" 
+        bind:close="closemodel"
+        round="{{false}}"
+        >
+          <van-picker 
+          show-toolbar
+          bind:cancel="closemodel"
+          bind:confirm="onConfirm"  
+          columns="{{[newActions[picindex]]}}"
+          />
+      </van-popup>
+  <!-- newweek -->

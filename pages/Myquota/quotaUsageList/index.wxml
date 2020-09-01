@@ -1,0 +1,70 @@
+<!--pages/Myquota/quotaUsageList/index.wxml-->
+<wxs src="../../../utils/commtime.wxs" module="format" />
+<van-tabs 
+  active="{{ active }}" 
+  bind:click="changeTabs" 
+  color="#0969AD"
+  tab-active-class="active-tabs"
+  >
+  <van-tab 
+   wx:for="{{tabList}}" 
+   wx:key="brandCode"  
+   title="{{item.brandName}}" 
+   name="{{item.brandCode}}"
+   />
+</van-tabs>
+
+
+<scroll-view scroll-y style="height:calc(100vh - 44px)" bindscrolltolower="scrolltolower" >
+<view class="weaper-for" wx:for="{{arrList}}" wx:key="index">
+  <view class="weaper-boxes">
+   <view class="felx-title">
+     <view class="bianh-color">配额编号： {{item.tradeCode||''}}</view>
+     <view class="status-color">{{item.status}}</view>
+   </view>
+  
+
+   <view class="content-weap">
+     <view class="weap-flex">
+       <view>可用数量：{{item.quotaCanNum || "--"}}件</view>
+       <view>已使用数量：{{item.quotaUseNum || "--"}}件</view>
+     </view>
+     <view class="line-hei-top">{{item.groupName}}</view>
+     <view class="line-hei">总数量：{{item.nowMove||'--'}}件</view>
+     <view class="line-hei">有效期：{{format.timestrToDateStr(item.quotaStartTime)}} 至 {{format.timestrToDateStr(item.quotaEndTime)}}</view>
+   </view>
+
+    <view class="button-btn">
+      <view class="btn-style" data-code="{{item.tradeCode}}" catchtap="handeltogl">关联订单</view>
+      <view class="btn-style" catchtap="handeltotz">调整记录</view>
+    
+    </view>
+ </view>
+
+</view>
+ <!-- 站位 -->
+<view class="heri" wx:if="{{arrList.length!=0}}"></view>
+<!-- 占无数据样式 -->
+      <wux-nothing-page  
+      wx:if="{{!arrList||arrList.length==0}}" 
+      resetStyle="height:calc(100vh - 44px)"></wux-nothing-page>
+
+</scroll-view>
+
+
+
+
+  <view class="footer-hei">
+    <view 
+      class="butn-color" 
+      wx:if="{{lookStatus}}"
+      data-status="{{0}}"
+      bindtap="handelchanegtype"
+      >失效配额查看</view>
+    <view 
+       class="butn-color" 
+       data-status="{{1}}"
+       wx:if="{{!lookStatus}}"
+       bindtap="handelchanegtype"
+       >生效配额查看</view>
+  </view>

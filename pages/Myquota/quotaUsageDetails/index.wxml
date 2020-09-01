@@ -1,0 +1,16 @@
+<!--pages/Myquota/quotaUsageDetails/index.wxml-->
+
+ <view class="weaper-page" wx:for="{{value}}" wx:key="index">
+   <view class="text-key">原配额总数：<text class="text-styl">{{item.oldQuotaNum||"--"}}件</text></view>
+   <view class="text-key">已使用数量：<text class="text-styl">{{item.quotaUseNum||'--'}}件</text></view>
+   <view class="text-key">剩余可用数量：<text class="text-styl">{{item.quotaCanNum||'--'}}件</text></view>
+   <view class="text-key">调整类型：<text class="text-styl">{{item.modifyType=='UP'?'调增':'调减'}}</text></view>
+   <view class="text-key">调整数量：<text class="text-styl">{{item.modifyNum||'--'}}件</text></view>
+   <view class="text-key">调整后剩余可用数量：<text class="text-styl">{{item.modifyAfterNum||'--'}}件</text></view>
+   <view class="text-key">调整后配额总数：<text class="text-styl">{{item.modifyAfterQuota||'--'}}件</text></view>
+ </view>
+
+<!-- 占无数据样式 -->
+      <wux-nothing-page  
+      wx:if="{{!value||value.length==0}}" 
+      resetStyle="height:100vh"></wux-nothing-page>

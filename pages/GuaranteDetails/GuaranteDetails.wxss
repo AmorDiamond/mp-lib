@@ -1,0 +1,173 @@
+/* pages/GuaranteDetails/GuaranteDetails.wxss */
+
+
+page{
+  background-color: #F1F2F1;
+ }
+ 
+ .wilthebox{
+   width:100%;
+   height:109px;
+   background:rgba(255,255,255,1);
+   box-shadow:0px 2px 9px 0px rgba(0,0,0,0.2);
+   padding: 8px 0 14px 16px;
+   box-sizing: border-box;
+ }
+
+ .weapergs{
+   height: 47px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-right: 16px;
+   box-sizing: border-box;
+   font-size: 15px;
+ }
+ .gscolor{
+   color:rgba(74,74,74,1);
+ }
+ 
+ .luozucolor{
+   color:rgba(0,0,0,1);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex: 1;
+ }
+ .luozucolorct{
+   color:rgba(0,0,0,1);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ .weapergsts{
+   height: 47px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-right: 16px;
+   box-sizing: border-box;
+   font-size: 15px;
+   border-bottom: 1px solid #dddddd;
+ }
+ .shangximg{
+   height: 12px;
+   width: 12px;
+ }
+ .weaperpciker{
+  position: relative;
+  display: flex;
+  flex: 1;
+  height: 39px;
+ }
+ .picker{
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 5px;
+   left: 0;
+   line-height: 39px;
+   text-align: right;
+ }
+ .xianwhilebox{
+   width:100%;
+   background:rgba(255,255,255,1);
+   border-radius:4px;
+   padding: 16px 16px;
+   box-sizing: border-box;
+ }
+
+ .xianwhileboxwea{
+  height:270px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 16px;
+  box-sizing: border-box;
+ }
+ .jizTime{
+   height: 39px;
+   width: 100%;
+   border-bottom: 1px solid #dddddd;
+   line-height: 39px;
+   font-size:14px;
+   color:rgba(81,81,81,1);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-right: 16px;
+   box-sizing: border-box;
+ }
+ .boxjief{
+   display: flex;
+   justify-content: space-between;
+   font-size:15px;
+   font-family:PingFangSC-Regular,PingFang SC;
+   margin-top: 10px;
+ }
+
+ .moneycol{
+   color:rgba(245,141,17,1);
+ }
+ .textzi{
+   font-size:15px;
+   font-family:PingFangSC-Medium,PingFang SC;
+   color:rgba(74,74,74,1);
+ }
+
+ .height{
+   height: 12px;
+   width: 100%;
+ }
+
+ .flloter{
+  width:100%;
+  height:50px;
+  background:rgba(8,97,166,1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+.hejtext{
+  font-size: 15px;
+  color: white;
+}
+.zhanktext{
+  width: 52px;
+  font-size:13px;
+  color:rgba(146,185,215,1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.jruon{
+  height: 16px;
+  width: 16px;
+}
+.weaper{
+  width: 100%;
+  background:rgba(8,97,166,1);
+  position: fixed;
+  bottom: 0;
+}
+ 
+.jiefang{
+  padding: 0 32px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+.big{
+  height: 300px;
+  transition-duration: 2s;
+}
+.flextbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+  line-height: 25px;
+}

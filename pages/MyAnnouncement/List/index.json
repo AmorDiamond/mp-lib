@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的公告",
+  "usingComponents": {
+    "wux-announce-item": "../component/AnnouncementItem/index",
+    "wux-nothing-page": "../../components/NothingPage/index",
+    "side-search": "../../components/sideSearch/sideSearch"
+
+  }
+}

@@ -1,0 +1,109 @@
+<!--pages/ChannelCode/ChannelCode.wxml-->
+<view class="fiex">
+  <view class="customheader"> 
+
+     <view class="weaperTime">
+       <view class="{{!todayck?'today':'tomouth'}}" bindtap="handeltoday">今日</view>
+       <view class="{{todayck?'today':'tomouth'}}" bindtap="handeltomouth">本月</view>
+     </view>
+     <!-- 扫码入库 -->
+      <view class="putstorage"> 
+          <view class="leftbox">
+
+             <view class="saocode">
+                <view class="tsaoma">
+                  扫码入库
+                 <view class="jluweaper" bind:tap="onEntryRecordList">
+                    记录
+                     <image src="../../img/jiant.png" class="jiantimg"></image></view>
+                </view>
+                <view class="saonmber">
+                <text class="numbercolor">{{countInfo.inBoxQuantity || 0}}</text>  箱
+                <text class="numbercolor">{{countInfo.inBottleQuantity || 0}}</text>盒</view>
+             </view>
+          
+          </view>
+          <!-- 扫码出库右边 -->
+          <view class="rightbox">
+              <view class="saocode">
+                <view class="tsaoma">
+                  扫码出库
+                 <view class="jluweaper" bind:tap="onEntryOutRecordList">
+                    记录
+                     <image src="../../img/jiant.png" class="jiantimg"></image></view>
+                </view>
+                <view class="saonmber">
+                <text class="numbercolor">{{countInfo.outBoxQuantity || 0}}</text>  箱
+                <text class="numbercolor">{{countInfo.outBottleQuantity || 0}}</text>盒</view>
+             </view>
+          </view>
+      </view>
+  </view>
+  <!-- 入库管理 -->
+ <view class="xiamwearper">
+
+    <view class="rukubox">
+     <view class="gunal">入库管理</view>
+     <!-- 下面图片入库 -->
+      <view class="tuweaper">
+         <view class="rukucg" data-type="purchase" bind:tap="onMenuClickHandle">
+          <image src="../../img/cg.png" class="cgimg"></image>
+          <text>采购入库</text>
+        </view>
+        <view class="rukucg" data-type="underReturn" bind:tap="onMenuClickHandle">
+          <image src="../../img/ruku.png" class="cgimg"></image>
+          <text>下游退货</text>
+        </view> 
+    
+      </view>
+       <wux-divider show-text="{{ false }}" />
+    </view>
+       
+
+  <!-- 出库管理 -->
+    <view class="rukuboxck">
+     <view class="gunal">出库管理</view>
+     <!-- 下面图片入库 -->
+      <view class="tuweaper">
+         <view class="rukucg" data-type="sales" bind:tap="onMenuClickHandle">
+          <image src="../../img/cg.png" class="cgimg"></image>
+          <text>销售出库</text>
+        </view>
+
+        <view class="rukucg" data-type="otherOut" bind:tap="onMenuClickHandle">
+          <image src="../../img/chuku.png" class="cgimg"></image>
+          <text>其它出库</text>
+        </view> 
+      </view>
+       <wux-divider show-text="{{ false }}" />
+    </view>
+
+
+  <!-- 库存管理 -->
+    <view class="rukuboxck">
+     <view class="gunal">库存管理</view>
+     <!-- 下面图片入库 -->
+      <view class="tuweaper">
+         <view class="rukucg" bind:tap="onGotoInventoryList">
+          <image src="../../img/pand.png" class="cgimg"></image>
+          <text>盘点管理</text>
+        </view>
+        <view class="rukucg" bind:tap="onGotoMyStock">
+          <image src="../../img/kuc.png" class="cgimg"></image>
+          <text>我的库存</text>
+        </view> 
+    
+      </view>
+    </view>
+
+
+  </view>   
+</view>
+
+<van-action-sheet
+  show="{{ show }}"
+  actions="{{ actions }}"
+  bind:close="onClose"
+  bind:select="onSelect"
+  description="请选择方式"
+/>

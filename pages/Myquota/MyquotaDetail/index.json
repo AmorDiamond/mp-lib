@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "库存盘点详情",
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index"
+  }
+}

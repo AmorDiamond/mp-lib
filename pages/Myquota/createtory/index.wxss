@@ -1,0 +1,270 @@
+/* pages/Myquota/createtory/index.wxss */
+
+.padTime{
+  width: 100%;
+  font-size:15px;
+  line-height: 28px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(46,46,46,1);
+  flex: 1;
+}
+.withe-box{
+  width: 100%;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  background:rgba(255,255,255,1);
+}
+.withe-title{
+  height: 40px;
+  width: 100%;
+  display: flex;
+  line-height: 40px;
+  font-size: 13px;
+  color:rgba(74,74,74,1);
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+.title-with{
+  width: 110px;
+}
+
+.withe-content{
+  padding-left: 16px;
+  box-sizing: border-box;
+  border-top: 1px solid #DDDDDD;
+}
+
+.withe-item{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  border-bottom: 1px solid #DDDDDD;
+  position: relative;
+}
+.withe-item:last-child{
+  border:none;
+}
+.title-itemt{
+  width: 94px;
+  text-align: center;
+}
+.title-color{
+  width: 60px;
+  text-align: center;
+  font-size: 14px;
+  color: #037AFF;
+
+}
+.title-itemon{
+  width: 110px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+.title-vone{
+   background-color: white;
+   position: absolute;
+}
+
+.update-biao{
+  font-size: 14px;
+  color: #515151;
+  padding-left: 16px;
+  text-align: center;
+  width: 90px;
+}
+.update-text{
+  font-size: 14px;
+  color: #515151;
+  padding-left: 16px;
+  width: 128px;
+  margin-top: 12px;
+}
+.updtaimg{
+  margin-left: 16px;
+  display: flex;
+}
+
+.updtaimg .van-uploader__preview {
+  margin: 0;
+  width: 90px;
+  height: 40px;
+}
+
+.updtaimg .van-uploader__preview image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+}
+
+.bottom-box{
+  background-color: white;
+  margin-top: 12px;
+  width: 100%;
+  overflow:hidden;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.section-container {
+  padding-bottom: 100px;
+}
+
+.felx{
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  justify-content: center;
+}
+.felx-text{
+  width:303px;
+  height:45px;
+  background:rgba(8,97,166,1);
+  border-radius:2px;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  line-height: 45px;
+}
+
+.round-title{
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+}
+.round{
+  font-size: 14px;
+  font-weight: bold;
+
+}
+
+.weaper-box{
+  padding-right: 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(2, 167, 240, 0.26);
+  align-items: center;
+  padding: 16rpx 24rpx;
+}
+.crlir{
+  width:8px;
+  height:8px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background:rgba(225,225,225,1);
+}
+.weapercel{
+  /* width: 100px; */
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  font-size:15px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(0,0,0,1);
+}
+.textsize{
+  font-size:11px;
+  color:rgba(74,74,74,1);
+  font-weight: 400;
+}
+.textsizets{
+  font-size:11px;
+  color:rgba(74,74,74,1);
+  font-weight: 400;
+  text-align: center;
+}
+.leftbox{
+  display: flex;
+  padding: 0 16px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.yuancrl{
+  width:32px;
+  height:32px;
+  border:1px dashed rgba(0,122,255,1);
+  color: #007AFF;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+}
+
+.yuancrls{
+  width:32px;
+  height:32px;
+  background-color:#007AFF;
+  color:white;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  font-size: 12px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.delete{
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+}
+.header-pd{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+.conpay-text{
+  font-size: 15px;
+  font-weight: bold;
+}
+.wul-text{
+  width: 96%;
+  border: 1px dashed #DDDDDD;
+  background-color: white;
+  padding: 5px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.van-swipe-cell__right{
+  background-color: #FF3C2B;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+  width: 65px;
+}
+
+.updata{
+  width:80px;
+ height:32px;
+ border: 1px solid #F34F41;
+ border-radius: 4px;
+ font-size: 12px;
+ text-align: center;
+ line-height:32px ;
+ color:rgba(243,79,65,1);
+}
+
+@font-face {
+  font-family:'vant-icon';
+  src:url('https://img.yzcdn.cn/vant/vant-icon-76f274.ttf') format('truetype');
+}

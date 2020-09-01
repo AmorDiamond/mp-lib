@@ -1,0 +1,24 @@
+<!--pages/LogisticsTracking/LogisticsTracking.wxml-->
+ <view class="weaperbox">
+   <view class="textsize">交货单 00000001</view>
+    <view class="banto">
+      <view class="wulsize">物流公司</view>
+      <view class="ztsize">中通快递</view>
+    </view>
+
+    <view class="banto">
+      <view class="wulsize">物流编号</view>
+      <view class="ztsize">23333333333333</view>
+    </view>
+     
+     <van-divider/>
+
+     <view class="wlxqcolor">物流详情文字</view>
+      <view>
+        <view></view>
+        <view class="boxfliex">
+          <text class="colortinme">2019-10-25 12:20</text>
+          <text class="chanklek" bindtap="handeltoDetail">查看详情   ></text>
+        </view>
+      </view>
+ </view>

@@ -1,0 +1,11 @@
+<!--pages/AboutDealers/AboutDealers.wxml-->
+
+<view class="logpic">
+  <image src="../../img/loginPic.png" class="logpic"></image>
+  <view class="textcs">经销商门户</view>
+  <view class="bnsize">{{Mdetail.version}}</view>
+</view>
+
+<view class="texbox">
+{{Mdetail.content}} 
+</view>

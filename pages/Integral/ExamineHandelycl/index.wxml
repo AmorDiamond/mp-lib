@@ -1,0 +1,56 @@
+<!--pages/Integral/ExamineHandelycl/index.wxml-->
+ <view class="checkedNext">
+   <view class="{{checkheader?'jfklue':'chuli'}}" bindtap="handelkhejgu">积分考核结果</view>
+   <view class="{{checkheader?'chuli':'jfklue'}}" bindtap="handelchuljd">处理进度</view>
+ 
+ </view>
+
+
+
+<view wx:if="{{checkheader}}">
+
+<view class="headerboxwhite">
+  <view class="niandu">年度：<text class="yesrdo">2020年</text></view>
+  <view class="niandu">季度：<text class="yesrdo">Q1</text></view>
+  <view class="niandu">积分考核结果：<text class="yesrdotd">10000</text>  分</view>
+</view>
+
+<!-- ========= -->
+<view class="kaohetit">考核结果说明</view>
+
+<view class="kaohwihtebox"> 
+ <textarea class="textareabox" disabled></textarea>
+</view>
+
+</view>
+
+
+
+<view wx:if="{{!checkheader}}">
+  <scroll-view scroll-y style="height:calc(100vh - 48px)" >
+  <view class="withdeer">
+     <view class="itemcrent"> <view class="crlier"></view>
+       <view class="rightbox">
+          <view>马建国 <text class="jxiaotext">经销商</text></view>
+          <view class="shengjtext">1级审批人，审批通过，审批意见：同意</view>
+          <view class="shengjtime">2019-10-25 12:20</view>
+
+       </view>
+
+     </view>
+
+    <view class="crilerline" wx:for="{{steps}}" wx:key="index">
+      <view><view class="line"></view></view>
+      <view class="crlierhus">
+        <view class="rightbox">
+          <view>马建国 <text class="jxiaotext">经销商</text></view>
+          <view class="shengjtext">1级审批人，审批通过，审批意见：同意</view>
+          <view class="shengjtime">2019-10-25 12:20</view>
+       </view>
+      
+      </view>
+    </view>
+  
+  </view>
+  </scroll-view>
+</view>

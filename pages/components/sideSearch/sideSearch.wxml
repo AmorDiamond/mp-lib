@@ -1,0 +1,161 @@
+<!--pages/components/sideSearch/sideSearch.wxml-->
+<!-- showSide -->
+  <van-popup
+  show="{{ showSide }}"
+  position="right"
+  custom-style="width: 80%;height:100%"
+  bind:close="onClose"
+ >
+  <view class="saixuan">
+
+  <!-- 订单状态 -->
+     <view class="ddanzt" wx:if="{{!showStaut}}">
+        <text class="textcolorddan">{{title}}</text>
+          <view class="xuanxingtext">
+              <view 
+                 class="{{(hasall?checkId:libsId)==item.brandCode?'quanbutextcolor':'chustextColor'}}"
+                 wx:for="{{companyList}}" 
+                 data-id="{{item.brandCode}}"
+                 wx:key="index"
+                 catchtap="handelcheckdd"
+                 >
+                 {{item.brandName}}
+                 </view>
+          </view>
+     </view>
+
+ <!-- 时间搜索 -->
+     <view class="ddanzt" wx:if="{{showStaut}}">
+        <view wx:if="{{pdcompany}}">
+         <text class="textcolorddan">{{titleCycle || '盘点公司：'}}</text>
+            <view class="input-style" bindtap="handelshowModelcompany">
+                <view wx:if="{{value}}">{{value}}</view>
+                <view wx:if="{{!value}}" class="size-col">请选择盘点公司</view>
+                <image src="../../../img/zkai.png" class="zkai"/>
+            </view>
+         </view>
+         <view wx:if="{{pdweek}}">
+            <text class="textcolorddan">{{titleCycle || '盘点周期：'}}</text>
+             <view class="wepaer-inputse">
+                  <view class="inputpal" bindtap="handselect">
+                    <view wx:if="{{valuesrc}}" >{{valuesrc}}</view>
+                    <view wx:if="{{!valuesrc}}" class="size-col">请选择</view>
+                    <image src="../../../img/zkai.png" class="zkai"/>
+               </view>
+                <view class="input-stylese" bindtap="handelshowModel">
+                    <view wx:if="{{valueWeek}}">{{valueWeek}}</view>
+                    <view wx:if="{{!valueWeek}}" class="size-col">请选择盘点周期</view>
+                    <image src="../../../img/zkai.png" class="zkai"/>
+                </view>
+             </view>
+           </view>
+        <text class="textcolorddan">{{titleTime||'盘点时间：'}}</text>
+            <view>
+              <picker mode="date" value="{{dateStart}}" bindchange="bindDateChangestr">
+                <view class="pickers">
+                  开始时间: <view class="datatime" wx:if="{{dateStart}}">{{dateStart}}</view>
+                     <view class="datatimest" wx:if="{{!dateStart}}">请选择开始时间</view>
+              </view>
+          
+              </picker>
+              <picker mode="date" value="{{dateEnd}}"  bindchange="bindDateChangeEnd">
+                <view class="pickers">
+                  结束时间: <view class="datatime" wx:if="{{dateEnd}}">{{dateEnd}}</view>
+                     <view class="datatimest" wx:if="{{!dateEnd}}">请选择结束时间</view>
+                </view>
+              </picker>
+              </view>
+        </view>
+
+
+     <!-- 审批状态 -->
+
+     <view class="ddanzts">
+        <text class="textcolorddan">{{titleT || ""}}</text>
+      <view class="xuanxingtext">
+            <view 
+              class="{{statusId==item.id?'quanbutextcolor':'chustextColor'}}"
+              wx:for="{{statusList}}" 
+              data-id="{{item.id}}"
+              wx:key="index"
+              catchtap="handelstatus"
+              >
+              {{item.name}}
+              </view>
+         </view>
+     </view>
+
+
+
+
+
+      <!-- 下面按钮 -->
+      <view class="foolter">
+        <view class="lefttext" bindtap="handelreset">重置</view>
+        <view class="righttext" bindtap="hanonClosedelok">确认</view>
+      </view>
+   </view>
+</van-popup>
+
+
+<!-- 盘点周期 -->
+<van-action-sheet 
+  show="{{ showeek }}" 
+  bind:close="onClickHide" 
+  title="请选择盘点周期"
+  safe-area-inset-bottom="{{true}}"
+  >
+  <view class="hei-hejight">
+  <view 
+    class="hei-frle" 
+    wx:for="{{searchData}}" wx:key="index"
+    catchtap="handelshoWeek"
+    data-name="{{item.label}}"
+    data-timeEnd="{{item.inventoryEndTime}}"
+    data-timestr="{{item.inventoryBegineTime}}"
+
+    >
+   {{item.label}}
+  </view>
+ </view>
+</van-action-sheet>
+
+<!-- 盘点公司 -->
+<van-action-sheet 
+  show="{{ showcompany }}" 
+  bind:close="onClickHide" 
+  title="请选择盘点公司"
+  safe-area-inset-bottom="{{true}}"
+  >
+<view class="hei-hejight">
+  <view 
+    class="hei-frle" 
+    wx:for="{{searchCompany}}" wx:key="brandCode"
+    catchtap="handelshowcompany"
+    data-name="{{item.brandName}}"
+    data-code="{{item.brandCode}}"
+
+    >
+   {{item.brandName}}
+  </view>
+</view>
+</van-action-sheet>
+
+<!-- 盘点周期 -->
+<van-action-sheet 
+  show="{{ showsect }}" 
+  bind:close="onClickHide" 
+  title="请选择盘周期"
+  safe-area-inset-bottom="{{true}}"
+  >
+<view class="hei-hejight">
+  <view 
+    class="hei-frle" 
+    wx:for="{{selfsetArr}}" wx:key="index"
+    catchtap="handelgetser"
+    data-name="{{item}}"
+    >
+   {{item}}
+  </view>
+</view>
+</van-action-sheet>

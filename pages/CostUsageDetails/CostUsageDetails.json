@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "费用使用明细",
+  "usingComponents": {
+    "wux-nothing-page": "../components/NothingPage/index"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "物流跟踪",
+  "usingComponents": {
+    "van-divider": "@vant/weapp/divider"
+  }
+}

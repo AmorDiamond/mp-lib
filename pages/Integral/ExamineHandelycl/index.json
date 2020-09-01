@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "积分考核结果",
+  
+  "usingComponents": {
+    "van-steps": "@vant/weapp/steps/index"
+  }
+}

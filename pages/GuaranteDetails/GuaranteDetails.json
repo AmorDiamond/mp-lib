@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "保证金额明细",
+  "usingComponents": {
+    "wux-nothing-page": "../components/NothingPage/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
+  }
+}

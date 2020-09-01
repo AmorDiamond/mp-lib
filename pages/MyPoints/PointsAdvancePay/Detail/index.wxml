@@ -1,0 +1,181 @@
+<view class="points-advance-detail">
+  <view class="head-area">
+    <view class="filter-time" bind:tap="onClickFilterTimeHandle">
+      {{yearText}}年{{quarterText}}
+      <view class="arrow-icon"></view>
+    </view>
+    <view class="top">
+      <view class="label">可兑付积分</view>
+      <view class="number">500</view>
+    </view>
+    <!-- 终端类型 -->
+    <view class="bottom terminal-bottom" wx:if="{{isTerminal}}">
+      <view class="item">
+        <view class="number">50000</view>
+        <view class="label">总积分</view>
+      </view>
+      <view class="item">
+        <view class="number">500</view>
+        <view class="label">已兑付积分</view>
+      </view>
+    </view>
+    <!-- 经销商类型 -->
+    <view class="bottom" wx:else>
+      <view class="item">
+        <view class="number">50000</view>
+        <view class="label">总积分</view>
+      </view>
+      <view class="item">
+        <view class="number">500</view>
+        <view class="label">已兑付积分</view>
+      </view>
+      <view class="item">
+        <view class="number">500</view>
+        <view class="label">垫付积分</view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部年度季度明细 -->
+  <view class="body-area">
+    <view class="tabs">
+      <van-tabs active="{{activeType}}" bind:change="onTabChange" animated>
+        <van-tab wx:for="{{tabTypes}}" wx:key="index" title="{{item.title}}" name="{{item.value}}">
+          <view class="list exchange-list" wx:if="{{item.value == 1}}">
+            <view class="section">
+              <view class="time-title">2020年</view>
+              <view class="season-area">
+                <van-collapse value="{{exSeasonActives}}" bind:change="onExchangeSeasonChange" border="{{false}}">
+                  <van-collapse-item title="第四季度兑付积分" name="1" value="100" border="{{false}}">
+                    <view class="item-content">
+                      <view class="item">兑付编号： DF0000002</view>
+                      <view class="item">兑付方：国窖公司</view>
+                      <view class="item">2019-12-21 13:01:11</view>
+                      <view class="extra-info">
+                        <view class="number">500</view>
+                        <view class="status success">已兑付</view>
+                      </view>
+                    </view>
+                    <view class="item-content">
+                      <view class="item">兑付编号： DF0000002</view>
+                      <view class="item">兑付方：国窖公司</view>
+                      <view class="item">2019-12-21 13:01:11</view>
+                      <view class="extra-info">
+                        <view class="number">500</view>
+                        <view class="status pendding">兑付中</view>
+                      </view>
+                    </view>
+                  </van-collapse-item>
+                  <van-collapse-item title="第三季度兑付积分" name="2" value="100" border="{{false}}">
+                    <view class="item-content">
+                      <view class="item">兑付编号： DF0000002</view>
+                      <view class="item">兑付方：国窖公司</view>
+                      <view class="item">2019-12-21 13:01:11</view>
+                      <view class="extra-info">
+                        <view class="number">500</view>
+                        <view class="status success">已兑付</view>
+                      </view>
+                    </view>
+                    <view class="item-content">
+                      <view class="item">兑付编号： DF0000002</view>
+                      <view class="item">兑付方：国窖公司</view>
+                      <view class="item">2019-12-21 13:01:11</view>
+                      <view class="extra-info">
+                        <view class="number">500</view>
+                        <view class="status pendding">兑付中</view>
+                      </view>
+                    </view>
+                  </van-collapse-item>
+                  <van-collapse-item title="有赞美业" name="3" value="100" border="{{false}}">
+                    线上拓客，随时预约，贴心顺手的开单收银
+                  </van-collapse-item>
+                </van-collapse>
+              </view>
+            </view>
+            <view class="section">
+              <view class="time-title">2021年</view>
+              <view class="season-area">
+                <van-collapse value="{{exSeasonActives}}" bind:change="onExchangeSeasonChange" border="{{false}}">
+                  <van-collapse-item title="有赞微商城" name="1">提供多样店铺模板，快速搭建网上商城</van-collapse-item>
+                  <van-collapse-item title="有赞零售" name="2">
+                    网店吸粉获客、会员分层营销、一机多种收款，告别经营低效和客户流失
+                  </van-collapse-item>
+                  <van-collapse-item title="有赞美业" name="3" disabled>
+                    线上拓客，随时预约，贴心顺手的开单收银
+                  </van-collapse-item>
+                </van-collapse>
+              </view>
+            </view>
+          </view>
+          <!-- 垫付积分年度季度列表 -->
+          <view class="list advance-pay-list" wx:else>
+            <view class="section">
+              <view class="time-title">2020年</view>
+              <view class="season-area">
+                <van-collapse value="{{adSeasonActives}}" bind:change="onAdvanceSeasonChange" border="{{false}}">
+                  <van-collapse-item title="第一季度垫付积分" name="1" value="100" border="{{false}}">
+                    <view class="item-content">
+                      <view class="item">兑付编号： DF0000002</view>
+                      <view class="item">客户名称：国窖公司</view>
+                      <view class="item">2019-12-21 13:01:11</view>
+                      <view class="extra-info">
+                        <view class="number">500</view>
+                        <view class="status success">已兑付</view>
+                      </view>
+                    </view>
+                  </van-collapse-item>
+                  <van-collapse-item title="有赞零售" name="2" value="100" border="{{false}}">
+                    网店吸粉获客、会员分层营销、一机多种收款，告别经营低效和客户流失
+                  </van-collapse-item>
+                  <van-collapse-item title="有赞美业" name="3" value="100" border="{{false}}" disabled>
+                    线上拓客，随时预约，贴心顺手的开单收银
+                  </van-collapse-item>
+                </van-collapse>
+              </view>
+            </view>
+            <view class="section">
+              <view class="time-title">2021年</view>
+              <view class="season-area">
+                <van-collapse value="{{adSeasonActives}}" bind:change="onAdvanceSeasonChange" border="{{false}}">
+                  <van-collapse-item title="有赞微商城" name="1">提供多样店铺模板，快速搭建网上商城</van-collapse-item>
+                  <van-collapse-item title="有赞零售" name="2">
+                    网店吸粉获客、会员分层营销、一机多种收款，告别经营低效和客户流失
+                  </van-collapse-item>
+                  <van-collapse-item title="有赞美业" name="3" disabled>
+                    线上拓客，随时预约，贴心顺手的开单收银
+                  </van-collapse-item>
+                </van-collapse>
+              </view>
+            </view>
+          </view>
+        </van-tab>
+      </van-tabs>
+    </view>
+  </view>
+</view>
+
+<!-- 底部去垫付 -->
+<view class="footer-btn opt-btn primary" bind:tap="onGotoAdvancePay">去垫付</view>
+
+<!-- 去垫付弹框 -->
+<van-dialog show="{{showDialog}}" title="垫付积分" bind:confirm="onDialogConfirmHandle" bind:cancel="onDialogCancelHandle" confirm-button-color="#006AB3" cancel-button-color="#696969" use-slot show-cancel-button>
+  <view class="dialog-content">
+    <view class="label-title">年度-季度：2020-Q1</view>
+    <view class="label-title">可兑付积分：100分</view>
+    <view class="control-itme">
+      <view class="label">兑付积分：</view>
+      <view class="control">
+        <input type="text" placeholder="请输入兑付积分" type="number" bind:blur="onChangeExchangeNum" />
+      </view>
+    </view>
+  </view>
+</van-dialog>
+
+<!-- 选择时间 -->
+<van-popup show="{{showPicker}}" bind:close="onPickerCancel" position="bottom">
+  <van-picker
+    show-toolbar
+    columns="{{ pickColumns }}"
+    bind:cancel="onPickerCancel"
+    bind:confirm="onPickerConfirm"
+  />
+</van-popup>

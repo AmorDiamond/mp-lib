@@ -1,0 +1,288 @@
+/* pages/percenter/percenter.wxss */
+page{
+  background-color: #F1F2F1;
+}
+
+.headergr{
+  width: 100%;
+  height: 97px;
+  background:#0969AD;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.wilthebox{
+  height: 145px;
+  width: 686rpx;
+  background: #fff;
+  box-shadow: 0px 4px 18px 0px rgba(0,0,0,0.2);
+  border-radius:6px;
+  position: absolute;
+  top: 15px;
+  padding-left: 16px;
+}
+.company{
+  font-size:17px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+}
+
+.ringhtext{
+  height:20px;
+  background:linear-gradient(143deg,rgba(255,207,95,1) 0%,rgba(255,161,49,1) 100%);
+  border-radius:2px;
+  font-size:12px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(93,71,37,1);
+  text-align: center;
+  line-height: 20px;
+  padding: 0 6px;
+  }
+  .weapercompany{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 16px;
+    box-sizing: border-box;
+    height: 50px;
+    border-bottom: 1rpx solid #ddd;
+  }
+  .wux-divider{
+    margin:0 !important;
+  }
+  .clirl{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #F1F2F1;
+  }
+  .weaperclirl{
+    height: 94px;
+    width: 100%;
+    padding-right: 16px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+
+  .morexx{
+    padding-left: 10px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .morexxty{
+    padding-left: 10px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .textpnety{
+    font-size: 14px;
+  }
+  .namewerper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .textpne{
+    color: #2E2E2E;
+    font-size:14px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+  }
+  .textname{
+    font-size:17px;
+    font-family:PingFangSC-Medium,PingFang SC;
+    font-weight:500;
+    color:rgba(46,46,46,1);
+  }
+  .textconpany{
+    width: 180px;
+    text-align: center;
+    font-size:15px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(46,46,46,1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+   .withs{
+     width: 45px;
+     text-align: center;
+   }
+  .qhimg{
+    height: 24px;
+    width: 48px;
+  }
+  .downbox{
+    width: 100%;
+    background-color: white;
+    height: 163px;
+    overflow: hidden;
+  }
+
+ .downboxin{
+   width: 100%;
+   height: 79px;
+   margin-top: 76px;
+   font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(46,46,46,1);
+  display: flex;
+  justify-content: space-around;
+ }
+ .bookimg{
+   width: 32px;
+   height: 32px;
+ }
+ .flexbook{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+ }
+ .jifenimg{
+  width: 16px;
+  height: 16px;
+}
+.tzimg{
+  width: 24px;
+  height: 24px;
+}
+.tzweaper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 16px;
+  box-sizing: border-box;
+  height: 60px;
+  background-color: white;
+  margin-top: 20px;
+}
+.tzweapers{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 16px;
+  box-sizing: border-box;
+  height: 60px;
+  background-color: white;
+  border-top: 1px solid #dddddd;
+}
+.padd{
+  padding-left: 16px;
+  box-sizing: border-box;
+  background-color: white;
+
+}
+.liteweaper{
+  width: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.liteweaperts{
+  width: 99px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.goout{
+  position: fixed;
+  bottom: 20px;
+  width:320px;
+  height:50px;
+  background:rgba(255,255,255,1);
+  border-radius:6px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.weaper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size:16px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(74,74,74,1);
+}
+
+.wperat{
+  height: 322px;
+  width: 247px;
+  position: relative;
+}
+.ppgs{
+  height: 46px;
+  width: 100%;
+  text-align: center;
+  line-height: 46px;
+  font-size:17px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(46,46,46,1);
+  border-bottom: 1px solid #dddddd;
+  padding-left: 16px;
+  box-sizing: border-box;
+
+}
+.van-popup{
+  border-radius: 6px !important;
+  background-color: #FFFFFF !important;
+  
+}
+.gscomp{
+  height: 45px;
+ display: flex;
+ align-items: center;
+  font-size: 15px;
+  border-bottom: 1px solid #dddddd;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+
+.buttomtext{
+  width: 100%;
+  position: absolute;
+   bottom: 0px;
+   left: 0;
+   right: 0;
+   height: 45px;
+   line-height: 45px;
+   border-top: 1px solid #dddddd;
+   text-align: center;
+   display: flex;
+} 
+.quxtext{
+  width: 50%;
+  font-size: 16px;
+  border-right: 1px solid #dddddd;
+}
+.quedtext{
+  width: 50%;
+  font-size: 16px;
+  color: #04569F;
+}
+.fliex{
+  width: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.postion .wux-badge__count{
+  top:-20rpx !important;
+}
+
+.textpne{
+  padding-left: 15px;
+}

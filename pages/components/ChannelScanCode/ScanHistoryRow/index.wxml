@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="body" bind:tap="onGotoDetail">
+    <view class="title" wx:if="{{title}}">{{title}}</view>
+    <view class="content">
+      <view wx:for="{{items}}" wx:key="index" class="item">
+        <view class="label">{{item.label}}：</view>
+        <view class="value">
+          <block wx:if="{{item.quantity}}">
+            <mp-product-quantity
+              chestNum="{{chestNum}}"
+              boxNum="{{boxNum}}"
+            />
+          </block>
+          <block wx:else>{{detail[item.id]}}</block>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <button type="primary" plain="true" bind:tap="onAfreshScan">重新扫码</button>
+    <button type="primary" plain="true" bind:tap="onContinueScan">继续扫码</button>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<picker mode="{{mode}}" fields="{{fields}}" value="{{value}}" bind:change="onChangeHandle">
+  <view class="picker picker-item">
+    {{value || (placeholder || '请选择')}}
+  </view>
+</picker>
